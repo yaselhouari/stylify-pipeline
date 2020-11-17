@@ -3088,3 +3088,242 @@ Using generated security password: 0640c760-0475-4672-bf9c-cfc48e25845f
 2020-11-17 19:06:23.738  INFO 14960 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@103478b8, org.springframework.security.web.context.SecurityContextPersistenceFilter@26612078, org.springframework.security.web.header.HeaderWriterFilter@312819ae, org.springframework.security.web.csrf.CsrfFilter@2d7aa291, org.springframework.security.web.authentication.logout.LogoutFilter@4552f905, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@74badf19, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@27053257, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@270f7b4d, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3063be68, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@13714753, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@27ec74a3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@56b704ea, org.springframework.security.web.session.SessionManagementFilter@6879e983, org.springframework.security.web.access.ExceptionTranslationFilter@2f0e7fa8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@24435620]
 2020-11-17 19:06:23.788  INFO 14960 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
 2020-11-17 19:06:23.790  INFO 14960 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-17 19:06:23.858  INFO 14960 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-17 19:06:23.867  INFO 14960 --- [main] com.example.ec.ExplorecaliApplication    : Started ExplorecaliApplication in 3.557 seconds (JVM running for 4.619)
+2020-11-17 19:23:37.982  INFO 16184 --- [main] com.example.ec.ExplorecaliApplication    : Starting ExplorecaliApplication on DESKTOP-7SLLO4E with PID 16184 (C:\Users\lenovo\Desktop\explorecali\target\classes started by lenovo in C:\Users\lenovo\Desktop\explorecali)
+2020-11-17 19:23:37.985 DEBUG 16184 --- [main] com.example.ec.ExplorecaliApplication    : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-11-17 19:23:37.985  INFO 16184 --- [main] com.example.ec.ExplorecaliApplication    : The following profiles are active: default
+2020-11-17 19:23:38.592  INFO 16184 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-17 19:23:38.636  INFO 16184 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39ms. Found 3 JPA repository interfaces.
+2020-11-17 19:23:39.103  INFO 16184 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-17 19:23:39.109  INFO 16184 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-17 19:23:39.109  INFO 16184 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-17 19:23:39.232  INFO 16184 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-17 19:23:39.232  INFO 16184 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1202 ms
+2020-11-17 19:23:39.378  INFO 16184 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-17 19:23:39.382  INFO 16184 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-17 19:23:39.448  INFO 16184 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-17 19:23:39.454  INFO 16184 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:68e4458d-39b4-417e-bd90-e2269d090055 (H2 1.4)
+2020-11-17 19:23:39.507  INFO 16184 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 9 migrations (execution time 00:00.023s)
+2020-11-17 19:23:39.516  INFO 16184 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-11-17 19:23:39.555  INFO 16184 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-11-17 19:23:39.559  INFO 16184 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.1 - CreateTourSchema
+2020-11-17 19:23:39.611  INFO 16184 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.2 - AddTours
+2020-11-17 19:23:39.632  INFO 16184 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.3 - CreateTourRatingSchema
+2020-11-17 19:23:39.647  INFO 16184 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.4 - AddTourRatings
+2020-11-17 19:23:39.660  INFO 16184 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.1 - CreateSecuritySchema
+2020-11-17 19:23:39.683  INFO 16184 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.2 - AddUsers
+2020-11-17 19:23:39.697  INFO 16184 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.3 - CreateServicePackagesSchema
+2020-11-17 19:23:39.710  INFO 16184 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.4 - AddServicePackages
+2020-11-17 19:23:39.728  INFO 16184 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.5 - AddServices
+2020-11-17 19:23:39.739  INFO 16184 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 9 migrations to schema "PUBLIC" (execution time 00:00.192s)
+2020-11-17 19:23:39.811  INFO 16184 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-17 19:23:39.854  INFO 16184 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-17 19:23:39.897  INFO 16184 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-11-17 19:23:40.001  INFO 16184 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-17 19:23:40.078  INFO 16184 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-17 19:23:40.412  INFO 16184 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-17 19:23:40.417  INFO 16184 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-17 19:23:40.674  WARN 16184 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-17 19:23:41.079  INFO 16184 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 38b48303-e8e4-4316-97eb-637dc95f2a56
+
+2020-11-17 19:23:41.176  INFO 16184 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@515c732d, org.springframework.security.web.context.SecurityContextPersistenceFilter@2ed7978c, org.springframework.security.web.header.HeaderWriterFilter@55e5415d, org.springframework.security.web.csrf.CsrfFilter@1f3f434, org.springframework.security.web.authentication.logout.LogoutFilter@55397d15, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@270f7b4d, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@57a5b03, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5ae87de0, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4adcc981, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@50b38342, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@351e86b2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1f85904a, org.springframework.security.web.session.SessionManagementFilter@4d75c604, org.springframework.security.web.access.ExceptionTranslationFilter@27053257, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@8315e4a]
+2020-11-17 19:23:41.221  WARN 16184 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2020-11-17 19:23:41.223  INFO 16184 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-17 19:23:41.224  INFO 16184 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-17 19:23:41.225  INFO 16184 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-11-17 19:23:41.227  INFO 16184 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-11-17 19:23:41.228  INFO 16184 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-11-17 19:23:41.236  INFO 16184 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-11-17 19:23:41.239 ERROR 16184 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2020-11-17 19:24:22.469  INFO 16208 --- [main] com.example.ec.ExplorecaliApplication    : Starting ExplorecaliApplication on DESKTOP-7SLLO4E with PID 16208 (C:\Users\lenovo\Desktop\explorecali\target\classes started by lenovo in C:\Users\lenovo\Desktop\explorecali)
+2020-11-17 19:24:22.473 DEBUG 16208 --- [main] com.example.ec.ExplorecaliApplication    : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-11-17 19:24:22.473  INFO 16208 --- [main] com.example.ec.ExplorecaliApplication    : The following profiles are active: default
+2020-11-17 19:24:23.063  INFO 16208 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-17 19:24:23.106  INFO 16208 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38ms. Found 3 JPA repository interfaces.
+2020-11-17 19:24:23.560  INFO 16208 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-17 19:24:23.566  INFO 16208 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-17 19:24:23.567  INFO 16208 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-17 19:24:23.686  INFO 16208 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-17 19:24:23.686  INFO 16208 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1170 ms
+2020-11-17 19:24:23.844  INFO 16208 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-17 19:24:23.850  INFO 16208 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-17 19:24:23.920  INFO 16208 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-17 19:24:23.927  INFO 16208 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:062625a2-3ac4-4ca7-a124-dce0cdb56b0a (H2 1.4)
+2020-11-17 19:24:23.977  INFO 16208 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 9 migrations (execution time 00:00.021s)
+2020-11-17 19:24:23.986  INFO 16208 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-11-17 19:24:24.021  INFO 16208 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-11-17 19:24:24.026  INFO 16208 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.1 - CreateTourSchema
+2020-11-17 19:24:24.063  INFO 16208 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.2 - AddTours
+2020-11-17 19:24:24.083  INFO 16208 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.3 - CreateTourRatingSchema
+2020-11-17 19:24:24.098  INFO 16208 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.4 - AddTourRatings
+2020-11-17 19:24:24.112  INFO 16208 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.1 - CreateSecuritySchema
+2020-11-17 19:24:24.128  INFO 16208 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.2 - AddUsers
+2020-11-17 19:24:24.140  INFO 16208 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.3 - CreateServicePackagesSchema
+2020-11-17 19:24:24.151  INFO 16208 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.4 - AddServicePackages
+2020-11-17 19:24:24.163  INFO 16208 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.5 - AddServices
+2020-11-17 19:24:24.175  INFO 16208 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 9 migrations to schema "PUBLIC" (execution time 00:00.159s)
+2020-11-17 19:24:24.239  INFO 16208 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-17 19:24:24.270  INFO 16208 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-17 19:24:24.307  INFO 16208 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-11-17 19:24:24.430  INFO 16208 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-17 19:24:24.513  INFO 16208 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-17 19:24:24.859  INFO 16208 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-17 19:24:24.865  INFO 16208 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-17 19:24:25.110  WARN 16208 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-17 19:24:25.485  INFO 16208 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: d69f3373-bd0e-4cc8-a741-6133d0f5c78c
+
+2020-11-17 19:24:25.592  INFO 16208 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5c7c75fb, org.springframework.security.web.context.SecurityContextPersistenceFilter@4bca8eaf, org.springframework.security.web.header.HeaderWriterFilter@35ff072c, org.springframework.security.web.csrf.CsrfFilter@72e49f6a, org.springframework.security.web.authentication.logout.LogoutFilter@70f91ae3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@74eab077, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@673a9db4, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@729d6ee2, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6d842877, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@52d59507, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@408d945b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4adcc981, org.springframework.security.web.session.SessionManagementFilter@27053257, org.springframework.security.web.access.ExceptionTranslationFilter@7b8cb283, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@575d48db]
+2020-11-17 19:24:25.640  INFO 16208 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-17 19:24:25.641  INFO 16208 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-17 19:24:25.708  INFO 16208 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-17 19:24:25.716  INFO 16208 --- [main] com.example.ec.ExplorecaliApplication    : Started ExplorecaliApplication in 3.575 seconds (JVM running for 4.679)
+2020-11-17 19:24:25.720  INFO 16208 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-11-17 19:24:25.726 ERROR 16208 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:779)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:322)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.example.ec.ExplorecaliApplication.main(ExplorecaliApplication.java:31)
+Caused by: java.lang.NullPointerException: Cannot invoke "com.example.ec.repo.ServicePackageRepository.count()" because "this.servicePackageRepository" is null
+	at com.example.ec.service.ServicePackageService.total(ServicePackageService.java:24)
+	at com.example.ec.ExplorecaliApplication.run(ExplorecaliApplication.java:36)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:795)
+	... 5 common frames omitted
+
+2020-11-17 19:24:25.805  INFO 16208 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-17 19:24:25.807  INFO 16208 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-17 19:24:25.808  INFO 16208 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-11-17 19:24:25.810  INFO 16208 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-11-17 19:25:06.342  INFO 8600 --- [main] com.example.ec.ExplorecaliApplication    : Starting ExplorecaliApplication on DESKTOP-7SLLO4E with PID 8600 (C:\Users\lenovo\Desktop\explorecali\target\classes started by lenovo in C:\Users\lenovo\Desktop\explorecali)
+2020-11-17 19:25:06.345 DEBUG 8600 --- [main] com.example.ec.ExplorecaliApplication    : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-11-17 19:25:06.345  INFO 8600 --- [main] com.example.ec.ExplorecaliApplication    : The following profiles are active: default
+2020-11-17 19:25:06.934  INFO 8600 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-17 19:25:06.978  INFO 8600 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38ms. Found 3 JPA repository interfaces.
+2020-11-17 19:25:07.418  INFO 8600 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-17 19:25:07.424  INFO 8600 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-17 19:25:07.424  INFO 8600 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-17 19:25:07.543  INFO 8600 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-17 19:25:07.543  INFO 8600 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1159 ms
+2020-11-17 19:25:07.690  INFO 8600 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-17 19:25:07.695  INFO 8600 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-17 19:25:07.762  INFO 8600 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-17 19:25:07.768  INFO 8600 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:7d460790-e71a-484b-908a-95338983ac2f (H2 1.4)
+2020-11-17 19:25:07.815  INFO 8600 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 9 migrations (execution time 00:00.020s)
+2020-11-17 19:25:07.824  INFO 8600 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-11-17 19:25:07.858  INFO 8600 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-11-17 19:25:07.862  INFO 8600 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.1 - CreateTourSchema
+2020-11-17 19:25:07.898  INFO 8600 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.2 - AddTours
+2020-11-17 19:25:07.919  INFO 8600 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.3 - CreateTourRatingSchema
+2020-11-17 19:25:07.932  INFO 8600 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.4 - AddTourRatings
+2020-11-17 19:25:07.945  INFO 8600 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.1 - CreateSecuritySchema
+2020-11-17 19:25:07.959  INFO 8600 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.2 - AddUsers
+2020-11-17 19:25:07.971  INFO 8600 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.3 - CreateServicePackagesSchema
+2020-11-17 19:25:07.986  INFO 8600 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.4 - AddServicePackages
+2020-11-17 19:25:07.998  INFO 8600 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.5 - AddServices
+2020-11-17 19:25:08.009  INFO 8600 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 9 migrations to schema "PUBLIC" (execution time 00:00.156s)
+2020-11-17 19:25:08.081  INFO 8600 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-17 19:25:08.113  INFO 8600 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-17 19:25:08.146  INFO 8600 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-11-17 19:25:08.260  INFO 8600 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-17 19:25:08.339  INFO 8600 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-17 19:25:08.674  INFO 8600 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-17 19:25:08.679  INFO 8600 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-17 19:25:08.929  WARN 8600 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-17 19:25:09.333  INFO 8600 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: e5816ab8-df1c-446f-8582-89e10d1070f1
+
+2020-11-17 19:25:09.436  INFO 8600 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5ae87de0, org.springframework.security.web.context.SecurityContextPersistenceFilter@30665461, org.springframework.security.web.header.HeaderWriterFilter@b8142f4, org.springframework.security.web.csrf.CsrfFilter@26612078, org.springframework.security.web.authentication.logout.LogoutFilter@5e360c3b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@56b704ea, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5649f55, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@1f85904a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@73aae7a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@424a152f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5a8b42a3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@514dc5f4, org.springframework.security.web.session.SessionManagementFilter@3265995e, org.springframework.security.web.access.ExceptionTranslationFilter@6a0e97fc, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4efe014f]
+2020-11-17 19:25:09.488  INFO 8600 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-17 19:25:09.490  INFO 8600 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-17 19:25:09.554  INFO 8600 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-17 19:25:09.563  INFO 8600 --- [main] com.example.ec.ExplorecaliApplication    : Started ExplorecaliApplication in 3.532 seconds (JVM running for 4.595)
+2020-11-17 19:25:09.566  INFO 8600 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-11-17 19:25:09.572 ERROR 8600 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:779)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:322)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.example.ec.ExplorecaliApplication.main(ExplorecaliApplication.java:31)
+Caused by: java.lang.NullPointerException: Cannot invoke "com.example.ec.repo.ServicePackageRepository.count()" because "this.servicePackageRepository" is null
+	at com.example.ec.service.ServicePackageService.total(ServicePackageService.java:24)
+	at com.example.ec.ExplorecaliApplication.run(ExplorecaliApplication.java:36)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:795)
+	... 5 common frames omitted
+
+2020-11-17 19:25:09.646  INFO 8600 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-17 19:25:09.648  INFO 8600 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-17 19:25:09.648  INFO 8600 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-11-17 19:25:09.650  INFO 8600 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-11-17 19:25:46.717  INFO 15164 --- [main] com.example.ec.ExplorecaliApplication    : Starting ExplorecaliApplication on DESKTOP-7SLLO4E with PID 15164 (C:\Users\lenovo\Desktop\explorecali\target\classes started by lenovo in C:\Users\lenovo\Desktop\explorecali)
+2020-11-17 19:25:46.721 DEBUG 15164 --- [main] com.example.ec.ExplorecaliApplication    : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-11-17 19:25:46.721  INFO 15164 --- [main] com.example.ec.ExplorecaliApplication    : The following profiles are active: default
+2020-11-17 19:25:47.338  INFO 15164 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-17 19:25:47.383  INFO 15164 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39ms. Found 3 JPA repository interfaces.
+2020-11-17 19:25:47.851  INFO 15164 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-17 19:25:47.858  INFO 15164 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-17 19:25:47.858  INFO 15164 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-17 19:25:47.977  INFO 15164 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-17 19:25:47.977  INFO 15164 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1215 ms
+2020-11-17 19:25:48.161  INFO 15164 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-17 19:25:48.166  INFO 15164 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-17 19:25:48.234  INFO 15164 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-17 19:25:48.240  INFO 15164 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:1b175d78-6358-4ca4-8adb-ef826ea0cfb6 (H2 1.4)
+2020-11-17 19:25:48.291  INFO 15164 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 9 migrations (execution time 00:00.022s)
+2020-11-17 19:25:48.300  INFO 15164 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-11-17 19:25:48.336  INFO 15164 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-11-17 19:25:48.341  INFO 15164 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.1 - CreateTourSchema
+2020-11-17 19:25:48.379  INFO 15164 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.2 - AddTours
+2020-11-17 19:25:48.402  INFO 15164 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.3 - CreateTourRatingSchema
+2020-11-17 19:25:48.418  INFO 15164 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.4 - AddTourRatings
+2020-11-17 19:25:48.431  INFO 15164 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.1 - CreateSecuritySchema
+2020-11-17 19:25:48.450  INFO 15164 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.2 - AddUsers
+2020-11-17 19:25:48.467  INFO 15164 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.3 - CreateServicePackagesSchema
+2020-11-17 19:25:48.481  INFO 15164 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.4 - AddServicePackages
+2020-11-17 19:25:48.494  INFO 15164 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.5 - AddServices
+2020-11-17 19:25:48.509  INFO 15164 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 9 migrations to schema "PUBLIC" (execution time 00:00.179s)
+2020-11-17 19:25:48.628  INFO 15164 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-17 19:25:48.704  INFO 15164 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-17 19:25:48.756  INFO 15164 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-11-17 19:25:48.889  INFO 15164 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-17 19:25:48.970  INFO 15164 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-17 19:25:49.358  INFO 15164 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-17 19:25:49.363  INFO 15164 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-17 19:25:49.629  WARN 15164 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-17 19:25:50.009  INFO 15164 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: ccb46e92-3dd0-478d-821f-07612000b197
+
+2020-11-17 19:25:50.108  INFO 15164 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6a7aa675, org.springframework.security.web.context.SecurityContextPersistenceFilter@3595086b, org.springframework.security.web.header.HeaderWriterFilter@77a4bac, org.springframework.security.web.csrf.CsrfFilter@60a99f3d, org.springframework.security.web.authentication.logout.LogoutFilter@408d945b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3c9ef37b, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@54bc3bcf, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@6eded11a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@22ff11ef, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3245efdb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@196d684b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@602a3237, org.springframework.security.web.session.SessionManagementFilter@72ec16f8, org.springframework.security.web.access.ExceptionTranslationFilter@762cdf46, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2c02a007]
+2020-11-17 19:25:50.157  INFO 15164 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-17 19:25:50.158  INFO 15164 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…

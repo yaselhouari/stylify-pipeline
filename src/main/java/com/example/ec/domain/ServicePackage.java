@@ -23,6 +23,10 @@ public class ServicePackage {
         this.description = description;
     }
 
+    public ServicePackage() {
+
+    }
+
     public Integer getId() {
         return id;
     }
