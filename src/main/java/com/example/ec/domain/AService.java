@@ -1,16 +1,14 @@
 package com.example.ec.domain;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name="service")
 public class AService {
 
     @Id
     @GeneratedValue
-    Integer id;
+    String id;
     @Column
     String title;
 
@@ -26,7 +24,7 @@ public class AService {
     @Column
     String duration;
 
-    public AService(Integer id, String title, String gender, String description, double price, String duration) {
+    public AService(String id, String title, String gender, String description, double price, String duration) {
         this.id = id;
         this.title = title;
         this.gender = gender;
@@ -39,11 +37,11 @@ public class AService {
 
     }
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
