@@ -18,7 +18,7 @@ public class AServiceService {
         this.servicePackageRepository = servicePackageRepository;
     }
 
-    public AService createService(String id, String title, String gender, String description, double price, String duration) {
+    public AService createService(Integer id, String title, String gender, String description, double price, String duration) {
         return serviceRepository.save( new AService(id, title, gender, description, price, duration));
     }
 

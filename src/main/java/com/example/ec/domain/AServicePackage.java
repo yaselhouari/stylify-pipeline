@@ -11,7 +11,7 @@ public class AServicePackage {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
 
-    private String id;
+    private Integer id;
 
     @Column
     private String name;
@@ -19,26 +19,23 @@ public class AServicePackage {
     @Column
     private String description;
 
-    public AServicePackage(String code, String name) {
-        this.id = code;
-        this.name = name;
-    }
+
 
     public AServicePackage() {
 
     }
 
-    public AServicePackage(String id, String name, String description) {
+    public AServicePackage(Integer id, String name, String description) {
         this.id = id;
         this.name = name;
         this.description = description;
     }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

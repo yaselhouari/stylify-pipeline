@@ -15,7 +15,7 @@ public class AServicePackageService {
         this.servicePackageRepository = servicePackageRepository;
     }
 
-    public AServicePackage createServicePackage(String id, String name, String description) {
+    public AServicePackage createServicePackage(Integer id, String name, String description) {
         return servicePackageRepository.findById(id)
                 .orElse(servicePackageRepository.save(new AServicePackage(id, name, description)));
     }
