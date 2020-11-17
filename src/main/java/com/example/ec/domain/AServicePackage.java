@@ -1,4 +1,4 @@
-package net.devlance.stylify.domain;
+package com.example.ec.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class ServicePackage {
+public class AServicePackage {
 
     @Id
     @GeneratedValue
@@ -15,12 +15,12 @@ public class ServicePackage {
     @Column
     private String name;
 
-    public ServicePackage(String code, String name) {
+    public AServicePackage(String code, String name) {
         this.code = code;
         this.name = name;
     }
 
-    public ServicePackage() {
+    public AServicePackage() {
 
     }
 

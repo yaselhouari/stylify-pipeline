@@ -1,13 +1,12 @@
-package net.devlance.stylify.domain;
+package com.example.ec.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import java.sql.Time;
 
 @Entity
-public class Service {
+public class AService {
 
     @Id
     @GeneratedValue
@@ -27,7 +26,7 @@ public class Service {
     @Column
     String duration;
 
-    public Service(Integer id, String title, String gender, String description, double price, String duration) {
+    public AService(Integer id, String title, String gender, String description, double price, String duration) {
         this.id = id;
         this.title = title;
         this.gender = gender;
@@ -36,7 +35,7 @@ public class Service {
         this.duration = duration;
     }
 
-    public Service() {
+    public AService() {
 
     }
 
