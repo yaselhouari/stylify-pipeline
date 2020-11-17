@@ -3,18 +3,15 @@ package com.example.ec.domain;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Table;
-import java.io.Serializable;
 import java.util.Objects;
 
 /**
  * A Classification of Tours.
  *
- * Created by Yassine El Houari
+ * Created by Mary Ellen Bowman
  */
-@Table(name="tour_package")
 @Entity
-public class TourPackage implements Serializable {
+public class TourPackage {
     @Id
     private String code;
 

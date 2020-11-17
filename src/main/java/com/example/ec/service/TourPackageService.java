@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 /**
  * Tour Package Service
  *
- * Created by Yassine El Houari
+ * Created by Mary Ellen Bowman
  */
 @Service
 public class TourPackageService {
@@ -19,15 +19,27 @@ public class TourPackageService {
         this.tourPackageRepository = tourPackageRepository;
     }
 
+    /**
+     * Create a Tour Package
+     *
+     * @param code code of the package
+     * @param name name of the package
+     *
+     * @return new or existing tour package
+     */
     public TourPackage createTourPackage(String code, String name) {
-        return !tourPackageRepository.existsById(code) ?
-                tourPackageRepository.save(new TourPackage(code, name)) :
-                null;
-
+        return tourPackageRepository.findById(code).orElse(tourPackageRepository.save(new TourPackage(code, name)));
     }
+
+    /**
+     * Lookup All Tour packages
+     *
+     * @return
+     */
     public Iterable<TourPackage> lookup(){
         return tourPackageRepository.findAll();
     }
+
     public long total() {
         return tourPackageRepository.count();
     }

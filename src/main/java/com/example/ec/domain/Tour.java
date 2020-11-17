@@ -1,18 +1,17 @@
 package com.example.ec.domain;
 
 import javax.persistence.*;
-import java.io.Serializable;
 import java.util.Objects;
 
 /**
  * The Tour contains all attributes of an Explore California Tour.
  *
- * Created by Yassine El Houari
+ * Created by Mary Ellen Bowman
  */
 @Entity
-public class Tour implements Serializable{
+public class Tour {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private Integer id;
 
     @Column
@@ -38,14 +37,14 @@ public class Tour implements Serializable{
 
 
     @ManyToOne
-    @JoinColumn(name="tour_package_code")
     private TourPackage tourPackage;
 
     @Column
-    @Enumerated(EnumType.STRING)
+    @Enumerated
     private Difficulty difficulty;
 
     @Column
+    @Enumerated(EnumType.STRING)
     private Region region;
 
     public Tour(String title, String description, String blurb, Integer price, String duration, String bullets,
@@ -73,24 +72,48 @@ public class Tour implements Serializable{
         return title;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
     public String getDescription() {
         return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getBlurb() {
         return blurb;
     }
 
+    public void setBlurb(String blurb) {
+        this.blurb = blurb;
+    }
+
     public Integer getPrice() {
         return price;
+    }
+
+    public void setPrice(Integer price) {
+        this.price = price;
     }
 
     public String getDuration() {
         return duration;
     }
 
+    public void setDuration(String duration) {
+        this.duration = duration;
+    }
+
     public String getBullets() {
         return bullets;
+    }
+
+    public void setBullets(String bullets) {
+        this.bullets = bullets;
     }
 
     public String getKeywords() {
@@ -101,12 +124,28 @@ public class Tour implements Serializable{
         return tourPackage;
     }
 
+    public void setTourPackage(TourPackage tourPackage) {
+        this.tourPackage = tourPackage;
+    }
+
+    public void setKeywords(String keywords) {
+        this.keywords = keywords;
+    }
+
     public Difficulty getDifficulty() {
         return difficulty;
     }
 
+    public void setDifficulty(Difficulty difficulty) {
+        this.difficulty = difficulty;
+    }
+
     public Region getRegion() {
         return region;
+    }
+
+    public void setRegion(Region region) {
+        this.region = region;
     }
 
     @Override

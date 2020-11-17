@@ -2844,3 +2844,247 @@ select count(*) as col_0_0_ from aservice_package aservicepa0_ [42102-200]
 2020-11-17 18:40:54.405  INFO 9752 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
 2020-11-17 18:40:54.407  INFO 9752 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
 2020-11-17 18:40:54.539  INFO 9752 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-17 19:02:49.532  INFO 10944 --- [main] com.example.ec.ExplorecaliApplication    : Starting ExplorecaliApplication on DESKTOP-7SLLO4E with PID 10944 (C:\Users\lenovo\Desktop\explorecali\target\classes started by lenovo in C:\Users\lenovo\Desktop\explorecali)
+2020-11-17 19:02:49.535 DEBUG 10944 --- [main] com.example.ec.ExplorecaliApplication    : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-11-17 19:02:49.536  INFO 10944 --- [main] com.example.ec.ExplorecaliApplication    : The following profiles are active: default
+2020-11-17 19:02:50.188  INFO 10944 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-17 19:02:50.236  INFO 10944 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42ms. Found 2 JPA repository interfaces.
+2020-11-17 19:02:50.779  INFO 10944 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-17 19:02:50.786  INFO 10944 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-17 19:02:50.786  INFO 10944 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-17 19:02:50.920  INFO 10944 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-17 19:02:50.920  INFO 10944 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1327 ms
+2020-11-17 19:02:51.078  INFO 10944 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-17 19:02:51.082  INFO 10944 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-17 19:02:51.148  INFO 10944 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-17 19:02:51.155  INFO 10944 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:6a0856db-13dd-4805-9956-a342269a2995 (H2 1.4)
+2020-11-17 19:02:51.216  INFO 10944 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 9 migrations (execution time 00:00.026s)
+2020-11-17 19:02:51.226  INFO 10944 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-11-17 19:02:51.259  INFO 10944 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-11-17 19:02:51.264  INFO 10944 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.1 - CreateTourSchema
+2020-11-17 19:02:51.305  INFO 10944 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.2 - AddTours
+2020-11-17 19:02:51.330  INFO 10944 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.3 - CreateTourRatingSchema
+2020-11-17 19:02:51.348  INFO 10944 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.4 - AddTourRatings
+2020-11-17 19:02:51.361  INFO 10944 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.1 - CreateSecuritySchema
+2020-11-17 19:02:51.376  INFO 10944 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.2 - AddUsers
+2020-11-17 19:02:51.387  INFO 10944 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.3 - CreateServicePackagesSchema
+2020-11-17 19:02:51.400  INFO 10944 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.4 - AddServicePackages
+2020-11-17 19:02:51.412  INFO 10944 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.5 - AddServices
+2020-11-17 19:02:51.422  INFO 10944 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 9 migrations to schema "PUBLIC" (execution time 00:00.170s)
+2020-11-17 19:02:51.498  INFO 10944 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-17 19:02:51.532  WARN 10944 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'explorecaliApplication': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'ec.importfile' in value "${ec.importfile}"
+2020-11-17 19:02:51.532  INFO 10944 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-17 19:02:51.535  INFO 10944 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-17 19:02:51.573  INFO 10944 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-11-17 19:02:51.680  INFO 10944 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-17 19:02:51.767  INFO 10944 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-17 19:02:52.110  INFO 10944 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-17 19:02:52.115  INFO 10944 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-17 19:02:52.117  INFO 10944 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-17 19:02:52.118  INFO 10944 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-11-17 19:02:52.120  INFO 10944 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-11-17 19:02:52.121  INFO 10944 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-11-17 19:02:52.129  INFO 10944 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-11-17 19:02:52.140 ERROR 10944 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'explorecaliApplication': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'ec.importfile' in value "${ec.importfile}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:405)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.example.ec.ExplorecaliApplication.main(ExplorecaliApplication.java:34)
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'ec.importfile' in value "${ec.importfile}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:178)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:175)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:918)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1248)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	... 18 common frames omitted
+
+2020-11-17 19:03:26.250  INFO 2868 --- [main] com.example.ec.ExplorecaliApplication    : Starting ExplorecaliApplication on DESKTOP-7SLLO4E with PID 2868 (C:\Users\lenovo\Desktop\explorecali\target\classes started by lenovo in C:\Users\lenovo\Desktop\explorecali)
+2020-11-17 19:03:26.252 DEBUG 2868 --- [main] com.example.ec.ExplorecaliApplication    : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-11-17 19:03:26.253  INFO 2868 --- [main] com.example.ec.ExplorecaliApplication    : The following profiles are active: default
+2020-11-17 19:03:26.851  INFO 2868 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-17 19:03:26.892  INFO 2868 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36ms. Found 2 JPA repository interfaces.
+2020-11-17 19:03:27.348  INFO 2868 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-17 19:03:27.354  INFO 2868 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-17 19:03:27.354  INFO 2868 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-17 19:03:27.473  INFO 2868 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-17 19:03:27.474  INFO 2868 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1181 ms
+2020-11-17 19:03:27.627  INFO 2868 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-17 19:03:27.632  INFO 2868 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-17 19:03:27.697  INFO 2868 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-17 19:03:27.704  INFO 2868 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:35e23fd8-b598-4d6e-8b4c-9145f48ab149 (H2 1.4)
+2020-11-17 19:03:27.755  INFO 2868 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 9 migrations (execution time 00:00.021s)
+2020-11-17 19:03:27.764  INFO 2868 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-11-17 19:03:27.795  INFO 2868 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-11-17 19:03:27.799  INFO 2868 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.1 - CreateTourSchema
+2020-11-17 19:03:27.835  INFO 2868 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.2 - AddTours
+2020-11-17 19:03:27.857  INFO 2868 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.3 - CreateTourRatingSchema
+2020-11-17 19:03:27.869  INFO 2868 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.4 - AddTourRatings
+2020-11-17 19:03:27.882  INFO 2868 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.1 - CreateSecuritySchema
+2020-11-17 19:03:27.895  INFO 2868 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.2 - AddUsers
+2020-11-17 19:03:27.904  INFO 2868 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.3 - CreateServicePackagesSchema
+2020-11-17 19:03:27.916  INFO 2868 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.4 - AddServicePackages
+2020-11-17 19:03:27.927  INFO 2868 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.5 - AddServices
+2020-11-17 19:03:27.937  INFO 2868 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 9 migrations to schema "PUBLIC" (execution time 00:00.147s)
+2020-11-17 19:03:28.015  INFO 2868 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-17 19:03:28.048  WARN 2868 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'explorecaliApplication': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'ec.importfile' in value "${ec.importfile}"
+2020-11-17 19:03:28.048  INFO 2868 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-17 19:03:28.049  INFO 2868 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-17 19:03:28.093  INFO 2868 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-11-17 19:03:28.196  INFO 2868 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-17 19:03:28.271  INFO 2868 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-17 19:03:28.635  INFO 2868 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-17 19:03:28.640  INFO 2868 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-17 19:03:28.643  INFO 2868 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-17 19:03:28.643  INFO 2868 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-11-17 19:03:28.645  INFO 2868 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-11-17 19:03:28.647  INFO 2868 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-11-17 19:03:28.660  INFO 2868 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-11-17 19:03:28.666 ERROR 2868 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'explorecaliApplication': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'ec.importfile' in value "${ec.importfile}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:405)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.example.ec.ExplorecaliApplication.main(ExplorecaliApplication.java:34)
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'ec.importfile' in value "${ec.importfile}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:178)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:175)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:918)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1248)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	... 18 common frames omitted
+
+2020-11-17 19:05:09.811  INFO 14340 --- [main] com.example.ec.ExplorecaliApplication    : Starting ExplorecaliApplication on DESKTOP-7SLLO4E with PID 14340 (C:\Users\lenovo\Desktop\explorecali\target\classes started by lenovo in C:\Users\lenovo\Desktop\explorecali)
+2020-11-17 19:05:09.815 DEBUG 14340 --- [main] com.example.ec.ExplorecaliApplication    : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-11-17 19:05:09.815  INFO 14340 --- [main] com.example.ec.ExplorecaliApplication    : The following profiles are active: default
+2020-11-17 19:05:10.493  INFO 14340 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-17 19:05:10.534  INFO 14340 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35ms. Found 2 JPA repository interfaces.
+2020-11-17 19:05:10.991  INFO 14340 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-17 19:05:10.997  INFO 14340 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-17 19:05:10.997  INFO 14340 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-17 19:05:11.124  INFO 14340 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-17 19:05:11.124  INFO 14340 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1260 ms
+2020-11-17 19:05:11.296  INFO 14340 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-17 19:05:11.301  INFO 14340 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-17 19:05:11.365  INFO 14340 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-17 19:05:11.371  INFO 14340 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:550c82dd-35f1-418e-a73e-ed3ef650c49e (H2 1.4)
+2020-11-17 19:05:11.422  INFO 14340 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 9 migrations (execution time 00:00.021s)
+2020-11-17 19:05:11.431  INFO 14340 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-11-17 19:05:11.465  INFO 14340 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-11-17 19:05:11.469  INFO 14340 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.1 - CreateTourSchema
+2020-11-17 19:05:11.505  INFO 14340 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.2 - AddTours
+2020-11-17 19:05:11.526  INFO 14340 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.3 - CreateTourRatingSchema
+2020-11-17 19:05:11.540  INFO 14340 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.4 - AddTourRatings
+2020-11-17 19:05:11.552  INFO 14340 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.1 - CreateSecuritySchema
+2020-11-17 19:05:11.568  INFO 14340 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.2 - AddUsers
+2020-11-17 19:05:11.582  INFO 14340 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.3 - CreateServicePackagesSchema
+2020-11-17 19:05:11.596  INFO 14340 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.4 - AddServicePackages
+2020-11-17 19:05:11.610  INFO 14340 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.5 - AddServices
+2020-11-17 19:05:11.622  INFO 14340 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 9 migrations to schema "PUBLIC" (execution time 00:00.163s)
+2020-11-17 19:05:11.702  INFO 14340 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-17 19:05:11.739  INFO 14340 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-17 19:05:11.855  INFO 14340 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-11-17 19:05:11.985  INFO 14340 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-17 19:05:12.056  INFO 14340 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-17 19:05:12.391  INFO 14340 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-17 19:05:12.397  INFO 14340 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-17 19:05:12.632  WARN 14340 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-17 19:05:13.015  INFO 14340 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 4d600885-f13e-4cf4-ad81-e8f19956e6b9
+
+2020-11-17 19:05:13.116  INFO 14340 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@74a74070, org.springframework.security.web.context.SecurityContextPersistenceFilter@2f0e7fa8, org.springframework.security.web.header.HeaderWriterFilter@279e1422, org.springframework.security.web.csrf.CsrfFilter@35841d6, org.springframework.security.web.authentication.logout.LogoutFilter@673a9db4, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5da3f32a, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@96be1ae, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@6c6919ff, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@66dd04e2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@72e49f6a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@54bc3bcf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5de335cf, org.springframework.security.web.session.SessionManagementFilter@3595086b, org.springframework.security.web.access.ExceptionTranslationFilter@19e2db7c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@35d4035f]
+2020-11-17 19:05:13.165  INFO 14340 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-17 19:05:13.166  INFO 14340 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-17 19:05:13.234  INFO 14340 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-17 19:05:13.242  INFO 14340 --- [main] com.example.ec.ExplorecaliApplication    : Started ExplorecaliApplication in 3.778 seconds (JVM running for 4.785)
+2020-11-17 19:06:20.629  INFO 14960 --- [main] com.example.ec.ExplorecaliApplication    : Starting ExplorecaliApplication on DESKTOP-7SLLO4E with PID 14960 (C:\Users\lenovo\Desktop\explorecali\target\classes started by lenovo in C:\Users\lenovo\Desktop\explorecali)
+2020-11-17 19:06:20.632 DEBUG 14960 --- [main] com.example.ec.ExplorecaliApplication    : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-11-17 19:06:20.632  INFO 14960 --- [main] com.example.ec.ExplorecaliApplication    : The following profiles are active: default
+2020-11-17 19:06:21.226  INFO 14960 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-17 19:06:21.268  INFO 14960 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37ms. Found 2 JPA repository interfaces.
+2020-11-17 19:06:21.735  INFO 14960 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-17 19:06:21.742  INFO 14960 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-17 19:06:21.742  INFO 14960 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-17 19:06:21.865  INFO 14960 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-17 19:06:21.865  INFO 14960 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1196 ms
+2020-11-17 19:06:22.021  INFO 14960 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-17 19:06:22.025  INFO 14960 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-17 19:06:22.094  INFO 14960 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-17 19:06:22.101  INFO 14960 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:16a1eb27-c4b6-4c65-a946-1c3ce8579894 (H2 1.4)
+2020-11-17 19:06:22.151  INFO 14960 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 9 migrations (execution time 00:00.021s)
+2020-11-17 19:06:22.160  INFO 14960 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-11-17 19:06:22.195  INFO 14960 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-11-17 19:06:22.201  INFO 14960 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.1 - CreateTourSchema
+2020-11-17 19:06:22.245  INFO 14960 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.2 - AddTours
+2020-11-17 19:06:22.264  INFO 14960 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.3 - CreateTourRatingSchema
+2020-11-17 19:06:22.277  INFO 14960 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.4 - AddTourRatings
+2020-11-17 19:06:22.288  INFO 14960 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.1 - CreateSecuritySchema
+2020-11-17 19:06:22.301  INFO 14960 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.2 - AddUsers
+2020-11-17 19:06:22.312  INFO 14960 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.3 - CreateServicePackagesSchema
+2020-11-17 19:06:22.324  INFO 14960 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.4 - AddServicePackages
+2020-11-17 19:06:22.334  INFO 14960 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.5 - AddServices
+2020-11-17 19:06:22.344  INFO 14960 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 9 migrations to schema "PUBLIC" (execution time 00:00.155s)
+2020-11-17 19:06:22.415  INFO 14960 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-17 19:06:22.448  INFO 14960 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-17 19:06:22.482  INFO 14960 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-11-17 19:06:22.596  INFO 14960 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-17 19:06:22.673  INFO 14960 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-17 19:06:23.003  INFO 14960 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-17 19:06:23.008  INFO 14960 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-17 19:06:23.247  WARN 14960 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-17 19:06:23.635  INFO 14960 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 0640c760-0475-4672-bf9c-cfc48e25845f
+
+2020-11-17 19:06:23.738  INFO 14960 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@103478b8, org.springframework.security.web.context.SecurityContextPersistenceFilter@26612078, org.springframework.security.web.header.HeaderWriterFilter@312819ae, org.springframework.security.web.csrf.CsrfFilter@2d7aa291, org.springframework.security.web.authentication.logout.LogoutFilter@4552f905, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@74badf19, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@27053257, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@270f7b4d, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3063be68, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@13714753, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@27ec74a3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@56b704ea, org.springframework.security.web.session.SessionManagementFilter@6879e983, org.springframework.security.web.access.ExceptionTranslationFilter@2f0e7fa8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@24435620]
+2020-11-17 19:06:23.788  INFO 14960 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-17 19:06:23.790  INFO 14960 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…

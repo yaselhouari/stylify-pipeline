@@ -1,31 +1,23 @@
 package com.example.ec.domain;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @Entity
-@Table(name="service_package")
-public class AServicePackage {
-
-
-
+public class ServicePackage {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
-
+    @GeneratedValue
     private Integer id;
 
     @Column
-    private String name;
+    String name;
 
     @Column
-    private String description;
+    String description;
 
-
-
-    public AServicePackage() {
-
-    }
-
-    public AServicePackage(Integer id, String name, String description) {
+    public ServicePackage(Integer id, String name, String description) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -54,6 +46,4 @@ public class AServicePackage {
     public void setDescription(String description) {
         this.description = description;
     }
-
-
 }
