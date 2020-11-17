@@ -1,0 +1,18 @@
+CREATE TABLE service_package(
+  id  BIGINT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(50) NOT NULL,
+  description VARCHAR(2000) NOT NULL
+);
+
+CREATE TABLE service (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  package_id CHAR(2) NOT NULL,
+  title VARCHAR(100) NOT NULL,
+  description VARCHAR(2000) NOT NULL,
+  gender VARCHAR(1) NOT NULL,
+  price VARCHAR(10) not null,
+  duration VARCHAR(32) NOT NULL
+);
+
+ALTER TABLE service ADD CONSTRAINT FK_SERVICE_PACKAGE_ID FOREIGN KEY (package_id) REFERENCES service_package(id);
+
