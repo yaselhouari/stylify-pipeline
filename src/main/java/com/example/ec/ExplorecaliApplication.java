@@ -12,6 +12,7 @@ public class ExplorecaliApplication implements CommandLineRunner {
     @Autowired
     private MyServicePackageService servicePackage;
 
+
     public static void main(String[] args) {
 		SpringApplication.run(ExplorecaliApplication.class, args);
 	}
@@ -20,6 +21,7 @@ public class ExplorecaliApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
         System.out.println(servicePackage.total());
         servicePackage.createServicePackage(11,"name", "description");
+        System.out.println(servicePackage.total());
     }
     
 }
