@@ -1,4 +1,4 @@
-INSERT INTO service_package (id, name, description) VALUES
+INSERT INTO My_Service_Package (id, name, description) VALUES
 (1,  'coloration et meches', 'description'),
 (2,  'lissage', 'description'),
 (3,  'manicure pedicure', 'description'),
@@ -10,5 +10,4 @@ INSERT INTO service_package (id, name, description) VALUES
 (8,  'maquillage', 'description'),
 (9,  'epilcation', 'description'),
 (10,  'soins de visage', 'description');
-
 
