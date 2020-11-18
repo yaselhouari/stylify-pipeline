@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Objects;
 
-public class MyServiceProvider {
+public class MyClient {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -25,10 +25,10 @@ public class MyServiceProvider {
     @Column
     private String location;
 
-    public MyServiceProvider() {
+    public MyClient() {
     }
 
-    public MyServiceProvider(Integer id, String firstName, String lastName, String gender, String mobile, String email, String birthDate, String location) {
+    public MyClient(Integer id, String firstName, String lastName, String gender, String mobile, String email, String birthDate, String location) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -107,7 +107,7 @@ public class MyServiceProvider {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        MyServiceProvider myClient = (MyServiceProvider) o;
+        MyClient myClient = (MyClient) o;
         return id.equals(myClient.id) &&
                 firstName.equals(myClient.firstName) &&
                 lastName.equals(myClient.lastName) &&
