@@ -10,5 +10,4 @@ public class MyService {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
 }
