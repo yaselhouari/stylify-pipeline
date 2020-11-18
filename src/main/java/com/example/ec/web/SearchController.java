@@ -4,7 +4,6 @@ import com.example.ec.helper.MyQuery;
 import com.example.ec.helper.MyResult;
 import com.example.ec.service.MySearchService;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 

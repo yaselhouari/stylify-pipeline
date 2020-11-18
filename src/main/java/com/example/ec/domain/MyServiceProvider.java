@@ -1,11 +1,9 @@
 package com.example.ec.domain;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Objects;
 
+@Entity
 public class MyServiceProvider {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,11 +22,17 @@ public class MyServiceProvider {
     private String birthDate;
     @Column
     private String location;
+    @Column
+    private String username;
+    @Column
+    private String password;
+    @Column
+    private String status;
 
     public MyServiceProvider() {
     }
 
-    public MyServiceProvider(Integer id, String firstName, String lastName, String gender, String mobile, String email, String birthDate, String location) {
+    public MyServiceProvider(Integer id, String firstName, String lastName, String gender, String mobile, String email, String birthDate, String location, String username, String password, String status) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -37,6 +41,9 @@ public class MyServiceProvider {
         this.email = email;
         this.birthDate = birthDate;
         this.location = location;
+        this.username = username;
+        this.password = password;
+        this.status = status;
     }
 
     public Integer getId() {
@@ -103,23 +110,67 @@ public class MyServiceProvider {
         this.location = location;
     }
 
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    @Override
+    public String toString() {
+        return "MyServiceProvider{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", gender='" + gender + '\'' +
+                ", mobile='" + mobile + '\'' +
+                ", email='" + email + '\'' +
+                ", birthDate='" + birthDate + '\'' +
+                ", location='" + location + '\'' +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", status='" + status + '\'' +
+                '}';
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        MyServiceProvider myClient = (MyServiceProvider) o;
-        return id.equals(myClient.id) &&
-                firstName.equals(myClient.firstName) &&
-                lastName.equals(myClient.lastName) &&
-                gender.equals(myClient.gender) &&
-                mobile.equals(myClient.mobile) &&
-                email.equals(myClient.email) &&
-                birthDate.equals(myClient.birthDate) &&
-                location.equals(myClient.location);
+        MyServiceProvider that = (MyServiceProvider) o;
+        return id.equals(that.id) &&
+                firstName.equals(that.firstName) &&
+                lastName.equals(that.lastName) &&
+                gender.equals(that.gender) &&
+                mobile.equals(that.mobile) &&
+                email.equals(that.email) &&
+                birthDate.equals(that.birthDate) &&
+                location.equals(that.location) &&
+                username.equals(that.username) &&
+                password.equals(that.password) &&
+                status.equals(that.status);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, firstName, lastName, gender, mobile, email, birthDate, location);
+        return Objects.hash(id, firstName, lastName, gender, mobile, email, birthDate, location, username, password, status);
     }
 }

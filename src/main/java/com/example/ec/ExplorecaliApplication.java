@@ -22,10 +22,7 @@ public class ExplorecaliApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        System.out.println(servicePackage.total());
-        servicePackage.createServicePackage(11,"name", "description");
-        System.out.println(servicePackage.total());
-        System.out.println(providerService.total());
+
     }
     
 }
