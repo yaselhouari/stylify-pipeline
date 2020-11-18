@@ -15,7 +15,8 @@ public class SearchController {
     public ArrayList<MyResult> postSearch(
             @RequestParam(value="searchDate") String searchDate,
             @RequestParam(value="searchServices") String searchServices,
-            @RequestParam(value="searchKeywords")String searchKeywords) {
+            @RequestParam(value="searchKeywords")String searchKeywords,
+            @RequestParam(value="locationType")String locationType) {
         MySearchService searchService = new MySearchService(new MyQuery());
         return searchService.getResulst();
     }
