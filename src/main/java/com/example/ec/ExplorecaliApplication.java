@@ -1,6 +1,7 @@
 package com.example.ec;
 
 import com.example.ec.service.MyServicePackageService;
+import com.example.ec.service.MyServiceProviderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -11,6 +12,8 @@ public class ExplorecaliApplication implements CommandLineRunner {
 
     @Autowired
     private MyServicePackageService servicePackage;
+    @Autowired
+    private MyServiceProviderService providerService;
 
 
     public static void main(String[] args) {
@@ -22,6 +25,7 @@ public class ExplorecaliApplication implements CommandLineRunner {
         System.out.println(servicePackage.total());
         servicePackage.createServicePackage(11,"name", "description");
         System.out.println(servicePackage.total());
+        System.out.println(providerService.total());
     }
     
 }
