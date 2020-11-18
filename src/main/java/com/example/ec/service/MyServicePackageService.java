@@ -24,5 +24,9 @@ public class MyServicePackageService {
     public long total() {
         return myServicePackageRepository.count();
     }
+
+    public Iterable<MyServicePackage> lookup() {
+        return myServicePackageRepository.findAll();
+    }
 }
 

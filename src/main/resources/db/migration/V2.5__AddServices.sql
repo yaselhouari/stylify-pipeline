@@ -1,4 +1,4 @@
-INSERT INTO service (package_id, title, description, gender, price, duration) VALUES
+INSERT INTO My_Service (package_id, title, description, gender, price, duration) VALUES
 (1, 'coloration cheveux', 'description', 'm', '100', '1:00'),
 (1, 'coloration barbe', 'description', 'm', '100', '1:00'),
 (1, 'coloration moustache', 'description', 'm', '100', '1:00'),
