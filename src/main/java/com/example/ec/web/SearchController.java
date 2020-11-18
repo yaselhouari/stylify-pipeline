@@ -8,9 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SearchController {
     @PostMapping("/search")
-    public String postSearch(@RequestParam(value="searchDate") String searchDate) {
-        return "searchDate";
+    public String postSearch(@RequestParam(value="searchDate") String searchDate, @RequestParam(value="searchServices") String searchServices) {
+        return searchDate + " " + searchServices;
     }
-
-
 }

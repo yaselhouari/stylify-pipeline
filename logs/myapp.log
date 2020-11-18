@@ -1194,3 +1194,164 @@ java.lang.IllegalArgumentException: Invalid character found in the request targe
 2020-11-18 12:16:43.170  INFO 9440 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-11-18 12:16:43.170  INFO 9440 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2020-11-18 12:16:43.182  INFO 9440 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2020-11-18 12:18:21.332  INFO 10336 --- [main] com.example.ec.ExplorecaliApplication    : Starting ExplorecaliApplication on DESKTOP-7SLLO4E with PID 10336 (C:\Users\lenovo\Desktop\explorecali\target\classes started by lenovo in C:\Users\lenovo\Desktop\explorecali)
+2020-11-18 12:18:21.336 DEBUG 10336 --- [main] com.example.ec.ExplorecaliApplication    : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-11-18 12:18:21.336  INFO 10336 --- [main] com.example.ec.ExplorecaliApplication    : The following profiles are active: default
+2020-11-18 12:18:21.977  INFO 10336 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-18 12:18:22.026  INFO 10336 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43ms. Found 4 JPA repository interfaces.
+2020-11-18 12:18:22.455  INFO 10336 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-18 12:18:22.461  INFO 10336 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-18 12:18:22.461  INFO 10336 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-18 12:18:22.582  INFO 10336 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-18 12:18:22.582  INFO 10336 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1192 ms
+2020-11-18 12:18:22.714  INFO 10336 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-18 12:18:22.719  INFO 10336 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-18 12:18:22.785  INFO 10336 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-18 12:18:22.791  INFO 10336 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:a15312df-671b-485a-aae0-dde576c8b95d (H2 1.4)
+2020-11-18 12:18:22.840  INFO 10336 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 11 migrations (execution time 00:00.023s)
+2020-11-18 12:18:22.849  INFO 10336 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-11-18 12:18:22.882  INFO 10336 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-11-18 12:18:22.886  INFO 10336 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.1 - CreateTourSchema
+2020-11-18 12:18:22.925  INFO 10336 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.2 - AddTours
+2020-11-18 12:18:22.946  INFO 10336 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.3 - CreateTourRatingSchema
+2020-11-18 12:18:22.959  INFO 10336 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.4 - AddTourRatings
+2020-11-18 12:18:22.971  INFO 10336 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.1 - CreateSecuritySchema
+2020-11-18 12:18:22.982  INFO 10336 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.2 - AddUsers
+2020-11-18 12:18:22.994  INFO 10336 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.3 - CreateServicePackagesSchema
+2020-11-18 12:18:23.007  INFO 10336 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.4 - AddServicePackages
+2020-11-18 12:18:23.019  INFO 10336 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.5 - AddServices
+2020-11-18 12:18:23.032  INFO 10336 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.6 - CreateServiceProviderSchema
+2020-11-18 12:18:23.042  INFO 10336 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.7 - AddServiceProviders
+2020-11-18 12:18:23.050  INFO 10336 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 11 migrations to schema "PUBLIC" (execution time 00:00.174s)
+2020-11-18 12:18:23.128  INFO 10336 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-18 12:18:23.165  INFO 10336 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-18 12:18:23.209  INFO 10336 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-11-18 12:18:23.328  INFO 10336 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-18 12:18:23.409  INFO 10336 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-18 12:18:23.774  INFO 10336 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-18 12:18:23.779  INFO 10336 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-18 12:18:24.027  WARN 10336 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-18 12:18:24.397  INFO 10336 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-18 12:18:24.399  INFO 10336 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-18 12:18:24.471  INFO 10336 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-18 12:18:24.479  INFO 10336 --- [main] com.example.ec.ExplorecaliApplication    : Started ExplorecaliApplication in 3.445 seconds (JVM running for 4.458)
+2020-11-18 12:18:28.503  INFO 10336 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-18 12:18:28.503  INFO 10336 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-18 12:18:28.515  INFO 10336 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2020-11-18 12:19:00.751  INFO 10336 --- [http-nio-8080-exec-4] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in the request target [/search?searchDate=%222020-18-11%22&searchServices=[1,2,3,4,5]]. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:490)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:261)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+2020-11-18 12:19:54.835  INFO 3820 --- [main] com.example.ec.ExplorecaliApplication    : Starting ExplorecaliApplication on DESKTOP-7SLLO4E with PID 3820 (C:\Users\lenovo\Desktop\explorecali\target\classes started by lenovo in C:\Users\lenovo\Desktop\explorecali)
+2020-11-18 12:19:54.838 DEBUG 3820 --- [main] com.example.ec.ExplorecaliApplication    : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-11-18 12:19:54.839  INFO 3820 --- [main] com.example.ec.ExplorecaliApplication    : The following profiles are active: default
+2020-11-18 12:19:55.464  INFO 3820 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-18 12:19:55.511  INFO 3820 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42ms. Found 4 JPA repository interfaces.
+2020-11-18 12:19:55.944  INFO 3820 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-18 12:19:55.950  INFO 3820 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-18 12:19:55.950  INFO 3820 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-18 12:19:56.075  INFO 3820 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-18 12:19:56.076  INFO 3820 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1183 ms
+2020-11-18 12:19:56.206  INFO 3820 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-18 12:19:56.211  INFO 3820 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-18 12:19:56.275  INFO 3820 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-18 12:19:56.282  INFO 3820 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:88c99402-7d4d-4ff9-930c-0dd773d6a335 (H2 1.4)
+2020-11-18 12:19:56.332  INFO 3820 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 11 migrations (execution time 00:00.023s)
+2020-11-18 12:19:56.340  INFO 3820 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-11-18 12:19:56.373  INFO 3820 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-11-18 12:19:56.377  INFO 3820 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.1 - CreateTourSchema
+2020-11-18 12:19:56.414  INFO 3820 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.2 - AddTours
+2020-11-18 12:19:56.436  INFO 3820 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.3 - CreateTourRatingSchema
+2020-11-18 12:19:56.452  INFO 3820 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.4 - AddTourRatings
+2020-11-18 12:19:56.467  INFO 3820 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.1 - CreateSecuritySchema
+2020-11-18 12:19:56.481  INFO 3820 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.2 - AddUsers
+2020-11-18 12:19:56.494  INFO 3820 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.3 - CreateServicePackagesSchema
+2020-11-18 12:19:56.506  INFO 3820 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.4 - AddServicePackages
+2020-11-18 12:19:56.521  INFO 3820 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.5 - AddServices
+2020-11-18 12:19:56.532  INFO 3820 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.6 - CreateServiceProviderSchema
+2020-11-18 12:19:56.540  INFO 3820 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.7 - AddServiceProviders
+2020-11-18 12:19:56.546  INFO 3820 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 11 migrations to schema "PUBLIC" (execution time 00:00.179s)
+2020-11-18 12:19:56.611  INFO 3820 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-18 12:19:56.649  INFO 3820 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-18 12:19:56.687  INFO 3820 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-11-18 12:19:56.792  INFO 3820 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-18 12:19:56.873  INFO 3820 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-18 12:19:57.242  INFO 3820 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-18 12:19:57.247  INFO 3820 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-18 12:19:57.496  WARN 3820 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-18 12:19:57.869  INFO 3820 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-18 12:19:57.870  INFO 3820 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-18 12:19:57.936  INFO 3820 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-18 12:19:57.944  INFO 3820 --- [main] com.example.ec.ExplorecaliApplication    : Started ExplorecaliApplication in 3.419 seconds (JVM running for 4.436)
+2020-11-18 12:20:02.145  INFO 3820 --- [http-nio-8080-exec-1] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in the request target [/search?searchDate=%222020-18-11%22&searchServices=[1,2,3,4,5]]. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:490)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:261)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+2020-11-18 12:22:00.818  INFO 3820 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-18 12:22:00.818  INFO 3820 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-18 12:22:00.834  INFO 3820 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2020-11-18 12:32:47.405  INFO 1212 --- [main] com.example.ec.ExplorecaliApplication    : Starting ExplorecaliApplication on DESKTOP-7SLLO4E with PID 1212 (C:\Users\lenovo\Desktop\explorecali\target\classes started by lenovo in C:\Users\lenovo\Desktop\explorecali)
+2020-11-18 12:32:47.407 DEBUG 1212 --- [main] com.example.ec.ExplorecaliApplication    : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-11-18 12:32:47.407  INFO 1212 --- [main] com.example.ec.ExplorecaliApplication    : The following profiles are active: default
+2020-11-18 12:32:48.074  INFO 1212 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-18 12:32:48.125  INFO 1212 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45ms. Found 4 JPA repository interfaces.
+2020-11-18 12:32:48.570  INFO 1212 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-18 12:32:48.576  INFO 1212 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-18 12:32:48.576  INFO 1212 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-18 12:32:48.702  INFO 1212 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-18 12:32:48.702  INFO 1212 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1243 ms
+2020-11-18 12:32:48.888  INFO 1212 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-18 12:32:48.893  INFO 1212 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-18 12:32:48.961  INFO 1212 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-18 12:32:48.968  INFO 1212 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:79da4a4b-89b7-47fb-889a-a26e2e465cc3 (H2 1.4)
+2020-11-18 12:32:49.018  INFO 1212 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 11 migrations (execution time 00:00.023s)
+2020-11-18 12:32:49.027  INFO 1212 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-11-18 12:32:49.060  INFO 1212 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-11-18 12:32:49.065  INFO 1212 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.1 - CreateTourSchema
+2020-11-18 12:32:49.102  INFO 1212 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.2 - AddTours
+2020-11-18 12:32:49.127  INFO 1212 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.3 - CreateTourRatingSchema
+2020-11-18 12:32:49.142  INFO 1212 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.4 - AddTourRatings
+2020-11-18 12:32:49.156  INFO 1212 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.1 - CreateSecuritySchema
+2020-11-18 12:32:49.174  INFO 1212 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.2 - AddUsers
+2020-11-18 12:32:49.190  INFO 1212 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.3 - CreateServicePackagesSchema
+2020-11-18 12:32:49.204  INFO 1212 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.4 - AddServicePackages
+2020-11-18 12:32:49.217  INFO 1212 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.5 - AddServices
+2020-11-18 12:32:49.231  INFO 1212 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.6 - CreateServiceProviderSchema
+2020-11-18 12:32:49.240  INFO 1212 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.7 - AddServiceProviders
+2020-11-18 12:32:49.249  INFO 1212 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 11 migrations to schema "PUBLIC" (execution time 00:00.194s)
+2020-11-18 12:32:49.330  INFO 1212 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-18 12:32:49.381  INFO 1212 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-18 12:32:49.428  INFO 1212 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-11-18 12:32:49.534  INFO 1212 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-18 12:32:49.633  INFO 1212 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-18 12:32:50.002  INFO 1212 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-18 12:32:50.008  INFO 1212 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-18 12:32:50.277  WARN 1212 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-18 12:32:50.662  INFO 1212 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-18 12:32:50.664  INFO 1212 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-18 12:32:50.737  INFO 1212 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-18 12:32:50.744  INFO 1212 --- [main] com.example.ec.ExplorecaliApplication    : Started ExplorecaliApplication in 3.691 seconds (JVM running for 4.971)
+2020-11-18 12:32:58.892  INFO 1212 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-18 12:32:58.892  INFO 1212 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
