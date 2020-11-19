@@ -6,17 +6,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/services")
 public class MyServiceController {
     @Autowired
     MyServiceService myService;
 
-    @GetMapping("/services")
+    @GetMapping
     public Iterable<MyService> getAllServices() {
         return myService.lookup();
     }
 
-    @RequestMapping(value = "/services/byPackageId/{packageId}", method = RequestMethod.GET)
-    public Iterable<MyService> getServicesByPackageId(@PathVariable(value="packageId") Integer packageId) {
+    @GetMapping("/packageId/{packageId}")
+    public Iterable<MyService> getServicesByPackageId(@PathVariable Integer packageId) {
         return myService.getServicesByPackageId(packageId);
     }
 }
