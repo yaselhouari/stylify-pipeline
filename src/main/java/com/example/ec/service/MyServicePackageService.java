@@ -28,5 +28,9 @@ public class MyServicePackageService {
     public Iterable<MyServicePackage> lookup() {
         return myServicePackageRepository.findAll();
     }
+
+    public Iterable<MyService> getServicePackageByGender(String gender) {
+        return myServicePackageRepository.findByGender(gender);
+    }
 }
 

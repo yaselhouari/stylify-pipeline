@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/services")
 public class MyServiceController {
     @Autowired
     MyServiceService myService;
@@ -16,7 +15,7 @@ public class MyServiceController {
         return myService.lookup();
     }
 
-    @RequestMapping(value = "/byPackage/{packageId}", method = RequestMethod.GET)
+    @RequestMapping(value = "/services/byPackageId/{packageId}", method = RequestMethod.GET)
     public Iterable<MyService> getServicesByPackageId(@PathVariable(value="packageId") Integer packageId) {
         return myService.getServicesByPackageId(packageId);
     }

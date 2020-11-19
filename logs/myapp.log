@@ -8113,3 +8113,361 @@ com.example.ec.web.MyServiceController#getAllServices() mapped.
 2020-11-19 14:24:46.592  INFO 16220 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-11-19 14:24:46.592  INFO 16220 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2020-11-19 14:24:46.607  INFO 16220 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2020-11-19 14:27:34.534  INFO 8756 --- [main] com.example.ec.StylifyApplication        : Starting StylifyApplication on DESKTOP-7SLLO4E with PID 8756 (C:\Users\lenovo\Desktop\explorecali\target\classes started by lenovo in C:\Users\lenovo\Desktop\explorecali)
+2020-11-19 14:27:34.536 DEBUG 8756 --- [main] com.example.ec.StylifyApplication        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-11-19 14:27:34.537  INFO 8756 --- [main] com.example.ec.StylifyApplication        : The following profiles are active: default
+2020-11-19 14:27:35.158  INFO 8756 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-19 14:27:35.207  INFO 8756 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43ms. Found 4 JPA repository interfaces.
+2020-11-19 14:27:35.631  INFO 8756 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-19 14:27:35.637  INFO 8756 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-19 14:27:35.637  INFO 8756 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-19 14:27:35.755  INFO 8756 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-19 14:27:35.755  INFO 8756 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1175 ms
+2020-11-19 14:27:35.900  INFO 8756 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-19 14:27:35.905  INFO 8756 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-19 14:27:35.970  INFO 8756 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-19 14:27:35.976  INFO 8756 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:89fbdadf-20e1-4557-ae14-d7454c830b18 (H2 1.4)
+2020-11-19 14:27:36.029  INFO 8756 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.023s)
+2020-11-19 14:27:36.038  INFO 8756 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-11-19 14:27:36.071  INFO 8756 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-11-19 14:27:36.075  INFO 8756 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.1 - CreateTourSchema
+2020-11-19 14:27:36.112  INFO 8756 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.2 - AddTours
+2020-11-19 14:27:36.131  INFO 8756 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.3 - CreateTourRatingSchema
+2020-11-19 14:27:36.143  INFO 8756 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.4 - AddTourRatings
+2020-11-19 14:27:36.153  INFO 8756 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.1 - CreateSecuritySchema
+2020-11-19 14:27:36.165  INFO 8756 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.2 - AddUsers
+2020-11-19 14:27:36.174  INFO 8756 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.3 - CreateServicePackagesSchema
+2020-11-19 14:27:36.185  INFO 8756 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.4 - AddServicePackages
+2020-11-19 14:27:36.196  INFO 8756 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.5 - AddServices
+2020-11-19 14:27:36.206  INFO 8756 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.6 - CreateServiceProviderSchema
+2020-11-19 14:27:36.214  INFO 8756 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.7 - AddServiceProviders
+2020-11-19 14:27:36.222  INFO 8756 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.8 - CreateClientSchema
+2020-11-19 14:27:36.232  INFO 8756 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.9 - AddClients
+2020-11-19 14:27:36.238  INFO 8756 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 13 migrations to schema "PUBLIC" (execution time 00:00.173s)
+2020-11-19 14:27:36.303  INFO 8756 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-19 14:27:36.342  INFO 8756 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-19 14:27:36.385  INFO 8756 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-11-19 14:27:36.489  INFO 8756 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-19 14:27:36.570  INFO 8756 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-19 14:27:36.916  INFO 8756 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-19 14:27:36.921  INFO 8756 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-19 14:27:37.164  WARN 8756 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-19 14:27:37.531  INFO 8756 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-19 14:27:37.532  INFO 8756 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-19 14:27:37.601  INFO 8756 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-19 14:27:37.609  INFO 8756 --- [main] com.example.ec.StylifyApplication        : Started StylifyApplication in 3.383 seconds (JVM running for 4.392)
+2020-11-19 14:27:45.544  INFO 8756 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-19 14:27:45.544  INFO 8756 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-19 14:27:45.557  INFO 8756 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2020-11-19 14:28:17.235 ERROR 8756 --- [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.core.convert.ConverterNotFoundException: No converter found capable of converting from type [com.example.ec.domain.MyServicePackage] to type [com.example.ec.domain.MyService]] with root cause
+
+org.springframework.core.convert.ConverterNotFoundException: No converter found capable of converting from type [com.example.ec.domain.MyServicePackage] to type [com.example.ec.domain.MyService]
+	at org.springframework.core.convert.support.GenericConversionService.handleConverterNotFound(GenericConversionService.java:321)
+	at org.springframework.core.convert.support.GenericConversionService.convert(GenericConversionService.java:194)
+	at org.springframework.core.convert.support.GenericConversionService.convert(GenericConversionService.java:174)
+	at org.springframework.data.repository.query.ResultProcessor$ProjectingConverter.convert(ResultProcessor.java:297)
+	at org.springframework.data.repository.query.ResultProcessor$ChainingConverter.lambda$and$0(ResultProcessor.java:217)
+	at org.springframework.data.repository.query.ResultProcessor$ChainingConverter.convert(ResultProcessor.java:228)
+	at org.springframework.data.repository.query.ResultProcessor.processResult(ResultProcessor.java:156)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:157)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:142)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor$QueryMethodInvoker.invoke(QueryExecutorMethodInterceptor.java:195)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:152)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:367)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:149)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy109.findByGender(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:205)
+	at com.sun.proxy.$Proxy71.findByGender(Unknown Source)
+	at com.example.ec.service.MyServicePackageService.getServicePackageByGender(MyServicePackageService.java:33)
+	at com.example.ec.web.MyServicePackageController.getServicesByPackageId(MyServicePackageController.java:22)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+2020-11-19 14:29:05.363  INFO 14956 --- [main] com.example.ec.StylifyApplication        : Starting StylifyApplication on DESKTOP-7SLLO4E with PID 14956 (C:\Users\lenovo\Desktop\explorecali\target\classes started by lenovo in C:\Users\lenovo\Desktop\explorecali)
+2020-11-19 14:29:05.365 DEBUG 14956 --- [main] com.example.ec.StylifyApplication        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-11-19 14:29:05.366  INFO 14956 --- [main] com.example.ec.StylifyApplication        : The following profiles are active: default
+2020-11-19 14:29:05.949  INFO 14956 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-19 14:29:05.998  INFO 14956 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43ms. Found 4 JPA repository interfaces.
+2020-11-19 14:29:06.425  INFO 14956 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-19 14:29:06.431  INFO 14956 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-19 14:29:06.431  INFO 14956 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-19 14:29:06.549  INFO 14956 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-19 14:29:06.550  INFO 14956 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1145 ms
+2020-11-19 14:29:06.683  INFO 14956 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-19 14:29:06.688  INFO 14956 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-19 14:29:06.752  INFO 14956 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-19 14:29:06.759  INFO 14956 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:7723098b-5a9a-4601-bc9d-2a8a1d8aa288 (H2 1.4)
+2020-11-19 14:29:06.808  INFO 14956 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.023s)
+2020-11-19 14:29:06.818  INFO 14956 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-11-19 14:29:06.853  INFO 14956 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-11-19 14:29:06.858  INFO 14956 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.1 - CreateTourSchema
+2020-11-19 14:29:06.902  INFO 14956 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.2 - AddTours
+2020-11-19 14:29:06.925  INFO 14956 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.3 - CreateTourRatingSchema
+2020-11-19 14:29:06.937  INFO 14956 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.4 - AddTourRatings
+2020-11-19 14:29:06.948  INFO 14956 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.1 - CreateSecuritySchema
+2020-11-19 14:29:06.960  INFO 14956 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.2 - AddUsers
+2020-11-19 14:29:06.969  INFO 14956 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.3 - CreateServicePackagesSchema
+2020-11-19 14:29:06.979  INFO 14956 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.4 - AddServicePackages
+2020-11-19 14:29:06.989  INFO 14956 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.5 - AddServices
+2020-11-19 14:29:07.000  INFO 14956 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.6 - CreateServiceProviderSchema
+2020-11-19 14:29:07.008  INFO 14956 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.7 - AddServiceProviders
+2020-11-19 14:29:07.015  INFO 14956 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.8 - CreateClientSchema
+2020-11-19 14:29:07.022  INFO 14956 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.9 - AddClients
+2020-11-19 14:29:07.029  INFO 14956 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 13 migrations to schema "PUBLIC" (execution time 00:00.181s)
+2020-11-19 14:29:07.092  INFO 14956 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-19 14:29:07.128  INFO 14956 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-19 14:29:07.168  INFO 14956 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-11-19 14:29:07.274  INFO 14956 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-19 14:29:07.351  INFO 14956 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-19 14:29:07.709  INFO 14956 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-19 14:29:07.714  INFO 14956 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-19 14:29:07.963  WARN 14956 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-19 14:29:08.320  INFO 14956 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-19 14:29:08.322  INFO 14956 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-19 14:29:08.395  INFO 14956 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-19 14:29:08.403  INFO 14956 --- [main] com.example.ec.StylifyApplication        : Started StylifyApplication in 3.367 seconds (JVM running for 4.43)
+2020-11-19 14:29:11.683  INFO 14956 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-19 14:29:11.683  INFO 14956 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-19 14:29:11.698  INFO 14956 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2020-11-19 14:29:16.548 ERROR 14956 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.core.convert.ConverterNotFoundException: No converter found capable of converting from type [com.example.ec.domain.MyServicePackage] to type [com.example.ec.domain.MyService]] with root cause
+
+org.springframework.core.convert.ConverterNotFoundException: No converter found capable of converting from type [com.example.ec.domain.MyServicePackage] to type [com.example.ec.domain.MyService]
+	at org.springframework.core.convert.support.GenericConversionService.handleConverterNotFound(GenericConversionService.java:321)
+	at org.springframework.core.convert.support.GenericConversionService.convert(GenericConversionService.java:194)
+	at org.springframework.core.convert.support.GenericConversionService.convert(GenericConversionService.java:174)
+	at org.springframework.data.repository.query.ResultProcessor$ProjectingConverter.convert(ResultProcessor.java:297)
+	at org.springframework.data.repository.query.ResultProcessor$ChainingConverter.lambda$and$0(ResultProcessor.java:217)
+	at org.springframework.data.repository.query.ResultProcessor$ChainingConverter.convert(ResultProcessor.java:228)
+	at org.springframework.data.repository.query.ResultProcessor.processResult(ResultProcessor.java:156)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:157)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:142)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor$QueryMethodInvoker.invoke(QueryExecutorMethodInterceptor.java:195)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:152)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:367)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:149)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy109.findByGender(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:205)
+	at com.sun.proxy.$Proxy71.findByGender(Unknown Source)
+	at com.example.ec.service.MyServicePackageService.getServicePackageByGender(MyServicePackageService.java:33)
+	at com.example.ec.web.MyServicePackageController.getServicesByPackageId(MyServicePackageController.java:22)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+2020-11-19 14:30:19.510  INFO 4700 --- [main] com.example.ec.StylifyApplication        : Starting StylifyApplication on DESKTOP-7SLLO4E with PID 4700 (C:\Users\lenovo\Desktop\explorecali\target\classes started by lenovo in C:\Users\lenovo\Desktop\explorecali)
+2020-11-19 14:30:19.513 DEBUG 4700 --- [main] com.example.ec.StylifyApplication        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-11-19 14:30:19.513  INFO 4700 --- [main] com.example.ec.StylifyApplication        : The following profiles are active: default
+2020-11-19 14:30:20.177  INFO 4700 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-19 14:30:20.228  INFO 4700 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45ms. Found 4 JPA repository interfaces.
+2020-11-19 14:30:20.689  INFO 4700 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-19 14:30:20.696  INFO 4700 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-19 14:30:20.696  INFO 4700 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-19 14:30:20.828  INFO 4700 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-19 14:30:20.828  INFO 4700 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1264 ms
+2020-11-19 14:30:20.989  INFO 4700 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-19 14:30:20.995  INFO 4700 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-19 14:30:21.086  INFO 4700 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-19 14:30:21.094  INFO 4700 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:25018333-febe-4af0-b644-b89b68759fbf (H2 1.4)
+2020-11-19 14:30:21.149  INFO 4700 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.025s)
+2020-11-19 14:30:21.158  INFO 4700 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-11-19 14:30:21.192  INFO 4700 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-11-19 14:30:21.197  INFO 4700 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.1 - CreateTourSchema
+2020-11-19 14:30:21.233  INFO 4700 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.2 - AddTours
+2020-11-19 14:30:21.251  INFO 4700 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.3 - CreateTourRatingSchema
+2020-11-19 14:30:21.263  INFO 4700 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.4 - AddTourRatings
+2020-11-19 14:30:21.274  INFO 4700 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.1 - CreateSecuritySchema
+2020-11-19 14:30:21.287  INFO 4700 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.2 - AddUsers
+2020-11-19 14:30:21.297  INFO 4700 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.3 - CreateServicePackagesSchema
+2020-11-19 14:30:21.307  INFO 4700 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.4 - AddServicePackages
+2020-11-19 14:30:21.320  INFO 4700 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.5 - AddServices
+2020-11-19 14:30:21.330  INFO 4700 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.6 - CreateServiceProviderSchema
+2020-11-19 14:30:21.338  INFO 4700 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.7 - AddServiceProviders
+2020-11-19 14:30:21.347  INFO 4700 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.8 - CreateClientSchema
+2020-11-19 14:30:21.355  INFO 4700 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.9 - AddClients
+2020-11-19 14:30:21.361  INFO 4700 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 13 migrations to schema "PUBLIC" (execution time 00:00.176s)
+2020-11-19 14:30:21.436  INFO 4700 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-19 14:30:21.494  INFO 4700 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-19 14:30:21.534  INFO 4700 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-11-19 14:30:21.645  INFO 4700 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-19 14:30:21.744  INFO 4700 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-19 14:30:22.133  INFO 4700 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-19 14:30:22.138  INFO 4700 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-19 14:30:22.390  WARN 4700 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-19 14:30:22.785  INFO 4700 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-19 14:30:22.787  INFO 4700 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-19 14:30:22.856  INFO 4700 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-19 14:30:22.863  INFO 4700 --- [main] com.example.ec.StylifyApplication        : Started StylifyApplication in 3.673 seconds (JVM running for 4.73)
+2020-11-19 14:30:29.154  INFO 4700 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-19 14:30:29.155  INFO 4700 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-19 14:30:29.168  INFO 4700 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2020-11-19 14:31:02.567  INFO 13024 --- [main] com.example.ec.StylifyApplication        : Starting StylifyApplication on DESKTOP-7SLLO4E with PID 13024 (C:\Users\lenovo\Desktop\explorecali\target\classes started by lenovo in C:\Users\lenovo\Desktop\explorecali)
+2020-11-19 14:31:02.570 DEBUG 13024 --- [main] com.example.ec.StylifyApplication        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-11-19 14:31:02.570  INFO 13024 --- [main] com.example.ec.StylifyApplication        : The following profiles are active: default
+2020-11-19 14:31:03.181  INFO 13024 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-19 14:31:03.235  INFO 13024 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48ms. Found 4 JPA repository interfaces.
+2020-11-19 14:31:03.661  INFO 13024 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-19 14:31:03.667  INFO 13024 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-19 14:31:03.667  INFO 13024 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-19 14:31:03.782  INFO 13024 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-19 14:31:03.783  INFO 13024 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1166 ms
+2020-11-19 14:31:03.924  INFO 13024 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-19 14:31:03.929  INFO 13024 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-19 14:31:04.000  INFO 13024 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-19 14:31:04.007  INFO 13024 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:ba75cc5b-4b73-4959-848c-3a0080c5240a (H2 1.4)
+2020-11-19 14:31:04.064  INFO 13024 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.028s)
+2020-11-19 14:31:04.073  INFO 13024 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-11-19 14:31:04.109  INFO 13024 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-11-19 14:31:04.114  INFO 13024 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.1 - CreateTourSchema
+2020-11-19 14:31:04.155  INFO 13024 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.2 - AddTours
+2020-11-19 14:31:04.176  INFO 13024 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.3 - CreateTourRatingSchema
+2020-11-19 14:31:04.188  INFO 13024 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.4 - AddTourRatings
+2020-11-19 14:31:04.198  INFO 13024 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.1 - CreateSecuritySchema
+2020-11-19 14:31:04.211  INFO 13024 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.2 - AddUsers
+2020-11-19 14:31:04.221  INFO 13024 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.3 - CreateServicePackagesSchema
+2020-11-19 14:31:04.232  INFO 13024 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.4 - AddServicePackages
+2020-11-19 14:31:04.243  INFO 13024 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.5 - AddServices
+2020-11-19 14:31:04.254  INFO 13024 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.6 - CreateServiceProviderSchema
+2020-11-19 14:31:04.262  INFO 13024 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.7 - AddServiceProviders
+2020-11-19 14:31:04.270  INFO 13024 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.8 - CreateClientSchema
+2020-11-19 14:31:04.278  INFO 13024 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.9 - AddClients
+2020-11-19 14:31:04.285  INFO 13024 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 13 migrations to schema "PUBLIC" (execution time 00:00.183s)
+2020-11-19 14:31:04.355  INFO 13024 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-19 14:31:04.394  INFO 13024 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-19 14:31:04.435  INFO 13024 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-11-19 14:31:04.605  INFO 13024 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-19 14:31:04.729  INFO 13024 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-19 14:31:05.074  INFO 13024 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-19 14:31:05.079  INFO 13024 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-19 14:31:05.324  WARN 13024 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-19 14:31:05.692  INFO 13024 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-19 14:31:05.694  INFO 13024 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-19 14:31:05.761  INFO 13024 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-19 14:31:05.768  INFO 13024 --- [main] com.example.ec.StylifyApplication        : Started StylifyApplication in 3.503 seconds (JVM running for 4.516)
+2020-11-19 14:31:09.610  INFO 13024 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-19 14:31:09.611  INFO 13024 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-19 14:31:09.626  INFO 13024 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
