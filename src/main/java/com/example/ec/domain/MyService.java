@@ -19,9 +19,6 @@ public class MyService {
     String description;
 
     @Column
-    String gender;
-
-    @Column
     String price;
 
     @Column
@@ -30,12 +27,11 @@ public class MyService {
     public MyService() {
     }
 
-    public MyService(Integer id, Integer packageId, String title, String description, String gender, String price, String duration) {
+    public MyService(Integer id, Integer packageId, String title, String description, String price, String duration) {
         this.id = id;
         this.packageId = packageId;
         this.title = title;
         this.description = description;
-        this.gender = gender;
         this.price = price;
         this.duration = duration;
     }
@@ -72,14 +68,6 @@ public class MyService {
         this.description = description;
     }
 
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
     public String getPrice() {
         return price;
     }
@@ -103,7 +91,6 @@ public class MyService {
                 ", packageId=" + packageId +
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
-                ", gender='" + gender + '\'' +
                 ", price='" + price + '\'' +
                 ", duration='" + duration + '\'' +
                 '}';
@@ -118,13 +105,12 @@ public class MyService {
                 packageId.equals(myService.packageId) &&
                 title.equals(myService.title) &&
                 description.equals(myService.description) &&
-                gender.equals(myService.gender) &&
                 price.equals(myService.price) &&
                 duration.equals(myService.duration);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, packageId, title, description, gender, price, duration);
+        return Objects.hash(id, packageId, title, description, price, duration);
     }
 }

@@ -6276,3 +6276,1461 @@ INSERT INTO My_Service_Package (id, name, description, gender) VALUES
 2020-11-19 14:01:50.808  INFO 12552 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-11-19 14:01:50.808  INFO 12552 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2020-11-19 14:01:50.822  INFO 12552 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2020-11-19 14:05:17.935  INFO 14880 --- [main] com.example.ec.StylifyApplication        : Starting StylifyApplication on DESKTOP-7SLLO4E with PID 14880 (C:\Users\lenovo\Desktop\explorecali\target\classes started by lenovo in C:\Users\lenovo\Desktop\explorecali)
+2020-11-19 14:05:17.938 DEBUG 14880 --- [main] com.example.ec.StylifyApplication        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-11-19 14:05:17.938  INFO 14880 --- [main] com.example.ec.StylifyApplication        : The following profiles are active: default
+2020-11-19 14:05:18.600  INFO 14880 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-19 14:05:18.649  INFO 14880 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43ms. Found 4 JPA repository interfaces.
+2020-11-19 14:05:19.099  INFO 14880 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-19 14:05:19.105  INFO 14880 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-19 14:05:19.105  INFO 14880 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-19 14:05:19.233  INFO 14880 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-19 14:05:19.233  INFO 14880 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1246 ms
+2020-11-19 14:05:19.377  INFO 14880 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-19 14:05:19.382  INFO 14880 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-19 14:05:19.448  INFO 14880 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-19 14:05:19.454  INFO 14880 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:436899d4-0961-4b97-890a-3ba5b61f5369 (H2 1.4)
+2020-11-19 14:05:19.506  INFO 14880 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.024s)
+2020-11-19 14:05:19.515  INFO 14880 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-11-19 14:05:19.547  INFO 14880 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-11-19 14:05:19.552  INFO 14880 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.1 - CreateTourSchema
+2020-11-19 14:05:19.591  INFO 14880 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.2 - AddTours
+2020-11-19 14:05:19.613  INFO 14880 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.3 - CreateTourRatingSchema
+2020-11-19 14:05:19.628  INFO 14880 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.4 - AddTourRatings
+2020-11-19 14:05:19.640  INFO 14880 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.1 - CreateSecuritySchema
+2020-11-19 14:05:19.653  INFO 14880 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.2 - AddUsers
+2020-11-19 14:05:19.665  INFO 14880 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.3 - CreateServicePackagesSchema
+2020-11-19 14:05:19.677  INFO 14880 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.4 - AddServicePackages
+2020-11-19 14:05:19.691  INFO 14880 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.5 - AddServices
+2020-11-19 14:05:19.703  INFO 14880 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.6 - CreateServiceProviderSchema
+2020-11-19 14:05:19.714  INFO 14880 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.7 - AddServiceProviders
+2020-11-19 14:05:19.723  INFO 14880 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.8 - CreateClientSchema
+2020-11-19 14:05:19.731  INFO 14880 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.9 - AddClients
+2020-11-19 14:05:19.738  INFO 14880 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 13 migrations to schema "PUBLIC" (execution time 00:00.196s)
+2020-11-19 14:05:19.809  INFO 14880 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-19 14:05:19.856  INFO 14880 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-19 14:05:19.903  INFO 14880 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-11-19 14:05:20.020  INFO 14880 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-19 14:05:20.104  INFO 14880 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-19 14:05:20.457  INFO 14880 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-19 14:05:20.463  INFO 14880 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-19 14:05:20.715  WARN 14880 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-19 14:05:21.122  INFO 14880 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-19 14:05:21.123  INFO 14880 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-19 14:05:21.153  INFO 14880 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-19 14:05:21.162  INFO 14880 --- [main] com.example.ec.StylifyApplication        : Started StylifyApplication in 3.586 seconds (JVM running for 4.802)
+2020-11-19 14:05:28.561  INFO 14880 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-19 14:05:28.561  INFO 14880 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-19 14:05:28.574  INFO 14880 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2020-11-19 14:06:39.920  INFO 13988 --- [main] com.example.ec.StylifyApplication        : Starting StylifyApplication on DESKTOP-7SLLO4E with PID 13988 (C:\Users\lenovo\Desktop\explorecali\target\classes started by lenovo in C:\Users\lenovo\Desktop\explorecali)
+2020-11-19 14:06:39.923 DEBUG 13988 --- [main] com.example.ec.StylifyApplication        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-11-19 14:06:39.923  INFO 13988 --- [main] com.example.ec.StylifyApplication        : The following profiles are active: default
+2020-11-19 14:06:40.527  INFO 13988 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-19 14:06:40.576  INFO 13988 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44ms. Found 4 JPA repository interfaces.
+2020-11-19 14:06:41.016  INFO 13988 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-19 14:06:41.022  INFO 13988 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-19 14:06:41.022  INFO 13988 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-19 14:06:41.146  INFO 13988 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-19 14:06:41.146  INFO 13988 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1180 ms
+2020-11-19 14:06:41.294  INFO 13988 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-19 14:06:41.299  INFO 13988 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-19 14:06:41.365  INFO 13988 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-19 14:06:41.371  INFO 13988 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:2b865255-d77c-43c2-8b4c-0a08c9907c6b (H2 1.4)
+2020-11-19 14:06:41.425  INFO 13988 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.023s)
+2020-11-19 14:06:41.434  INFO 13988 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-11-19 14:06:41.467  INFO 13988 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-11-19 14:06:41.471  INFO 13988 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.1 - CreateTourSchema
+2020-11-19 14:06:41.508  INFO 13988 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.2 - AddTours
+2020-11-19 14:06:41.530  INFO 13988 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.3 - CreateTourRatingSchema
+2020-11-19 14:06:41.542  INFO 13988 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.4 - AddTourRatings
+2020-11-19 14:06:41.554  INFO 13988 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.1 - CreateSecuritySchema
+2020-11-19 14:06:41.566  INFO 13988 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.2 - AddUsers
+2020-11-19 14:06:41.575  INFO 13988 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.3 - CreateServicePackagesSchema
+2020-11-19 14:06:41.586  INFO 13988 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.4 - AddServicePackages
+2020-11-19 14:06:41.596  INFO 13988 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.5 - AddServices
+2020-11-19 14:06:41.602 ERROR 13988 --- [main] o.f.core.internal.command.DbMigrate      : Migration of schema "PUBLIC" to version 2.5 - AddServices failed! Please restore backups and roll back database and code!
+2020-11-19 14:06:41.608  WARN 13988 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: 
+Migration V2.5__AddServices.sql failed
+--------------------------------------
+SQL State  : 42S22
+Error Code : 42122
+Message    : Column "GENDER" not found; SQL statement:
+INSERT INTO My_Service (package_id, title, description, gender, price, duration) VALUES
+(1, 'coloration cheveux', 'description', '100', '1:00'),
+(1, 'coloration barbe', 'description', '100', '1:00'),
+(1, 'coloration moustache', 'description', '100', '1:00'),
+(1, 'mèches pour cheveux', 'description', '100', '1:00'),
+
+(2, 'défrisage', 'description', '100', '1:00'),
+(2, 'kératine', 'description', '100', '1:00'),
+(2, 'protein', 'description', '100', '1:00'),
+(2, 'pack lissage (lissage + coupe + barbe)', 'description', '100', '1:00'),
+
+(3, 'manucure normal', 'description', '100', '1:00'),
+(3, 'manucure façon spa', 'description', '100', '1:00'),
+(3, 'pedicure normal', 'description', '100', '1:00'),
+(3, 'pedicure façon spa', 'description', '100', '1:00'),
+
+(4, 'soin black mask', 'description', '100', '1:00'),
+(4, 'soin hydratant', 'description', '100', '1:00'),
+(4, 'soin de visage express 30 min', 'description', '100', '1:00'),
+(4, 'soin de visage profond avec extraction des points noirs', 'description', '100', '1:00'),
+
+(5, 'nez-narines', 'description', '100', '1:00'),
+(5, 'oreilles', 'description', '100', '1:00'),
+(5, 'contour de barbe', 'description', '100', '1:00'),
+(5, 'visage complet', 'description', '100', '1:00'),
+
+(6, 'pose vernis permanent', 'description',  '100', '1:00'),
+(6, 'manucure avec vernis permanent', 'description',  '100', '1:00'),
+(6, 'pose vernis french', 'description',  '100', '1:00'),
+(6, 'manucure avec french', 'description',  '100', '1:00'),
+(6, 'pose vernis simple', 'description',  '100', '1:00'),
+(6, 'manucure avec pose vernis simple', 'description',  '100', '1:00'),
+
+(7, 'pedicure avec vernis simplme', 'description',  '100', '1:00'),
+(7, 'pedicure french', 'description',  '100', '1:00'),
+(7, 'pedicure avec vernis permanent', 'description',  '100', '1:00'),
+(7, 'pedicure avec retrait vernis permanent', 'description',  '100', '1:00'),
+
+(8, 'maquillage de jour', 'description',  '100', '1:00'),
+(8, 'maquillage de nuit', 'description',  '100', '1:00'),
+(8, 'maquillage et faux cils', 'description',  '100', '1:00'),
+
+(9, 'sourcils', 'description',  '100', '1:00'),
+(9, 'visage', 'description',  '100', '1:00'),
+(9, 'duvet', 'description',  '100', '1:00'),
+(9, 'demis-bras', 'description',  '100', '1:00'),
+(9, 'bras', 'description',  '100', '1:00'),
+(9, 'jambes', 'description',  '100', '1:00'),
+(9, 'demi-jambes', 'description',  '100', '1:00'),
+(9, 'aiselle', 'description',  '100', '1:00'),
+(9, 'maillot brésilien', 'description',  '100', '1:00'),
+(9, 'bord de maillot', 'description',  '100', '1:00'),
+(9, 'maillot intégral', 'description',  '100', '1:00'),
+(9, 'épilation complète', 'description',  '100', '1:00'),
+
+(10, 'soin black mask', 'description',  '100', '1:00'),
+(10, 'soin hydratant', 'description',  '100', '1:00'),
+(10, 'soin de visage express 30 mins', 'description',  '100', '1:00'),
+(10, 'soin de visage profond avec extraction des points noirs', 'description',  '100', '1:00') [42122-200]
+Location   : db/migration/V2.5__AddServices.sql (C:\Users\lenovo\Desktop\explorecali\target\classes\db\migration\V2.5__AddServices.sql)
+Line       : 1
+Statement  : INSERT INTO My_Service (package_id, title, description, gender, price, duration) VALUES
+(1, 'coloration cheveux', 'description', '100', '1:00'),
+(1, 'coloration barbe', 'description', '100', '1:00'),
+(1, 'coloration moustache', 'description', '100', '1:00'),
+(1, 'mèches pour cheveux', 'description', '100', '1:00'),
+
+(2, 'défrisage', 'description', '100', '1:00'),
+(2, 'kératine', 'description', '100', '1:00'),
+(2, 'protein', 'description', '100', '1:00'),
+(2, 'pack lissage (lissage + coupe + barbe)', 'description', '100', '1:00'),
+
+(3, 'manucure normal', 'description', '100', '1:00'),
+(3, 'manucure façon spa', 'description', '100', '1:00'),
+(3, 'pedicure normal', 'description', '100', '1:00'),
+(3, 'pedicure façon spa', 'description', '100', '1:00'),
+
+(4, 'soin black mask', 'description', '100', '1:00'),
+(4, 'soin hydratant', 'description', '100', '1:00'),
+(4, 'soin de visage express 30 min', 'description', '100', '1:00'),
+(4, 'soin de visage profond avec extraction des points noirs', 'description', '100', '1:00'),
+
+(5, 'nez-narines', 'description', '100', '1:00'),
+(5, 'oreilles', 'description', '100', '1:00'),
+(5, 'contour de barbe', 'description', '100', '1:00'),
+(5, 'visage complet', 'description', '100', '1:00'),
+
+(6, 'pose vernis permanent', 'description',  '100', '1:00'),
+(6, 'manucure avec vernis permanent', 'description',  '100', '1:00'),
+(6, 'pose vernis french', 'description',  '100', '1:00'),
+(6, 'manucure avec french', 'description',  '100', '1:00'),
+(6, 'pose vernis simple', 'description',  '100', '1:00'),
+(6, 'manucure avec pose vernis simple', 'description',  '100', '1:00'),
+
+(7, 'pedicure avec vernis simplme', 'description',  '100', '1:00'),
+(7, 'pedicure french', 'description',  '100', '1:00'),
+(7, 'pedicure avec vernis permanent', 'description',  '100', '1:00'),
+(7, 'pedicure avec retrait vernis permanent', 'description',  '100', '1:00'),
+
+(8, 'maquillage de jour', 'description',  '100', '1:00'),
+(8, 'maquillage de nuit', 'description',  '100', '1:00'),
+(8, 'maquillage et faux cils', 'description',  '100', '1:00'),
+
+(9, 'sourcils', 'description',  '100', '1:00'),
+(9, 'visage', 'description',  '100', '1:00'),
+(9, 'duvet', 'description',  '100', '1:00'),
+(9, 'demis-bras', 'description',  '100', '1:00'),
+(9, 'bras', 'description',  '100', '1:00'),
+(9, 'jambes', 'description',  '100', '1:00'),
+(9, 'demi-jambes', 'description',  '100', '1:00'),
+(9, 'aiselle', 'description',  '100', '1:00'),
+(9, 'maillot brésilien', 'description',  '100', '1:00'),
+(9, 'bord de maillot', 'description',  '100', '1:00'),
+(9, 'maillot intégral', 'description',  '100', '1:00'),
+(9, 'épilation complète', 'description',  '100', '1:00'),
+
+(10, 'soin black mask', 'description',  '100', '1:00'),
+(10, 'soin hydratant', 'description',  '100', '1:00'),
+(10, 'soin de visage express 30 mins', 'description',  '100', '1:00'),
+(10, 'soin de visage profond avec extraction des points noirs', 'description',  '100', '1:00')
+
+2020-11-19 14:06:41.608  INFO 13988 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-11-19 14:06:41.611  INFO 13988 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-11-19 14:06:41.613  INFO 13988 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-11-19 14:06:41.622  INFO 13988 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-11-19 14:06:41.629 ERROR 13988 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: 
+Migration V2.5__AddServices.sql failed
+--------------------------------------
+SQL State  : 42S22
+Error Code : 42122
+Message    : Column "GENDER" not found; SQL statement:
+INSERT INTO My_Service (package_id, title, description, gender, price, duration) VALUES
+(1, 'coloration cheveux', 'description', '100', '1:00'),
+(1, 'coloration barbe', 'description', '100', '1:00'),
+(1, 'coloration moustache', 'description', '100', '1:00'),
+(1, 'mèches pour cheveux', 'description', '100', '1:00'),
+
+(2, 'défrisage', 'description', '100', '1:00'),
+(2, 'kératine', 'description', '100', '1:00'),
+(2, 'protein', 'description', '100', '1:00'),
+(2, 'pack lissage (lissage + coupe + barbe)', 'description', '100', '1:00'),
+
+(3, 'manucure normal', 'description', '100', '1:00'),
+(3, 'manucure façon spa', 'description', '100', '1:00'),
+(3, 'pedicure normal', 'description', '100', '1:00'),
+(3, 'pedicure façon spa', 'description', '100', '1:00'),
+
+(4, 'soin black mask', 'description', '100', '1:00'),
+(4, 'soin hydratant', 'description', '100', '1:00'),
+(4, 'soin de visage express 30 min', 'description', '100', '1:00'),
+(4, 'soin de visage profond avec extraction des points noirs', 'description', '100', '1:00'),
+
+(5, 'nez-narines', 'description', '100', '1:00'),
+(5, 'oreilles', 'description', '100', '1:00'),
+(5, 'contour de barbe', 'description', '100', '1:00'),
+(5, 'visage complet', 'description', '100', '1:00'),
+
+(6, 'pose vernis permanent', 'description',  '100', '1:00'),
+(6, 'manucure avec vernis permanent', 'description',  '100', '1:00'),
+(6, 'pose vernis french', 'description',  '100', '1:00'),
+(6, 'manucure avec french', 'description',  '100', '1:00'),
+(6, 'pose vernis simple', 'description',  '100', '1:00'),
+(6, 'manucure avec pose vernis simple', 'description',  '100', '1:00'),
+
+(7, 'pedicure avec vernis simplme', 'description',  '100', '1:00'),
+(7, 'pedicure french', 'description',  '100', '1:00'),
+(7, 'pedicure avec vernis permanent', 'description',  '100', '1:00'),
+(7, 'pedicure avec retrait vernis permanent', 'description',  '100', '1:00'),
+
+(8, 'maquillage de jour', 'description',  '100', '1:00'),
+(8, 'maquillage de nuit', 'description',  '100', '1:00'),
+(8, 'maquillage et faux cils', 'description',  '100', '1:00'),
+
+(9, 'sourcils', 'description',  '100', '1:00'),
+(9, 'visage', 'description',  '100', '1:00'),
+(9, 'duvet', 'description',  '100', '1:00'),
+(9, 'demis-bras', 'description',  '100', '1:00'),
+(9, 'bras', 'description',  '100', '1:00'),
+(9, 'jambes', 'description',  '100', '1:00'),
+(9, 'demi-jambes', 'description',  '100', '1:00'),
+(9, 'aiselle', 'description',  '100', '1:00'),
+(9, 'maillot brésilien', 'description',  '100', '1:00'),
+(9, 'bord de maillot', 'description',  '100', '1:00'),
+(9, 'maillot intégral', 'description',  '100', '1:00'),
+(9, 'épilation complète', 'description',  '100', '1:00'),
+
+(10, 'soin black mask', 'description',  '100', '1:00'),
+(10, 'soin hydratant', 'description',  '100', '1:00'),
+(10, 'soin de visage express 30 mins', 'description',  '100', '1:00'),
+(10, 'soin de visage profond avec extraction des points noirs', 'description',  '100', '1:00') [42122-200]
+Location   : db/migration/V2.5__AddServices.sql (C:\Users\lenovo\Desktop\explorecali\target\classes\db\migration\V2.5__AddServices.sql)
+Line       : 1
+Statement  : INSERT INTO My_Service (package_id, title, description, gender, price, duration) VALUES
+(1, 'coloration cheveux', 'description', '100', '1:00'),
+(1, 'coloration barbe', 'description', '100', '1:00'),
+(1, 'coloration moustache', 'description', '100', '1:00'),
+(1, 'mèches pour cheveux', 'description', '100', '1:00'),
+
+(2, 'défrisage', 'description', '100', '1:00'),
+(2, 'kératine', 'description', '100', '1:00'),
+(2, 'protein', 'description', '100', '1:00'),
+(2, 'pack lissage (lissage + coupe + barbe)', 'description', '100', '1:00'),
+
+(3, 'manucure normal', 'description', '100', '1:00'),
+(3, 'manucure façon spa', 'description', '100', '1:00'),
+(3, 'pedicure normal', 'description', '100', '1:00'),
+(3, 'pedicure façon spa', 'description', '100', '1:00'),
+
+(4, 'soin black mask', 'description', '100', '1:00'),
+(4, 'soin hydratant', 'description', '100', '1:00'),
+(4, 'soin de visage express 30 min', 'description', '100', '1:00'),
+(4, 'soin de visage profond avec extraction des points noirs', 'description', '100', '1:00'),
+
+(5, 'nez-narines', 'description', '100', '1:00'),
+(5, 'oreilles', 'description', '100', '1:00'),
+(5, 'contour de barbe', 'description', '100', '1:00'),
+(5, 'visage complet', 'description', '100', '1:00'),
+
+(6, 'pose vernis permanent', 'description',  '100', '1:00'),
+(6, 'manucure avec vernis permanent', 'description',  '100', '1:00'),
+(6, 'pose vernis french', 'description',  '100', '1:00'),
+(6, 'manucure avec french', 'description',  '100', '1:00'),
+(6, 'pose vernis simple', 'description',  '100', '1:00'),
+(6, 'manucure avec pose vernis simple', 'description',  '100', '1:00'),
+
+(7, 'pedicure avec vernis simplme', 'description',  '100', '1:00'),
+(7, 'pedicure french', 'description',  '100', '1:00'),
+(7, 'pedicure avec vernis permanent', 'description',  '100', '1:00'),
+(7, 'pedicure avec retrait vernis permanent', 'description',  '100', '1:00'),
+
+(8, 'maquillage de jour', 'description',  '100', '1:00'),
+(8, 'maquillage de nuit', 'description',  '100', '1:00'),
+(8, 'maquillage et faux cils', 'description',  '100', '1:00'),
+
+(9, 'sourcils', 'description',  '100', '1:00'),
+(9, 'visage', 'description',  '100', '1:00'),
+(9, 'duvet', 'description',  '100', '1:00'),
+(9, 'demis-bras', 'description',  '100', '1:00'),
+(9, 'bras', 'description',  '100', '1:00'),
+(9, 'jambes', 'description',  '100', '1:00'),
+(9, 'demi-jambes', 'description',  '100', '1:00'),
+(9, 'aiselle', 'description',  '100', '1:00'),
+(9, 'maillot brésilien', 'description',  '100', '1:00'),
+(9, 'bord de maillot', 'description',  '100', '1:00'),
+(9, 'maillot intégral', 'description',  '100', '1:00'),
+(9, 'épilation complète', 'description',  '100', '1:00'),
+
+(10, 'soin black mask', 'description',  '100', '1:00'),
+(10, 'soin hydratant', 'description',  '100', '1:00'),
+(10, 'soin de visage express 30 mins', 'description',  '100', '1:00'),
+(10, 'soin de visage profond avec extraction des points noirs', 'description',  '100', '1:00')
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1794)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:311)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1109)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.example.ec.StylifyApplication.main(StylifyApplication.java:20)
+Caused by: org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: 
+Migration V2.5__AddServices.sql failed
+--------------------------------------
+SQL State  : 42S22
+Error Code : 42122
+Message    : Column "GENDER" not found; SQL statement:
+INSERT INTO My_Service (package_id, title, description, gender, price, duration) VALUES
+(1, 'coloration cheveux', 'description', '100', '1:00'),
+(1, 'coloration barbe', 'description', '100', '1:00'),
+(1, 'coloration moustache', 'description', '100', '1:00'),
+(1, 'mèches pour cheveux', 'description', '100', '1:00'),
+
+(2, 'défrisage', 'description', '100', '1:00'),
+(2, 'kératine', 'description', '100', '1:00'),
+(2, 'protein', 'description', '100', '1:00'),
+(2, 'pack lissage (lissage + coupe + barbe)', 'description', '100', '1:00'),
+
+(3, 'manucure normal', 'description', '100', '1:00'),
+(3, 'manucure façon spa', 'description', '100', '1:00'),
+(3, 'pedicure normal', 'description', '100', '1:00'),
+(3, 'pedicure façon spa', 'description', '100', '1:00'),
+
+(4, 'soin black mask', 'description', '100', '1:00'),
+(4, 'soin hydratant', 'description', '100', '1:00'),
+(4, 'soin de visage express 30 min', 'description', '100', '1:00'),
+(4, 'soin de visage profond avec extraction des points noirs', 'description', '100', '1:00'),
+
+(5, 'nez-narines', 'description', '100', '1:00'),
+(5, 'oreilles', 'description', '100', '1:00'),
+(5, 'contour de barbe', 'description', '100', '1:00'),
+(5, 'visage complet', 'description', '100', '1:00'),
+
+(6, 'pose vernis permanent', 'description',  '100', '1:00'),
+(6, 'manucure avec vernis permanent', 'description',  '100', '1:00'),
+(6, 'pose vernis french', 'description',  '100', '1:00'),
+(6, 'manucure avec french', 'description',  '100', '1:00'),
+(6, 'pose vernis simple', 'description',  '100', '1:00'),
+(6, 'manucure avec pose vernis simple', 'description',  '100', '1:00'),
+
+(7, 'pedicure avec vernis simplme', 'description',  '100', '1:00'),
+(7, 'pedicure french', 'description',  '100', '1:00'),
+(7, 'pedicure avec vernis permanent', 'description',  '100', '1:00'),
+(7, 'pedicure avec retrait vernis permanent', 'description',  '100', '1:00'),
+
+(8, 'maquillage de jour', 'description',  '100', '1:00'),
+(8, 'maquillage de nuit', 'description',  '100', '1:00'),
+(8, 'maquillage et faux cils', 'description',  '100', '1:00'),
+
+(9, 'sourcils', 'description',  '100', '1:00'),
+(9, 'visage', 'description',  '100', '1:00'),
+(9, 'duvet', 'description',  '100', '1:00'),
+(9, 'demis-bras', 'description',  '100', '1:00'),
+(9, 'bras', 'description',  '100', '1:00'),
+(9, 'jambes', 'description',  '100', '1:00'),
+(9, 'demi-jambes', 'description',  '100', '1:00'),
+(9, 'aiselle', 'description',  '100', '1:00'),
+(9, 'maillot brésilien', 'description',  '100', '1:00'),
+(9, 'bord de maillot', 'description',  '100', '1:00'),
+(9, 'maillot intégral', 'description',  '100', '1:00'),
+(9, 'épilation complète', 'description',  '100', '1:00'),
+
+(10, 'soin black mask', 'description',  '100', '1:00'),
+(10, 'soin hydratant', 'description',  '100', '1:00'),
+(10, 'soin de visage express 30 mins', 'description',  '100', '1:00'),
+(10, 'soin de visage profond avec extraction des points noirs', 'description',  '100', '1:00') [42122-200]
+Location   : db/migration/V2.5__AddServices.sql (C:\Users\lenovo\Desktop\explorecali\target\classes\db\migration\V2.5__AddServices.sql)
+Line       : 1
+Statement  : INSERT INTO My_Service (package_id, title, description, gender, price, duration) VALUES
+(1, 'coloration cheveux', 'description', '100', '1:00'),
+(1, 'coloration barbe', 'description', '100', '1:00'),
+(1, 'coloration moustache', 'description', '100', '1:00'),
+(1, 'mèches pour cheveux', 'description', '100', '1:00'),
+
+(2, 'défrisage', 'description', '100', '1:00'),
+(2, 'kératine', 'description', '100', '1:00'),
+(2, 'protein', 'description', '100', '1:00'),
+(2, 'pack lissage (lissage + coupe + barbe)', 'description', '100', '1:00'),
+
+(3, 'manucure normal', 'description', '100', '1:00'),
+(3, 'manucure façon spa', 'description', '100', '1:00'),
+(3, 'pedicure normal', 'description', '100', '1:00'),
+(3, 'pedicure façon spa', 'description', '100', '1:00'),
+
+(4, 'soin black mask', 'description', '100', '1:00'),
+(4, 'soin hydratant', 'description', '100', '1:00'),
+(4, 'soin de visage express 30 min', 'description', '100', '1:00'),
+(4, 'soin de visage profond avec extraction des points noirs', 'description', '100', '1:00'),
+
+(5, 'nez-narines', 'description', '100', '1:00'),
+(5, 'oreilles', 'description', '100', '1:00'),
+(5, 'contour de barbe', 'description', '100', '1:00'),
+(5, 'visage complet', 'description', '100', '1:00'),
+
+(6, 'pose vernis permanent', 'description',  '100', '1:00'),
+(6, 'manucure avec vernis permanent', 'description',  '100', '1:00'),
+(6, 'pose vernis french', 'description',  '100', '1:00'),
+(6, 'manucure avec french', 'description',  '100', '1:00'),
+(6, 'pose vernis simple', 'description',  '100', '1:00'),
+(6, 'manucure avec pose vernis simple', 'description',  '100', '1:00'),
+
+(7, 'pedicure avec vernis simplme', 'description',  '100', '1:00'),
+(7, 'pedicure french', 'description',  '100', '1:00'),
+(7, 'pedicure avec vernis permanent', 'description',  '100', '1:00'),
+(7, 'pedicure avec retrait vernis permanent', 'description',  '100', '1:00'),
+
+(8, 'maquillage de jour', 'description',  '100', '1:00'),
+(8, 'maquillage de nuit', 'description',  '100', '1:00'),
+(8, 'maquillage et faux cils', 'description',  '100', '1:00'),
+
+(9, 'sourcils', 'description',  '100', '1:00'),
+(9, 'visage', 'description',  '100', '1:00'),
+(9, 'duvet', 'description',  '100', '1:00'),
+(9, 'demis-bras', 'description',  '100', '1:00'),
+(9, 'bras', 'description',  '100', '1:00'),
+(9, 'jambes', 'description',  '100', '1:00'),
+(9, 'demi-jambes', 'description',  '100', '1:00'),
+(9, 'aiselle', 'description',  '100', '1:00'),
+(9, 'maillot brésilien', 'description',  '100', '1:00'),
+(9, 'bord de maillot', 'description',  '100', '1:00'),
+(9, 'maillot intégral', 'description',  '100', '1:00'),
+(9, 'épilation complète', 'description',  '100', '1:00'),
+
+(10, 'soin black mask', 'description',  '100', '1:00'),
+(10, 'soin hydratant', 'description',  '100', '1:00'),
+(10, 'soin de visage express 30 mins', 'description',  '100', '1:00'),
+(10, 'soin de visage profond avec extraction des points noirs', 'description',  '100', '1:00')
+
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:369)
+	at org.flywaydb.core.internal.command.DbMigrate.access$200(DbMigrate.java:54)
+	at org.flywaydb.core.internal.command.DbMigrate$3.call(DbMigrate.java:282)
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:66)
+	at org.flywaydb.core.internal.command.DbMigrate.applyMigrations(DbMigrate.java:279)
+	at org.flywaydb.core.internal.command.DbMigrate.migrateGroup(DbMigrate.java:244)
+	at org.flywaydb.core.internal.command.DbMigrate.access$100(DbMigrate.java:54)
+	at org.flywaydb.core.internal.command.DbMigrate$2.call(DbMigrate.java:162)
+	at org.flywaydb.core.internal.command.DbMigrate$2.call(DbMigrate.java:159)
+	at org.flywaydb.core.internal.jdbc.TableLockingExecutionTemplate$1.call(TableLockingExecutionTemplate.java:38)
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:66)
+	at org.flywaydb.core.internal.jdbc.TableLockingExecutionTemplate.execute(TableLockingExecutionTemplate.java:33)
+	at org.flywaydb.core.internal.database.base.Connection.lock(Connection.java:129)
+	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory.lock(JdbcTableSchemaHistory.java:140)
+	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:159)
+	at org.flywaydb.core.internal.command.DbMigrate.migrate(DbMigrate.java:137)
+	at org.flywaydb.core.Flyway$1.execute(Flyway.java:199)
+	at org.flywaydb.core.Flyway$1.execute(Flyway.java:159)
+	at org.flywaydb.core.Flyway.execute(Flyway.java:530)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:159)
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:65)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1790)
+	... 19 common frames omitted
+Caused by: org.flywaydb.core.internal.sqlscript.FlywaySqlScriptException: 
+Migration V2.5__AddServices.sql failed
+--------------------------------------
+SQL State  : 42S22
+Error Code : 42122
+Message    : Column "GENDER" not found; SQL statement:
+INSERT INTO My_Service (package_id, title, description, gender, price, duration) VALUES
+(1, 'coloration cheveux', 'description', '100', '1:00'),
+(1, 'coloration barbe', 'description', '100', '1:00'),
+(1, 'coloration moustache', 'description', '100', '1:00'),
+(1, 'mèches pour cheveux', 'description', '100', '1:00'),
+
+(2, 'défrisage', 'description', '100', '1:00'),
+(2, 'kératine', 'description', '100', '1:00'),
+(2, 'protein', 'description', '100', '1:00'),
+(2, 'pack lissage (lissage + coupe + barbe)', 'description', '100', '1:00'),
+
+(3, 'manucure normal', 'description', '100', '1:00'),
+(3, 'manucure façon spa', 'description', '100', '1:00'),
+(3, 'pedicure normal', 'description', '100', '1:00'),
+(3, 'pedicure façon spa', 'description', '100', '1:00'),
+
+(4, 'soin black mask', 'description', '100', '1:00'),
+(4, 'soin hydratant', 'description', '100', '1:00'),
+(4, 'soin de visage express 30 min', 'description', '100', '1:00'),
+(4, 'soin de visage profond avec extraction des points noirs', 'description', '100', '1:00'),
+
+(5, 'nez-narines', 'description', '100', '1:00'),
+(5, 'oreilles', 'description', '100', '1:00'),
+(5, 'contour de barbe', 'description', '100', '1:00'),
+(5, 'visage complet', 'description', '100', '1:00'),
+
+(6, 'pose vernis permanent', 'description',  '100', '1:00'),
+(6, 'manucure avec vernis permanent', 'description',  '100', '1:00'),
+(6, 'pose vernis french', 'description',  '100', '1:00'),
+(6, 'manucure avec french', 'description',  '100', '1:00'),
+(6, 'pose vernis simple', 'description',  '100', '1:00'),
+(6, 'manucure avec pose vernis simple', 'description',  '100', '1:00'),
+
+(7, 'pedicure avec vernis simplme', 'description',  '100', '1:00'),
+(7, 'pedicure french', 'description',  '100', '1:00'),
+(7, 'pedicure avec vernis permanent', 'description',  '100', '1:00'),
+(7, 'pedicure avec retrait vernis permanent', 'description',  '100', '1:00'),
+
+(8, 'maquillage de jour', 'description',  '100', '1:00'),
+(8, 'maquillage de nuit', 'description',  '100', '1:00'),
+(8, 'maquillage et faux cils', 'description',  '100', '1:00'),
+
+(9, 'sourcils', 'description',  '100', '1:00'),
+(9, 'visage', 'description',  '100', '1:00'),
+(9, 'duvet', 'description',  '100', '1:00'),
+(9, 'demis-bras', 'description',  '100', '1:00'),
+(9, 'bras', 'description',  '100', '1:00'),
+(9, 'jambes', 'description',  '100', '1:00'),
+(9, 'demi-jambes', 'description',  '100', '1:00'),
+(9, 'aiselle', 'description',  '100', '1:00'),
+(9, 'maillot brésilien', 'description',  '100', '1:00'),
+(9, 'bord de maillot', 'description',  '100', '1:00'),
+(9, 'maillot intégral', 'description',  '100', '1:00'),
+(9, 'épilation complète', 'description',  '100', '1:00'),
+
+(10, 'soin black mask', 'description',  '100', '1:00'),
+(10, 'soin hydratant', 'description',  '100', '1:00'),
+(10, 'soin de visage express 30 mins', 'description',  '100', '1:00'),
+(10, 'soin de visage profond avec extraction des points noirs', 'description',  '100', '1:00') [42122-200]
+Location   : db/migration/V2.5__AddServices.sql (C:\Users\lenovo\Desktop\explorecali\target\classes\db\migration\V2.5__AddServices.sql)
+Line       : 1
+Statement  : INSERT INTO My_Service (package_id, title, description, gender, price, duration) VALUES
+(1, 'coloration cheveux', 'description', '100', '1:00'),
+(1, 'coloration barbe', 'description', '100', '1:00'),
+(1, 'coloration moustache', 'description', '100', '1:00'),
+(1, 'mèches pour cheveux', 'description', '100', '1:00'),
+
+(2, 'défrisage', 'description', '100', '1:00'),
+(2, 'kératine', 'description', '100', '1:00'),
+(2, 'protein', 'description', '100', '1:00'),
+(2, 'pack lissage (lissage + coupe + barbe)', 'description', '100', '1:00'),
+
+(3, 'manucure normal', 'description', '100', '1:00'),
+(3, 'manucure façon spa', 'description', '100', '1:00'),
+(3, 'pedicure normal', 'description', '100', '1:00'),
+(3, 'pedicure façon spa', 'description', '100', '1:00'),
+
+(4, 'soin black mask', 'description', '100', '1:00'),
+(4, 'soin hydratant', 'description', '100', '1:00'),
+(4, 'soin de visage express 30 min', 'description', '100', '1:00'),
+(4, 'soin de visage profond avec extraction des points noirs', 'description', '100', '1:00'),
+
+(5, 'nez-narines', 'description', '100', '1:00'),
+(5, 'oreilles', 'description', '100', '1:00'),
+(5, 'contour de barbe', 'description', '100', '1:00'),
+(5, 'visage complet', 'description', '100', '1:00'),
+
+(6, 'pose vernis permanent', 'description',  '100', '1:00'),
+(6, 'manucure avec vernis permanent', 'description',  '100', '1:00'),
+(6, 'pose vernis french', 'description',  '100', '1:00'),
+(6, 'manucure avec french', 'description',  '100', '1:00'),
+(6, 'pose vernis simple', 'description',  '100', '1:00'),
+(6, 'manucure avec pose vernis simple', 'description',  '100', '1:00'),
+
+(7, 'pedicure avec vernis simplme', 'description',  '100', '1:00'),
+(7, 'pedicure french', 'description',  '100', '1:00'),
+(7, 'pedicure avec vernis permanent', 'description',  '100', '1:00'),
+(7, 'pedicure avec retrait vernis permanent', 'description',  '100', '1:00'),
+
+(8, 'maquillage de jour', 'description',  '100', '1:00'),
+(8, 'maquillage de nuit', 'description',  '100', '1:00'),
+(8, 'maquillage et faux cils', 'description',  '100', '1:00'),
+
+(9, 'sourcils', 'description',  '100', '1:00'),
+(9, 'visage', 'description',  '100', '1:00'),
+(9, 'duvet', 'description',  '100', '1:00'),
+(9, 'demis-bras', 'description',  '100', '1:00'),
+(9, 'bras', 'description',  '100', '1:00'),
+(9, 'jambes', 'description',  '100', '1:00'),
+(9, 'demi-jambes', 'description',  '100', '1:00'),
+(9, 'aiselle', 'description',  '100', '1:00'),
+(9, 'maillot brésilien', 'description',  '100', '1:00'),
+(9, 'bord de maillot', 'description',  '100', '1:00'),
+(9, 'maillot intégral', 'description',  '100', '1:00'),
+(9, 'épilation complète', 'description',  '100', '1:00'),
+
+(10, 'soin black mask', 'description',  '100', '1:00'),
+(10, 'soin hydratant', 'description',  '100', '1:00'),
+(10, 'soin de visage express 30 mins', 'description',  '100', '1:00'),
+(10, 'soin de visage profond avec extraction des points noirs', 'description',  '100', '1:00')
+
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.handleException(DefaultSqlScriptExecutor.java:275)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:220)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.execute(DefaultSqlScriptExecutor.java:127)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.executeOnce(SqlMigrationExecutor.java:88)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.access$000(SqlMigrationExecutor.java:33)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor$1.call(SqlMigrationExecutor.java:77)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor$1.call(SqlMigrationExecutor.java:74)
+	at org.flywaydb.core.internal.database.DefaultExecutionStrategy.execute(DefaultExecutionStrategy.java:28)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.execute(SqlMigrationExecutor.java:74)
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:366)
+	... 41 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "GENDER" not found; SQL statement:
+INSERT INTO My_Service (package_id, title, description, gender, price, duration) VALUES
+(1, 'coloration cheveux', 'description', '100', '1:00'),
+(1, 'coloration barbe', 'description', '100', '1:00'),
+(1, 'coloration moustache', 'description', '100', '1:00'),
+(1, 'mèches pour cheveux', 'description', '100', '1:00'),
+
+(2, 'défrisage', 'description', '100', '1:00'),
+(2, 'kératine', 'description', '100', '1:00'),
+(2, 'protein', 'description', '100', '1:00'),
+(2, 'pack lissage (lissage + coupe + barbe)', 'description', '100', '1:00'),
+
+(3, 'manucure normal', 'description', '100', '1:00'),
+(3, 'manucure façon spa', 'description', '100', '1:00'),
+(3, 'pedicure normal', 'description', '100', '1:00'),
+(3, 'pedicure façon spa', 'description', '100', '1:00'),
+
+(4, 'soin black mask', 'description', '100', '1:00'),
+(4, 'soin hydratant', 'description', '100', '1:00'),
+(4, 'soin de visage express 30 min', 'description', '100', '1:00'),
+(4, 'soin de visage profond avec extraction des points noirs', 'description', '100', '1:00'),
+
+(5, 'nez-narines', 'description', '100', '1:00'),
+(5, 'oreilles', 'description', '100', '1:00'),
+(5, 'contour de barbe', 'description', '100', '1:00'),
+(5, 'visage complet', 'description', '100', '1:00'),
+
+(6, 'pose vernis permanent', 'description',  '100', '1:00'),
+(6, 'manucure avec vernis permanent', 'description',  '100', '1:00'),
+(6, 'pose vernis french', 'description',  '100', '1:00'),
+(6, 'manucure avec french', 'description',  '100', '1:00'),
+(6, 'pose vernis simple', 'description',  '100', '1:00'),
+(6, 'manucure avec pose vernis simple', 'description',  '100', '1:00'),
+
+(7, 'pedicure avec vernis simplme', 'description',  '100', '1:00'),
+(7, 'pedicure french', 'description',  '100', '1:00'),
+(7, 'pedicure avec vernis permanent', 'description',  '100', '1:00'),
+(7, 'pedicure avec retrait vernis permanent', 'description',  '100', '1:00'),
+
+(8, 'maquillage de jour', 'description',  '100', '1:00'),
+(8, 'maquillage de nuit', 'description',  '100', '1:00'),
+(8, 'maquillage et faux cils', 'description',  '100', '1:00'),
+
+(9, 'sourcils', 'description',  '100', '1:00'),
+(9, 'visage', 'description',  '100', '1:00'),
+(9, 'duvet', 'description',  '100', '1:00'),
+(9, 'demis-bras', 'description',  '100', '1:00'),
+(9, 'bras', 'description',  '100', '1:00'),
+(9, 'jambes', 'description',  '100', '1:00'),
+(9, 'demi-jambes', 'description',  '100', '1:00'),
+(9, 'aiselle', 'description',  '100', '1:00'),
+(9, 'maillot brésilien', 'description',  '100', '1:00'),
+(9, 'bord de maillot', 'description',  '100', '1:00'),
+(9, 'maillot intégral', 'description',  '100', '1:00'),
+(9, 'épilation complète', 'description',  '100', '1:00'),
+
+(10, 'soin black mask', 'description',  '100', '1:00'),
+(10, 'soin hydratant', 'description',  '100', '1:00'),
+(10, 'soin de visage express 30 mins', 'description',  '100', '1:00'),
+(10, 'soin de visage profond avec extraction des points noirs', 'description',  '100', '1:00') [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.parseColumn(Parser.java:1450)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.flywaydb.core.internal.jdbc.JdbcTemplate.executeStatement(JdbcTemplate.java:244)
+	at org.flywaydb.core.internal.sqlscript.ParsedSqlStatement.execute(ParsedSqlStatement.java:111)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:208)
+	... 49 common frames omitted
+
+2020-11-19 14:07:40.340  INFO 1660 --- [main] com.example.ec.StylifyApplication        : Starting StylifyApplication on DESKTOP-7SLLO4E with PID 1660 (C:\Users\lenovo\Desktop\explorecali\target\classes started by lenovo in C:\Users\lenovo\Desktop\explorecali)
+2020-11-19 14:07:40.344 DEBUG 1660 --- [main] com.example.ec.StylifyApplication        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-11-19 14:07:40.344  INFO 1660 --- [main] com.example.ec.StylifyApplication        : The following profiles are active: default
+2020-11-19 14:07:41.034  INFO 1660 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-19 14:07:41.083  INFO 1660 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43ms. Found 4 JPA repository interfaces.
+2020-11-19 14:07:41.513  INFO 1660 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-19 14:07:41.519  INFO 1660 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-19 14:07:41.519  INFO 1660 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-19 14:07:41.632  INFO 1660 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-19 14:07:41.632  INFO 1660 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1235 ms
+2020-11-19 14:07:41.771  INFO 1660 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-19 14:07:41.776  INFO 1660 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-19 14:07:41.842  INFO 1660 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-19 14:07:41.848  INFO 1660 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:13a16805-78a5-485d-9cdb-6bb2ec6cd043 (H2 1.4)
+2020-11-19 14:07:41.901  INFO 1660 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.024s)
+2020-11-19 14:07:41.910  INFO 1660 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-11-19 14:07:41.946  INFO 1660 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-11-19 14:07:41.951  INFO 1660 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.1 - CreateTourSchema
+2020-11-19 14:07:41.988  INFO 1660 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.2 - AddTours
+2020-11-19 14:07:42.006  INFO 1660 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.3 - CreateTourRatingSchema
+2020-11-19 14:07:42.020  INFO 1660 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.4 - AddTourRatings
+2020-11-19 14:07:42.031  INFO 1660 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.1 - CreateSecuritySchema
+2020-11-19 14:07:42.043  INFO 1660 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.2 - AddUsers
+2020-11-19 14:07:42.053  INFO 1660 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.3 - CreateServicePackagesSchema
+2020-11-19 14:07:42.062  INFO 1660 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.4 - AddServicePackages
+2020-11-19 14:07:42.074  INFO 1660 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.5 - AddServices
+2020-11-19 14:07:42.080 ERROR 1660 --- [main] o.f.core.internal.command.DbMigrate      : Migration of schema "PUBLIC" to version 2.5 - AddServices failed! Please restore backups and roll back database and code!
+2020-11-19 14:07:42.085  WARN 1660 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: 
+Migration V2.5__AddServices.sql failed
+--------------------------------------
+SQL State  : 42S22
+Error Code : 42122
+Message    : Column "GENDER" not found; SQL statement:
+INSERT INTO My_Service (package_id, title, description, gender, price, duration) VALUES
+(1, 'coloration cheveux', 'description', '100', '1:00'),
+(1, 'coloration barbe', 'description', '100', '1:00'),
+(1, 'coloration moustache', 'description', '100', '1:00'),
+(1, 'mèches pour cheveux', 'description', '100', '1:00'),
+
+(2, 'défrisage', 'description', '100', '1:00'),
+(2, 'kératine', 'description', '100', '1:00'),
+(2, 'protein', 'description', '100', '1:00'),
+(2, 'pack lissage (lissage + coupe + barbe)', 'description', '100', '1:00'),
+
+(3, 'manucure normal', 'description', '100', '1:00'),
+(3, 'manucure façon spa', 'description', '100', '1:00'),
+(3, 'pedicure normal', 'description', '100', '1:00'),
+(3, 'pedicure façon spa', 'description', '100', '1:00'),
+
+(4, 'soin black mask', 'description', '100', '1:00'),
+(4, 'soin hydratant', 'description', '100', '1:00'),
+(4, 'soin de visage express 30 min', 'description', '100', '1:00'),
+(4, 'soin de visage profond avec extraction des points noirs', 'description', '100', '1:00'),
+
+(5, 'nez-narines', 'description', '100', '1:00'),
+(5, 'oreilles', 'description', '100', '1:00'),
+(5, 'contour de barbe', 'description', '100', '1:00'),
+(5, 'visage complet', 'description', '100', '1:00'),
+
+(6, 'pose vernis permanent', 'description',  '100', '1:00'),
+(6, 'manucure avec vernis permanent', 'description',  '100', '1:00'),
+(6, 'pose vernis french', 'description',  '100', '1:00'),
+(6, 'manucure avec french', 'description',  '100', '1:00'),
+(6, 'pose vernis simple', 'description',  '100', '1:00'),
+(6, 'manucure avec pose vernis simple', 'description',  '100', '1:00'),
+
+(7, 'pedicure avec vernis simplme', 'description',  '100', '1:00'),
+(7, 'pedicure french', 'description',  '100', '1:00'),
+(7, 'pedicure avec vernis permanent', 'description',  '100', '1:00'),
+(7, 'pedicure avec retrait vernis permanent', 'description',  '100', '1:00'),
+
+(8, 'maquillage de jour', 'description',  '100', '1:00'),
+(8, 'maquillage de nuit', 'description',  '100', '1:00'),
+(8, 'maquillage et faux cils', 'description',  '100', '1:00'),
+
+(9, 'sourcils', 'description',  '100', '1:00'),
+(9, 'visage', 'description',  '100', '1:00'),
+(9, 'duvet', 'description',  '100', '1:00'),
+(9, 'demis-bras', 'description',  '100', '1:00'),
+(9, 'bras', 'description',  '100', '1:00'),
+(9, 'jambes', 'description',  '100', '1:00'),
+(9, 'demi-jambes', 'description',  '100', '1:00'),
+(9, 'aiselle', 'description',  '100', '1:00'),
+(9, 'maillot brésilien', 'description',  '100', '1:00'),
+(9, 'bord de maillot', 'description',  '100', '1:00'),
+(9, 'maillot intégral', 'description',  '100', '1:00'),
+(9, 'épilation complète', 'description',  '100', '1:00'),
+
+(10, 'soin black mask', 'description',  '100', '1:00'),
+(10, 'soin hydratant', 'description',  '100', '1:00'),
+(10, 'soin de visage express 30 mins', 'description',  '100', '1:00'),
+(10, 'soin de visage profond avec extraction des points noirs', 'description',  '100', '1:00') [42122-200]
+Location   : db/migration/V2.5__AddServices.sql (C:\Users\lenovo\Desktop\explorecali\target\classes\db\migration\V2.5__AddServices.sql)
+Line       : 1
+Statement  : INSERT INTO My_Service (package_id, title, description, gender, price, duration) VALUES
+(1, 'coloration cheveux', 'description', '100', '1:00'),
+(1, 'coloration barbe', 'description', '100', '1:00'),
+(1, 'coloration moustache', 'description', '100', '1:00'),
+(1, 'mèches pour cheveux', 'description', '100', '1:00'),
+
+(2, 'défrisage', 'description', '100', '1:00'),
+(2, 'kératine', 'description', '100', '1:00'),
+(2, 'protein', 'description', '100', '1:00'),
+(2, 'pack lissage (lissage + coupe + barbe)', 'description', '100', '1:00'),
+
+(3, 'manucure normal', 'description', '100', '1:00'),
+(3, 'manucure façon spa', 'description', '100', '1:00'),
+(3, 'pedicure normal', 'description', '100', '1:00'),
+(3, 'pedicure façon spa', 'description', '100', '1:00'),
+
+(4, 'soin black mask', 'description', '100', '1:00'),
+(4, 'soin hydratant', 'description', '100', '1:00'),
+(4, 'soin de visage express 30 min', 'description', '100', '1:00'),
+(4, 'soin de visage profond avec extraction des points noirs', 'description', '100', '1:00'),
+
+(5, 'nez-narines', 'description', '100', '1:00'),
+(5, 'oreilles', 'description', '100', '1:00'),
+(5, 'contour de barbe', 'description', '100', '1:00'),
+(5, 'visage complet', 'description', '100', '1:00'),
+
+(6, 'pose vernis permanent', 'description',  '100', '1:00'),
+(6, 'manucure avec vernis permanent', 'description',  '100', '1:00'),
+(6, 'pose vernis french', 'description',  '100', '1:00'),
+(6, 'manucure avec french', 'description',  '100', '1:00'),
+(6, 'pose vernis simple', 'description',  '100', '1:00'),
+(6, 'manucure avec pose vernis simple', 'description',  '100', '1:00'),
+
+(7, 'pedicure avec vernis simplme', 'description',  '100', '1:00'),
+(7, 'pedicure french', 'description',  '100', '1:00'),
+(7, 'pedicure avec vernis permanent', 'description',  '100', '1:00'),
+(7, 'pedicure avec retrait vernis permanent', 'description',  '100', '1:00'),
+
+(8, 'maquillage de jour', 'description',  '100', '1:00'),
+(8, 'maquillage de nuit', 'description',  '100', '1:00'),
+(8, 'maquillage et faux cils', 'description',  '100', '1:00'),
+
+(9, 'sourcils', 'description',  '100', '1:00'),
+(9, 'visage', 'description',  '100', '1:00'),
+(9, 'duvet', 'description',  '100', '1:00'),
+(9, 'demis-bras', 'description',  '100', '1:00'),
+(9, 'bras', 'description',  '100', '1:00'),
+(9, 'jambes', 'description',  '100', '1:00'),
+(9, 'demi-jambes', 'description',  '100', '1:00'),
+(9, 'aiselle', 'description',  '100', '1:00'),
+(9, 'maillot brésilien', 'description',  '100', '1:00'),
+(9, 'bord de maillot', 'description',  '100', '1:00'),
+(9, 'maillot intégral', 'description',  '100', '1:00'),
+(9, 'épilation complète', 'description',  '100', '1:00'),
+
+(10, 'soin black mask', 'description',  '100', '1:00'),
+(10, 'soin hydratant', 'description',  '100', '1:00'),
+(10, 'soin de visage express 30 mins', 'description',  '100', '1:00'),
+(10, 'soin de visage profond avec extraction des points noirs', 'description',  '100', '1:00')
+
+2020-11-19 14:07:42.085  INFO 1660 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-11-19 14:07:42.087  INFO 1660 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-11-19 14:07:42.089  INFO 1660 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-11-19 14:07:42.098  INFO 1660 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-11-19 14:07:42.105 ERROR 1660 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: 
+Migration V2.5__AddServices.sql failed
+--------------------------------------
+SQL State  : 42S22
+Error Code : 42122
+Message    : Column "GENDER" not found; SQL statement:
+INSERT INTO My_Service (package_id, title, description, gender, price, duration) VALUES
+(1, 'coloration cheveux', 'description', '100', '1:00'),
+(1, 'coloration barbe', 'description', '100', '1:00'),
+(1, 'coloration moustache', 'description', '100', '1:00'),
+(1, 'mèches pour cheveux', 'description', '100', '1:00'),
+
+(2, 'défrisage', 'description', '100', '1:00'),
+(2, 'kératine', 'description', '100', '1:00'),
+(2, 'protein', 'description', '100', '1:00'),
+(2, 'pack lissage (lissage + coupe + barbe)', 'description', '100', '1:00'),
+
+(3, 'manucure normal', 'description', '100', '1:00'),
+(3, 'manucure façon spa', 'description', '100', '1:00'),
+(3, 'pedicure normal', 'description', '100', '1:00'),
+(3, 'pedicure façon spa', 'description', '100', '1:00'),
+
+(4, 'soin black mask', 'description', '100', '1:00'),
+(4, 'soin hydratant', 'description', '100', '1:00'),
+(4, 'soin de visage express 30 min', 'description', '100', '1:00'),
+(4, 'soin de visage profond avec extraction des points noirs', 'description', '100', '1:00'),
+
+(5, 'nez-narines', 'description', '100', '1:00'),
+(5, 'oreilles', 'description', '100', '1:00'),
+(5, 'contour de barbe', 'description', '100', '1:00'),
+(5, 'visage complet', 'description', '100', '1:00'),
+
+(6, 'pose vernis permanent', 'description',  '100', '1:00'),
+(6, 'manucure avec vernis permanent', 'description',  '100', '1:00'),
+(6, 'pose vernis french', 'description',  '100', '1:00'),
+(6, 'manucure avec french', 'description',  '100', '1:00'),
+(6, 'pose vernis simple', 'description',  '100', '1:00'),
+(6, 'manucure avec pose vernis simple', 'description',  '100', '1:00'),
+
+(7, 'pedicure avec vernis simplme', 'description',  '100', '1:00'),
+(7, 'pedicure french', 'description',  '100', '1:00'),
+(7, 'pedicure avec vernis permanent', 'description',  '100', '1:00'),
+(7, 'pedicure avec retrait vernis permanent', 'description',  '100', '1:00'),
+
+(8, 'maquillage de jour', 'description',  '100', '1:00'),
+(8, 'maquillage de nuit', 'description',  '100', '1:00'),
+(8, 'maquillage et faux cils', 'description',  '100', '1:00'),
+
+(9, 'sourcils', 'description',  '100', '1:00'),
+(9, 'visage', 'description',  '100', '1:00'),
+(9, 'duvet', 'description',  '100', '1:00'),
+(9, 'demis-bras', 'description',  '100', '1:00'),
+(9, 'bras', 'description',  '100', '1:00'),
+(9, 'jambes', 'description',  '100', '1:00'),
+(9, 'demi-jambes', 'description',  '100', '1:00'),
+(9, 'aiselle', 'description',  '100', '1:00'),
+(9, 'maillot brésilien', 'description',  '100', '1:00'),
+(9, 'bord de maillot', 'description',  '100', '1:00'),
+(9, 'maillot intégral', 'description',  '100', '1:00'),
+(9, 'épilation complète', 'description',  '100', '1:00'),
+
+(10, 'soin black mask', 'description',  '100', '1:00'),
+(10, 'soin hydratant', 'description',  '100', '1:00'),
+(10, 'soin de visage express 30 mins', 'description',  '100', '1:00'),
+(10, 'soin de visage profond avec extraction des points noirs', 'description',  '100', '1:00') [42122-200]
+Location   : db/migration/V2.5__AddServices.sql (C:\Users\lenovo\Desktop\explorecali\target\classes\db\migration\V2.5__AddServices.sql)
+Line       : 1
+Statement  : INSERT INTO My_Service (package_id, title, description, gender, price, duration) VALUES
+(1, 'coloration cheveux', 'description', '100', '1:00'),
+(1, 'coloration barbe', 'description', '100', '1:00'),
+(1, 'coloration moustache', 'description', '100', '1:00'),
+(1, 'mèches pour cheveux', 'description', '100', '1:00'),
+
+(2, 'défrisage', 'description', '100', '1:00'),
+(2, 'kératine', 'description', '100', '1:00'),
+(2, 'protein', 'description', '100', '1:00'),
+(2, 'pack lissage (lissage + coupe + barbe)', 'description', '100', '1:00'),
+
+(3, 'manucure normal', 'description', '100', '1:00'),
+(3, 'manucure façon spa', 'description', '100', '1:00'),
+(3, 'pedicure normal', 'description', '100', '1:00'),
+(3, 'pedicure façon spa', 'description', '100', '1:00'),
+
+(4, 'soin black mask', 'description', '100', '1:00'),
+(4, 'soin hydratant', 'description', '100', '1:00'),
+(4, 'soin de visage express 30 min', 'description', '100', '1:00'),
+(4, 'soin de visage profond avec extraction des points noirs', 'description', '100', '1:00'),
+
+(5, 'nez-narines', 'description', '100', '1:00'),
+(5, 'oreilles', 'description', '100', '1:00'),
+(5, 'contour de barbe', 'description', '100', '1:00'),
+(5, 'visage complet', 'description', '100', '1:00'),
+
+(6, 'pose vernis permanent', 'description',  '100', '1:00'),
+(6, 'manucure avec vernis permanent', 'description',  '100', '1:00'),
+(6, 'pose vernis french', 'description',  '100', '1:00'),
+(6, 'manucure avec french', 'description',  '100', '1:00'),
+(6, 'pose vernis simple', 'description',  '100', '1:00'),
+(6, 'manucure avec pose vernis simple', 'description',  '100', '1:00'),
+
+(7, 'pedicure avec vernis simplme', 'description',  '100', '1:00'),
+(7, 'pedicure french', 'description',  '100', '1:00'),
+(7, 'pedicure avec vernis permanent', 'description',  '100', '1:00'),
+(7, 'pedicure avec retrait vernis permanent', 'description',  '100', '1:00'),
+
+(8, 'maquillage de jour', 'description',  '100', '1:00'),
+(8, 'maquillage de nuit', 'description',  '100', '1:00'),
+(8, 'maquillage et faux cils', 'description',  '100', '1:00'),
+
+(9, 'sourcils', 'description',  '100', '1:00'),
+(9, 'visage', 'description',  '100', '1:00'),
+(9, 'duvet', 'description',  '100', '1:00'),
+(9, 'demis-bras', 'description',  '100', '1:00'),
+(9, 'bras', 'description',  '100', '1:00'),
+(9, 'jambes', 'description',  '100', '1:00'),
+(9, 'demi-jambes', 'description',  '100', '1:00'),
+(9, 'aiselle', 'description',  '100', '1:00'),
+(9, 'maillot brésilien', 'description',  '100', '1:00'),
+(9, 'bord de maillot', 'description',  '100', '1:00'),
+(9, 'maillot intégral', 'description',  '100', '1:00'),
+(9, 'épilation complète', 'description',  '100', '1:00'),
+
+(10, 'soin black mask', 'description',  '100', '1:00'),
+(10, 'soin hydratant', 'description',  '100', '1:00'),
+(10, 'soin de visage express 30 mins', 'description',  '100', '1:00'),
+(10, 'soin de visage profond avec extraction des points noirs', 'description',  '100', '1:00')
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1794)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:311)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1109)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.example.ec.StylifyApplication.main(StylifyApplication.java:20)
+Caused by: org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: 
+Migration V2.5__AddServices.sql failed
+--------------------------------------
+SQL State  : 42S22
+Error Code : 42122
+Message    : Column "GENDER" not found; SQL statement:
+INSERT INTO My_Service (package_id, title, description, gender, price, duration) VALUES
+(1, 'coloration cheveux', 'description', '100', '1:00'),
+(1, 'coloration barbe', 'description', '100', '1:00'),
+(1, 'coloration moustache', 'description', '100', '1:00'),
+(1, 'mèches pour cheveux', 'description', '100', '1:00'),
+
+(2, 'défrisage', 'description', '100', '1:00'),
+(2, 'kératine', 'description', '100', '1:00'),
+(2, 'protein', 'description', '100', '1:00'),
+(2, 'pack lissage (lissage + coupe + barbe)', 'description', '100', '1:00'),
+
+(3, 'manucure normal', 'description', '100', '1:00'),
+(3, 'manucure façon spa', 'description', '100', '1:00'),
+(3, 'pedicure normal', 'description', '100', '1:00'),
+(3, 'pedicure façon spa', 'description', '100', '1:00'),
+
+(4, 'soin black mask', 'description', '100', '1:00'),
+(4, 'soin hydratant', 'description', '100', '1:00'),
+(4, 'soin de visage express 30 min', 'description', '100', '1:00'),
+(4, 'soin de visage profond avec extraction des points noirs', 'description', '100', '1:00'),
+
+(5, 'nez-narines', 'description', '100', '1:00'),
+(5, 'oreilles', 'description', '100', '1:00'),
+(5, 'contour de barbe', 'description', '100', '1:00'),
+(5, 'visage complet', 'description', '100', '1:00'),
+
+(6, 'pose vernis permanent', 'description',  '100', '1:00'),
+(6, 'manucure avec vernis permanent', 'description',  '100', '1:00'),
+(6, 'pose vernis french', 'description',  '100', '1:00'),
+(6, 'manucure avec french', 'description',  '100', '1:00'),
+(6, 'pose vernis simple', 'description',  '100', '1:00'),
+(6, 'manucure avec pose vernis simple', 'description',  '100', '1:00'),
+
+(7, 'pedicure avec vernis simplme', 'description',  '100', '1:00'),
+(7, 'pedicure french', 'description',  '100', '1:00'),
+(7, 'pedicure avec vernis permanent', 'description',  '100', '1:00'),
+(7, 'pedicure avec retrait vernis permanent', 'description',  '100', '1:00'),
+
+(8, 'maquillage de jour', 'description',  '100', '1:00'),
+(8, 'maquillage de nuit', 'description',  '100', '1:00'),
+(8, 'maquillage et faux cils', 'description',  '100', '1:00'),
+
+(9, 'sourcils', 'description',  '100', '1:00'),
+(9, 'visage', 'description',  '100', '1:00'),
+(9, 'duvet', 'description',  '100', '1:00'),
+(9, 'demis-bras', 'description',  '100', '1:00'),
+(9, 'bras', 'description',  '100', '1:00'),
+(9, 'jambes', 'description',  '100', '1:00'),
+(9, 'demi-jambes', 'description',  '100', '1:00'),
+(9, 'aiselle', 'description',  '100', '1:00'),
+(9, 'maillot brésilien', 'description',  '100', '1:00'),
+(9, 'bord de maillot', 'description',  '100', '1:00'),
+(9, 'maillot intégral', 'description',  '100', '1:00'),
+(9, 'épilation complète', 'description',  '100', '1:00'),
+
+(10, 'soin black mask', 'description',  '100', '1:00'),
+(10, 'soin hydratant', 'description',  '100', '1:00'),
+(10, 'soin de visage express 30 mins', 'description',  '100', '1:00'),
+(10, 'soin de visage profond avec extraction des points noirs', 'description',  '100', '1:00') [42122-200]
+Location   : db/migration/V2.5__AddServices.sql (C:\Users\lenovo\Desktop\explorecali\target\classes\db\migration\V2.5__AddServices.sql)
+Line       : 1
+Statement  : INSERT INTO My_Service (package_id, title, description, gender, price, duration) VALUES
+(1, 'coloration cheveux', 'description', '100', '1:00'),
+(1, 'coloration barbe', 'description', '100', '1:00'),
+(1, 'coloration moustache', 'description', '100', '1:00'),
+(1, 'mèches pour cheveux', 'description', '100', '1:00'),
+
+(2, 'défrisage', 'description', '100', '1:00'),
+(2, 'kératine', 'description', '100', '1:00'),
+(2, 'protein', 'description', '100', '1:00'),
+(2, 'pack lissage (lissage + coupe + barbe)', 'description', '100', '1:00'),
+
+(3, 'manucure normal', 'description', '100', '1:00'),
+(3, 'manucure façon spa', 'description', '100', '1:00'),
+(3, 'pedicure normal', 'description', '100', '1:00'),
+(3, 'pedicure façon spa', 'description', '100', '1:00'),
+
+(4, 'soin black mask', 'description', '100', '1:00'),
+(4, 'soin hydratant', 'description', '100', '1:00'),
+(4, 'soin de visage express 30 min', 'description', '100', '1:00'),
+(4, 'soin de visage profond avec extraction des points noirs', 'description', '100', '1:00'),
+
+(5, 'nez-narines', 'description', '100', '1:00'),
+(5, 'oreilles', 'description', '100', '1:00'),
+(5, 'contour de barbe', 'description', '100', '1:00'),
+(5, 'visage complet', 'description', '100', '1:00'),
+
+(6, 'pose vernis permanent', 'description',  '100', '1:00'),
+(6, 'manucure avec vernis permanent', 'description',  '100', '1:00'),
+(6, 'pose vernis french', 'description',  '100', '1:00'),
+(6, 'manucure avec french', 'description',  '100', '1:00'),
+(6, 'pose vernis simple', 'description',  '100', '1:00'),
+(6, 'manucure avec pose vernis simple', 'description',  '100', '1:00'),
+
+(7, 'pedicure avec vernis simplme', 'description',  '100', '1:00'),
+(7, 'pedicure french', 'description',  '100', '1:00'),
+(7, 'pedicure avec vernis permanent', 'description',  '100', '1:00'),
+(7, 'pedicure avec retrait vernis permanent', 'description',  '100', '1:00'),
+
+(8, 'maquillage de jour', 'description',  '100', '1:00'),
+(8, 'maquillage de nuit', 'description',  '100', '1:00'),
+(8, 'maquillage et faux cils', 'description',  '100', '1:00'),
+
+(9, 'sourcils', 'description',  '100', '1:00'),
+(9, 'visage', 'description',  '100', '1:00'),
+(9, 'duvet', 'description',  '100', '1:00'),
+(9, 'demis-bras', 'description',  '100', '1:00'),
+(9, 'bras', 'description',  '100', '1:00'),
+(9, 'jambes', 'description',  '100', '1:00'),
+(9, 'demi-jambes', 'description',  '100', '1:00'),
+(9, 'aiselle', 'description',  '100', '1:00'),
+(9, 'maillot brésilien', 'description',  '100', '1:00'),
+(9, 'bord de maillot', 'description',  '100', '1:00'),
+(9, 'maillot intégral', 'description',  '100', '1:00'),
+(9, 'épilation complète', 'description',  '100', '1:00'),
+
+(10, 'soin black mask', 'description',  '100', '1:00'),
+(10, 'soin hydratant', 'description',  '100', '1:00'),
+(10, 'soin de visage express 30 mins', 'description',  '100', '1:00'),
+(10, 'soin de visage profond avec extraction des points noirs', 'description',  '100', '1:00')
+
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:369)
+	at org.flywaydb.core.internal.command.DbMigrate.access$200(DbMigrate.java:54)
+	at org.flywaydb.core.internal.command.DbMigrate$3.call(DbMigrate.java:282)
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:66)
+	at org.flywaydb.core.internal.command.DbMigrate.applyMigrations(DbMigrate.java:279)
+	at org.flywaydb.core.internal.command.DbMigrate.migrateGroup(DbMigrate.java:244)
+	at org.flywaydb.core.internal.command.DbMigrate.access$100(DbMigrate.java:54)
+	at org.flywaydb.core.internal.command.DbMigrate$2.call(DbMigrate.java:162)
+	at org.flywaydb.core.internal.command.DbMigrate$2.call(DbMigrate.java:159)
+	at org.flywaydb.core.internal.jdbc.TableLockingExecutionTemplate$1.call(TableLockingExecutionTemplate.java:38)
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:66)
+	at org.flywaydb.core.internal.jdbc.TableLockingExecutionTemplate.execute(TableLockingExecutionTemplate.java:33)
+	at org.flywaydb.core.internal.database.base.Connection.lock(Connection.java:129)
+	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory.lock(JdbcTableSchemaHistory.java:140)
+	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:159)
+	at org.flywaydb.core.internal.command.DbMigrate.migrate(DbMigrate.java:137)
+	at org.flywaydb.core.Flyway$1.execute(Flyway.java:199)
+	at org.flywaydb.core.Flyway$1.execute(Flyway.java:159)
+	at org.flywaydb.core.Flyway.execute(Flyway.java:530)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:159)
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:65)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1790)
+	... 19 common frames omitted
+Caused by: org.flywaydb.core.internal.sqlscript.FlywaySqlScriptException: 
+Migration V2.5__AddServices.sql failed
+--------------------------------------
+SQL State  : 42S22
+Error Code : 42122
+Message    : Column "GENDER" not found; SQL statement:
+INSERT INTO My_Service (package_id, title, description, gender, price, duration) VALUES
+(1, 'coloration cheveux', 'description', '100', '1:00'),
+(1, 'coloration barbe', 'description', '100', '1:00'),
+(1, 'coloration moustache', 'description', '100', '1:00'),
+(1, 'mèches pour cheveux', 'description', '100', '1:00'),
+
+(2, 'défrisage', 'description', '100', '1:00'),
+(2, 'kératine', 'description', '100', '1:00'),
+(2, 'protein', 'description', '100', '1:00'),
+(2, 'pack lissage (lissage + coupe + barbe)', 'description', '100', '1:00'),
+
+(3, 'manucure normal', 'description', '100', '1:00'),
+(3, 'manucure façon spa', 'description', '100', '1:00'),
+(3, 'pedicure normal', 'description', '100', '1:00'),
+(3, 'pedicure façon spa', 'description', '100', '1:00'),
+
+(4, 'soin black mask', 'description', '100', '1:00'),
+(4, 'soin hydratant', 'description', '100', '1:00'),
+(4, 'soin de visage express 30 min', 'description', '100', '1:00'),
+(4, 'soin de visage profond avec extraction des points noirs', 'description', '100', '1:00'),
+
+(5, 'nez-narines', 'description', '100', '1:00'),
+(5, 'oreilles', 'description', '100', '1:00'),
+(5, 'contour de barbe', 'description', '100', '1:00'),
+(5, 'visage complet', 'description', '100', '1:00'),
+
+(6, 'pose vernis permanent', 'description',  '100', '1:00'),
+(6, 'manucure avec vernis permanent', 'description',  '100', '1:00'),
+(6, 'pose vernis french', 'description',  '100', '1:00'),
+(6, 'manucure avec french', 'description',  '100', '1:00'),
+(6, 'pose vernis simple', 'description',  '100', '1:00'),
+(6, 'manucure avec pose vernis simple', 'description',  '100', '1:00'),
+
+(7, 'pedicure avec vernis simplme', 'description',  '100', '1:00'),
+(7, 'pedicure french', 'description',  '100', '1:00'),
+(7, 'pedicure avec vernis permanent', 'description',  '100', '1:00'),
+(7, 'pedicure avec retrait vernis permanent', 'description',  '100', '1:00'),
+
+(8, 'maquillage de jour', 'description',  '100', '1:00'),
+(8, 'maquillage de nuit', 'description',  '100', '1:00'),
+(8, 'maquillage et faux cils', 'description',  '100', '1:00'),
+
+(9, 'sourcils', 'description',  '100', '1:00'),
+(9, 'visage', 'description',  '100', '1:00'),
+(9, 'duvet', 'description',  '100', '1:00'),
+(9, 'demis-bras', 'description',  '100', '1:00'),
+(9, 'bras', 'description',  '100', '1:00'),
+(9, 'jambes', 'description',  '100', '1:00'),
+(9, 'demi-jambes', 'description',  '100', '1:00'),
+(9, 'aiselle', 'description',  '100', '1:00'),
+(9, 'maillot brésilien', 'description',  '100', '1:00'),
+(9, 'bord de maillot', 'description',  '100', '1:00'),
+(9, 'maillot intégral', 'description',  '100', '1:00'),
+(9, 'épilation complète', 'description',  '100', '1:00'),
+
+(10, 'soin black mask', 'description',  '100', '1:00'),
+(10, 'soin hydratant', 'description',  '100', '1:00'),
+(10, 'soin de visage express 30 mins', 'description',  '100', '1:00'),
+(10, 'soin de visage profond avec extraction des points noirs', 'description',  '100', '1:00') [42122-200]
+Location   : db/migration/V2.5__AddServices.sql (C:\Users\lenovo\Desktop\explorecali\target\classes\db\migration\V2.5__AddServices.sql)
+Line       : 1
+Statement  : INSERT INTO My_Service (package_id, title, description, gender, price, duration) VALUES
+(1, 'coloration cheveux', 'description', '100', '1:00'),
+(1, 'coloration barbe', 'description', '100', '1:00'),
+(1, 'coloration moustache', 'description', '100', '1:00'),
+(1, 'mèches pour cheveux', 'description', '100', '1:00'),
+
+(2, 'défrisage', 'description', '100', '1:00'),
+(2, 'kératine', 'description', '100', '1:00'),
+(2, 'protein', 'description', '100', '1:00'),
+(2, 'pack lissage (lissage + coupe + barbe)', 'description', '100', '1:00'),
+
+(3, 'manucure normal', 'description', '100', '1:00'),
+(3, 'manucure façon spa', 'description', '100', '1:00'),
+(3, 'pedicure normal', 'description', '100', '1:00'),
+(3, 'pedicure façon spa', 'description', '100', '1:00'),
+
+(4, 'soin black mask', 'description', '100', '1:00'),
+(4, 'soin hydratant', 'description', '100', '1:00'),
+(4, 'soin de visage express 30 min', 'description', '100', '1:00'),
+(4, 'soin de visage profond avec extraction des points noirs', 'description', '100', '1:00'),
+
+(5, 'nez-narines', 'description', '100', '1:00'),
+(5, 'oreilles', 'description', '100', '1:00'),
+(5, 'contour de barbe', 'description', '100', '1:00'),
+(5, 'visage complet', 'description', '100', '1:00'),
+
+(6, 'pose vernis permanent', 'description',  '100', '1:00'),
+(6, 'manucure avec vernis permanent', 'description',  '100', '1:00'),
+(6, 'pose vernis french', 'description',  '100', '1:00'),
+(6, 'manucure avec french', 'description',  '100', '1:00'),
+(6, 'pose vernis simple', 'description',  '100', '1:00'),
+(6, 'manucure avec pose vernis simple', 'description',  '100', '1:00'),
+
+(7, 'pedicure avec vernis simplme', 'description',  '100', '1:00'),
+(7, 'pedicure french', 'description',  '100', '1:00'),
+(7, 'pedicure avec vernis permanent', 'description',  '100', '1:00'),
+(7, 'pedicure avec retrait vernis permanent', 'description',  '100', '1:00'),
+
+(8, 'maquillage de jour', 'description',  '100', '1:00'),
+(8, 'maquillage de nuit', 'description',  '100', '1:00'),
+(8, 'maquillage et faux cils', 'description',  '100', '1:00'),
+
+(9, 'sourcils', 'description',  '100', '1:00'),
+(9, 'visage', 'description',  '100', '1:00'),
+(9, 'duvet', 'description',  '100', '1:00'),
+(9, 'demis-bras', 'description',  '100', '1:00'),
+(9, 'bras', 'description',  '100', '1:00'),
+(9, 'jambes', 'description',  '100', '1:00'),
+(9, 'demi-jambes', 'description',  '100', '1:00'),
+(9, 'aiselle', 'description',  '100', '1:00'),
+(9, 'maillot brésilien', 'description',  '100', '1:00'),
+(9, 'bord de maillot', 'description',  '100', '1:00'),
+(9, 'maillot intégral', 'description',  '100', '1:00'),
+(9, 'épilation complète', 'description',  '100', '1:00'),
+
+(10, 'soin black mask', 'description',  '100', '1:00'),
+(10, 'soin hydratant', 'description',  '100', '1:00'),
+(10, 'soin de visage express 30 mins', 'description',  '100', '1:00'),
+(10, 'soin de visage profond avec extraction des points noirs', 'description',  '100', '1:00')
+
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.handleException(DefaultSqlScriptExecutor.java:275)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:220)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.execute(DefaultSqlScriptExecutor.java:127)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.executeOnce(SqlMigrationExecutor.java:88)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.access$000(SqlMigrationExecutor.java:33)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor$1.call(SqlMigrationExecutor.java:77)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor$1.call(SqlMigrationExecutor.java:74)
+	at org.flywaydb.core.internal.database.DefaultExecutionStrategy.execute(DefaultExecutionStrategy.java:28)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.execute(SqlMigrationExecutor.java:74)
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:366)
+	... 41 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "GENDER" not found; SQL statement:
+INSERT INTO My_Service (package_id, title, description, gender, price, duration) VALUES
+(1, 'coloration cheveux', 'description', '100', '1:00'),
+(1, 'coloration barbe', 'description', '100', '1:00'),
+(1, 'coloration moustache', 'description', '100', '1:00'),
+(1, 'mèches pour cheveux', 'description', '100', '1:00'),
+
+(2, 'défrisage', 'description', '100', '1:00'),
+(2, 'kératine', 'description', '100', '1:00'),
+(2, 'protein', 'description', '100', '1:00'),
+(2, 'pack lissage (lissage + coupe + barbe)', 'description', '100', '1:00'),
+
+(3, 'manucure normal', 'description', '100', '1:00'),
+(3, 'manucure façon spa', 'description', '100', '1:00'),
+(3, 'pedicure normal', 'description', '100', '1:00'),
+(3, 'pedicure façon spa', 'description', '100', '1:00'),
+
+(4, 'soin black mask', 'description', '100', '1:00'),
+(4, 'soin hydratant', 'description', '100', '1:00'),
+(4, 'soin de visage express 30 min', 'description', '100', '1:00'),
+(4, 'soin de visage profond avec extraction des points noirs', 'description', '100', '1:00'),
+
+(5, 'nez-narines', 'description', '100', '1:00'),
+(5, 'oreilles', 'description', '100', '1:00'),
+(5, 'contour de barbe', 'description', '100', '1:00'),
+(5, 'visage complet', 'description', '100', '1:00'),
+
+(6, 'pose vernis permanent', 'description',  '100', '1:00'),
+(6, 'manucure avec vernis permanent', 'description',  '100', '1:00'),
+(6, 'pose vernis french', 'description',  '100', '1:00'),
+(6, 'manucure avec french', 'description',  '100', '1:00'),
+(6, 'pose vernis simple', 'description',  '100', '1:00'),
+(6, 'manucure avec pose vernis simple', 'description',  '100', '1:00'),
+
+(7, 'pedicure avec vernis simplme', 'description',  '100', '1:00'),
+(7, 'pedicure french', 'description',  '100', '1:00'),
+(7, 'pedicure avec vernis permanent', 'description',  '100', '1:00'),
+(7, 'pedicure avec retrait vernis permanent', 'description',  '100', '1:00'),
+
+(8, 'maquillage de jour', 'description',  '100', '1:00'),
+(8, 'maquillage de nuit', 'description',  '100', '1:00'),
+(8, 'maquillage et faux cils', 'description',  '100', '1:00'),
+
+(9, 'sourcils', 'description',  '100', '1:00'),
+(9, 'visage', 'description',  '100', '1:00'),
+(9, 'duvet', 'description',  '100', '1:00'),
+(9, 'demis-bras', 'description',  '100', '1:00'),
+(9, 'bras', 'description',  '100', '1:00'),
+(9, 'jambes', 'description',  '100', '1:00'),
+(9, 'demi-jambes', 'description',  '100', '1:00'),
+(9, 'aiselle', 'description',  '100', '1:00'),
+(9, 'maillot brésilien', 'description',  '100', '1:00'),
+(9, 'bord de maillot', 'description',  '100', '1:00'),
+(9, 'maillot intégral', 'description',  '100', '1:00'),
+(9, 'épilation complète', 'description',  '100', '1:00'),
+
+(10, 'soin black mask', 'description',  '100', '1:00'),
+(10, 'soin hydratant', 'description',  '100', '1:00'),
+(10, 'soin de visage express 30 mins', 'description',  '100', '1:00'),
+(10, 'soin de visage profond avec extraction des points noirs', 'description',  '100', '1:00') [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.parseColumn(Parser.java:1450)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.flywaydb.core.internal.jdbc.JdbcTemplate.executeStatement(JdbcTemplate.java:244)
+	at org.flywaydb.core.internal.sqlscript.ParsedSqlStatement.execute(ParsedSqlStatement.java:111)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:208)
+	... 49 common frames omitted
+
+2020-11-19 14:08:20.322  INFO 15736 --- [main] com.example.ec.StylifyApplication        : Starting StylifyApplication on DESKTOP-7SLLO4E with PID 15736 (C:\Users\lenovo\Desktop\explorecali\target\classes started by lenovo in C:\Users\lenovo\Desktop\explorecali)
+2020-11-19 14:08:20.326 DEBUG 15736 --- [main] com.example.ec.StylifyApplication        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-11-19 14:08:20.326  INFO 15736 --- [main] com.example.ec.StylifyApplication        : The following profiles are active: default
+2020-11-19 14:08:20.982  INFO 15736 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-19 14:08:21.031  INFO 15736 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43ms. Found 4 JPA repository interfaces.
+2020-11-19 14:08:21.471  INFO 15736 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-19 14:08:21.477  INFO 15736 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-19 14:08:21.477  INFO 15736 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-19 14:08:21.616  INFO 15736 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-19 14:08:21.616  INFO 15736 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1233 ms
+2020-11-19 14:08:21.763  INFO 15736 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-19 14:08:21.768  INFO 15736 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-19 14:08:21.843  INFO 15736 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-19 14:08:21.849  INFO 15736 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:fc23229c-7b1f-444d-9293-b829a077aafd (H2 1.4)
+2020-11-19 14:08:21.907  INFO 15736 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.027s)
+2020-11-19 14:08:21.915  INFO 15736 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-11-19 14:08:21.951  INFO 15736 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-11-19 14:08:21.956  INFO 15736 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.1 - CreateTourSchema
+2020-11-19 14:08:22.045  INFO 15736 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.2 - AddTours
+2020-11-19 14:08:22.092  INFO 15736 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.3 - CreateTourRatingSchema
+2020-11-19 14:08:22.115  INFO 15736 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.4 - AddTourRatings
+2020-11-19 14:08:22.133  INFO 15736 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.1 - CreateSecuritySchema
+2020-11-19 14:08:22.152  INFO 15736 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.2 - AddUsers
+2020-11-19 14:08:22.165  INFO 15736 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.3 - CreateServicePackagesSchema
+2020-11-19 14:08:22.179  INFO 15736 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.4 - AddServicePackages
+2020-11-19 14:08:22.191  INFO 15736 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.5 - AddServices
+2020-11-19 14:08:22.203  INFO 15736 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.6 - CreateServiceProviderSchema
+2020-11-19 14:08:22.212  INFO 15736 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.7 - AddServiceProviders
+2020-11-19 14:08:22.221  INFO 15736 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.8 - CreateClientSchema
+2020-11-19 14:08:22.230  INFO 15736 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.9 - AddClients
+2020-11-19 14:08:22.237  INFO 15736 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 13 migrations to schema "PUBLIC" (execution time 00:00.293s)
+2020-11-19 14:08:22.326  INFO 15736 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-19 14:08:22.367  INFO 15736 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-19 14:08:22.399  INFO 15736 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-11-19 14:08:22.501  INFO 15736 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-19 14:08:22.588  INFO 15736 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-19 14:08:22.924  INFO 15736 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-19 14:08:22.929  INFO 15736 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-19 14:08:23.177  WARN 15736 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-19 14:08:23.551  INFO 15736 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-19 14:08:23.553  INFO 15736 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-19 14:08:23.579  INFO 15736 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-19 14:08:23.587  INFO 15736 --- [main] com.example.ec.StylifyApplication        : Started StylifyApplication in 3.645 seconds (JVM running for 4.719)
+2020-11-19 14:08:27.205  INFO 15736 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-19 14:08:27.206  INFO 15736 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-19 14:08:27.221  INFO 15736 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
