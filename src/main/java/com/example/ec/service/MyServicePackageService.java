@@ -17,8 +17,8 @@ public class MyServicePackageService {
 
 
 
-    public MyServicePackage createServicePackage(Integer id, String name, String description) {
-        return myServicePackageRepository.save(new MyServicePackage(id, name, description));
+    public MyServicePackage createServicePackage(Integer id, String name, String description, String gender) {
+        return myServicePackageRepository.save(new MyServicePackage(id, name, description, gender));
     }
 
     public long total() {

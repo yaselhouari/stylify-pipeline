@@ -1,7 +1,8 @@
 CREATE TABLE My_Service_Package(
   id  BIGINT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(50) NOT NULL,
-  description VARCHAR(2000) NOT NULL
+  description VARCHAR(2000) NOT NULL,
+  gender VARCHAR(20)
 );
 
 CREATE TABLE My_Service (

@@ -15,14 +15,17 @@ public class MyServicePackage {
     @Column
     String description;
 
-    public MyServicePackage(Integer id, String name, String description) {
+    @Column
+    String gender;
+
+    public MyServicePackage() {
+    }
+
+    public MyServicePackage(Integer id, String name, String description, String gender) {
         this.id = id;
         this.name = name;
         this.description = description;
-    }
-
-    public MyServicePackage() {
-
+        this.gender = gender;
     }
 
     public Integer getId() {
@@ -49,12 +52,21 @@ public class MyServicePackage {
         this.description = description;
     }
 
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
     @Override
     public String toString() {
         return "MyServicePackage{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
+                ", gender='" + gender + '\'' +
                 '}';
     }
 
@@ -63,13 +75,14 @@ public class MyServicePackage {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         MyServicePackage that = (MyServicePackage) o;
-        return Objects.equals(id, that.id) &&
-                Objects.equals(name, that.name) &&
-                Objects.equals(description, that.description);
+        return id.equals(that.id) &&
+                name.equals(that.name) &&
+                description.equals(that.description) &&
+                gender.equals(that.gender);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, description);
+        return Objects.hash(id, name, description, gender);
     }
 }

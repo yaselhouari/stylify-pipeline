@@ -5718,3 +5718,561 @@ INSERT INTO My_Service_Provider(id, first_name, last_name, gender, mobile, email
 2020-11-19 13:55:34.510  INFO 12640 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-11-19 13:55:34.510  INFO 12640 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2020-11-19 13:55:34.523  INFO 12640 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2020-11-19 13:58:50.343  INFO 4540 --- [main] com.example.ec.StylifyApplication        : Starting StylifyApplication on DESKTOP-7SLLO4E with PID 4540 (C:\Users\lenovo\Desktop\explorecali\target\classes started by lenovo in C:\Users\lenovo\Desktop\explorecali)
+2020-11-19 13:58:50.346 DEBUG 4540 --- [main] com.example.ec.StylifyApplication        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-11-19 13:58:50.346  INFO 4540 --- [main] com.example.ec.StylifyApplication        : The following profiles are active: default
+2020-11-19 13:58:51.041  INFO 4540 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-19 13:58:51.095  INFO 4540 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47ms. Found 4 JPA repository interfaces.
+2020-11-19 13:58:51.520  INFO 4540 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-19 13:58:51.526  INFO 4540 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-19 13:58:51.526  INFO 4540 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-19 13:58:51.642  INFO 4540 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-19 13:58:51.642  INFO 4540 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1256 ms
+2020-11-19 13:58:51.790  INFO 4540 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-19 13:58:51.796  INFO 4540 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-19 13:58:51.879  INFO 4540 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-19 13:58:51.886  INFO 4540 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:eb60000f-c01e-4740-9480-b556e0fa1bd9 (H2 1.4)
+2020-11-19 13:58:51.953  INFO 4540 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.032s)
+2020-11-19 13:58:51.962  INFO 4540 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-11-19 13:58:51.993  INFO 4540 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-11-19 13:58:51.998  INFO 4540 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.1 - CreateTourSchema
+2020-11-19 13:58:52.036  INFO 4540 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.2 - AddTours
+2020-11-19 13:58:52.056  INFO 4540 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.3 - CreateTourRatingSchema
+2020-11-19 13:58:52.069  INFO 4540 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.4 - AddTourRatings
+2020-11-19 13:58:52.081  INFO 4540 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.1 - CreateSecuritySchema
+2020-11-19 13:58:52.095  INFO 4540 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.2 - AddUsers
+2020-11-19 13:58:52.106  INFO 4540 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.3 - CreateServicePackagesSchema
+2020-11-19 13:58:52.118  INFO 4540 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.4 - AddServicePackages
+2020-11-19 13:58:52.124 ERROR 4540 --- [main] o.f.core.internal.command.DbMigrate      : Migration of schema "PUBLIC" to version 2.4 - AddServicePackages failed! Please restore backups and roll back database and code!
+2020-11-19 13:58:52.131  WARN 4540 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: 
+Migration V2.4__AddServicePackages.sql failed
+---------------------------------------------
+SQL State  : 21S02
+Error Code : 21002
+Message    : Column count does not match; SQL statement:
+INSERT INTO My_Service_Package (id, name, description) VALUES
+(1,  'coloration et meches', 'description', 'm'),
+(2,  'lissage', 'description', 'm'),
+(3,  'manicure pedicure', 'description', 'm'),
+(4,  'soins de visage', 'description', 'm'),
+(5,  'epilcation', 'description', 'm'),
+
+(6,  'beauté des mains', 'description', 'f'),
+(7,  'beauté des pieds', 'description', 'f'),
+(8,  'maquillage', 'description', 'f'),
+(9,  'epilcation', 'description', 'f'),
+(10,  'soins de visage', 'description', 'f') [21002-200]
+Location   : db/migration/V2.4__AddServicePackages.sql (C:\Users\lenovo\Desktop\explorecali\target\classes\db\migration\V2.4__AddServicePackages.sql)
+Line       : 1
+Statement  : INSERT INTO My_Service_Package (id, name, description) VALUES
+(1,  'coloration et meches', 'description', 'm'),
+(2,  'lissage', 'description', 'm'),
+(3,  'manicure pedicure', 'description', 'm'),
+(4,  'soins de visage', 'description', 'm'),
+(5,  'epilcation', 'description', 'm'),
+
+(6,  'beauté des mains', 'description', 'f'),
+(7,  'beauté des pieds', 'description', 'f'),
+(8,  'maquillage', 'description', 'f'),
+(9,  'epilcation', 'description', 'f'),
+(10,  'soins de visage', 'description', 'f')
+
+2020-11-19 13:58:52.131  INFO 4540 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-11-19 13:58:52.133  INFO 4540 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-11-19 13:58:52.136  INFO 4540 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-11-19 13:58:52.145  INFO 4540 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-11-19 13:58:52.154 ERROR 4540 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: 
+Migration V2.4__AddServicePackages.sql failed
+---------------------------------------------
+SQL State  : 21S02
+Error Code : 21002
+Message    : Column count does not match; SQL statement:
+INSERT INTO My_Service_Package (id, name, description) VALUES
+(1,  'coloration et meches', 'description', 'm'),
+(2,  'lissage', 'description', 'm'),
+(3,  'manicure pedicure', 'description', 'm'),
+(4,  'soins de visage', 'description', 'm'),
+(5,  'epilcation', 'description', 'm'),
+
+(6,  'beauté des mains', 'description', 'f'),
+(7,  'beauté des pieds', 'description', 'f'),
+(8,  'maquillage', 'description', 'f'),
+(9,  'epilcation', 'description', 'f'),
+(10,  'soins de visage', 'description', 'f') [21002-200]
+Location   : db/migration/V2.4__AddServicePackages.sql (C:\Users\lenovo\Desktop\explorecali\target\classes\db\migration\V2.4__AddServicePackages.sql)
+Line       : 1
+Statement  : INSERT INTO My_Service_Package (id, name, description) VALUES
+(1,  'coloration et meches', 'description', 'm'),
+(2,  'lissage', 'description', 'm'),
+(3,  'manicure pedicure', 'description', 'm'),
+(4,  'soins de visage', 'description', 'm'),
+(5,  'epilcation', 'description', 'm'),
+
+(6,  'beauté des mains', 'description', 'f'),
+(7,  'beauté des pieds', 'description', 'f'),
+(8,  'maquillage', 'description', 'f'),
+(9,  'epilcation', 'description', 'f'),
+(10,  'soins de visage', 'description', 'f')
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1794)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:311)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1109)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.example.ec.StylifyApplication.main(StylifyApplication.java:20)
+Caused by: org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: 
+Migration V2.4__AddServicePackages.sql failed
+---------------------------------------------
+SQL State  : 21S02
+Error Code : 21002
+Message    : Column count does not match; SQL statement:
+INSERT INTO My_Service_Package (id, name, description) VALUES
+(1,  'coloration et meches', 'description', 'm'),
+(2,  'lissage', 'description', 'm'),
+(3,  'manicure pedicure', 'description', 'm'),
+(4,  'soins de visage', 'description', 'm'),
+(5,  'epilcation', 'description', 'm'),
+
+(6,  'beauté des mains', 'description', 'f'),
+(7,  'beauté des pieds', 'description', 'f'),
+(8,  'maquillage', 'description', 'f'),
+(9,  'epilcation', 'description', 'f'),
+(10,  'soins de visage', 'description', 'f') [21002-200]
+Location   : db/migration/V2.4__AddServicePackages.sql (C:\Users\lenovo\Desktop\explorecali\target\classes\db\migration\V2.4__AddServicePackages.sql)
+Line       : 1
+Statement  : INSERT INTO My_Service_Package (id, name, description) VALUES
+(1,  'coloration et meches', 'description', 'm'),
+(2,  'lissage', 'description', 'm'),
+(3,  'manicure pedicure', 'description', 'm'),
+(4,  'soins de visage', 'description', 'm'),
+(5,  'epilcation', 'description', 'm'),
+
+(6,  'beauté des mains', 'description', 'f'),
+(7,  'beauté des pieds', 'description', 'f'),
+(8,  'maquillage', 'description', 'f'),
+(9,  'epilcation', 'description', 'f'),
+(10,  'soins de visage', 'description', 'f')
+
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:369)
+	at org.flywaydb.core.internal.command.DbMigrate.access$200(DbMigrate.java:54)
+	at org.flywaydb.core.internal.command.DbMigrate$3.call(DbMigrate.java:282)
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:66)
+	at org.flywaydb.core.internal.command.DbMigrate.applyMigrations(DbMigrate.java:279)
+	at org.flywaydb.core.internal.command.DbMigrate.migrateGroup(DbMigrate.java:244)
+	at org.flywaydb.core.internal.command.DbMigrate.access$100(DbMigrate.java:54)
+	at org.flywaydb.core.internal.command.DbMigrate$2.call(DbMigrate.java:162)
+	at org.flywaydb.core.internal.command.DbMigrate$2.call(DbMigrate.java:159)
+	at org.flywaydb.core.internal.jdbc.TableLockingExecutionTemplate$1.call(TableLockingExecutionTemplate.java:38)
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:66)
+	at org.flywaydb.core.internal.jdbc.TableLockingExecutionTemplate.execute(TableLockingExecutionTemplate.java:33)
+	at org.flywaydb.core.internal.database.base.Connection.lock(Connection.java:129)
+	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory.lock(JdbcTableSchemaHistory.java:140)
+	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:159)
+	at org.flywaydb.core.internal.command.DbMigrate.migrate(DbMigrate.java:137)
+	at org.flywaydb.core.Flyway$1.execute(Flyway.java:199)
+	at org.flywaydb.core.Flyway$1.execute(Flyway.java:159)
+	at org.flywaydb.core.Flyway.execute(Flyway.java:530)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:159)
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:65)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1790)
+	... 19 common frames omitted
+Caused by: org.flywaydb.core.internal.sqlscript.FlywaySqlScriptException: 
+Migration V2.4__AddServicePackages.sql failed
+---------------------------------------------
+SQL State  : 21S02
+Error Code : 21002
+Message    : Column count does not match; SQL statement:
+INSERT INTO My_Service_Package (id, name, description) VALUES
+(1,  'coloration et meches', 'description', 'm'),
+(2,  'lissage', 'description', 'm'),
+(3,  'manicure pedicure', 'description', 'm'),
+(4,  'soins de visage', 'description', 'm'),
+(5,  'epilcation', 'description', 'm'),
+
+(6,  'beauté des mains', 'description', 'f'),
+(7,  'beauté des pieds', 'description', 'f'),
+(8,  'maquillage', 'description', 'f'),
+(9,  'epilcation', 'description', 'f'),
+(10,  'soins de visage', 'description', 'f') [21002-200]
+Location   : db/migration/V2.4__AddServicePackages.sql (C:\Users\lenovo\Desktop\explorecali\target\classes\db\migration\V2.4__AddServicePackages.sql)
+Line       : 1
+Statement  : INSERT INTO My_Service_Package (id, name, description) VALUES
+(1,  'coloration et meches', 'description', 'm'),
+(2,  'lissage', 'description', 'm'),
+(3,  'manicure pedicure', 'description', 'm'),
+(4,  'soins de visage', 'description', 'm'),
+(5,  'epilcation', 'description', 'm'),
+
+(6,  'beauté des mains', 'description', 'f'),
+(7,  'beauté des pieds', 'description', 'f'),
+(8,  'maquillage', 'description', 'f'),
+(9,  'epilcation', 'description', 'f'),
+(10,  'soins de visage', 'description', 'f')
+
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.handleException(DefaultSqlScriptExecutor.java:275)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:220)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.execute(DefaultSqlScriptExecutor.java:127)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.executeOnce(SqlMigrationExecutor.java:88)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.access$000(SqlMigrationExecutor.java:33)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor$1.call(SqlMigrationExecutor.java:77)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor$1.call(SqlMigrationExecutor.java:74)
+	at org.flywaydb.core.internal.database.DefaultExecutionStrategy.execute(DefaultExecutionStrategy.java:28)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.execute(SqlMigrationExecutor.java:74)
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:366)
+	... 41 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Column count does not match; SQL statement:
+INSERT INTO My_Service_Package (id, name, description) VALUES
+(1,  'coloration et meches', 'description', 'm'),
+(2,  'lissage', 'description', 'm'),
+(3,  'manicure pedicure', 'description', 'm'),
+(4,  'soins de visage', 'description', 'm'),
+(5,  'epilcation', 'description', 'm'),
+
+(6,  'beauté des mains', 'description', 'f'),
+(7,  'beauté des pieds', 'description', 'f'),
+(8,  'maquillage', 'description', 'f'),
+(9,  'epilcation', 'description', 'f'),
+(10,  'soins de visage', 'description', 'f') [21002-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.command.dml.Insert.prepare(Insert.java:319)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.flywaydb.core.internal.jdbc.JdbcTemplate.executeStatement(JdbcTemplate.java:244)
+	at org.flywaydb.core.internal.sqlscript.ParsedSqlStatement.execute(ParsedSqlStatement.java:111)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:208)
+	... 49 common frames omitted
+
+2020-11-19 13:59:15.075  INFO 15512 --- [main] com.example.ec.StylifyApplication        : Starting StylifyApplication on DESKTOP-7SLLO4E with PID 15512 (C:\Users\lenovo\Desktop\explorecali\target\classes started by lenovo in C:\Users\lenovo\Desktop\explorecali)
+2020-11-19 13:59:15.077 DEBUG 15512 --- [main] com.example.ec.StylifyApplication        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-11-19 13:59:15.078  INFO 15512 --- [main] com.example.ec.StylifyApplication        : The following profiles are active: default
+2020-11-19 13:59:15.676  INFO 15512 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-19 13:59:15.724  INFO 15512 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43ms. Found 4 JPA repository interfaces.
+2020-11-19 13:59:16.143  INFO 15512 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-19 13:59:16.149  INFO 15512 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-19 13:59:16.149  INFO 15512 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-19 13:59:16.265  INFO 15512 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-19 13:59:16.265  INFO 15512 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1140 ms
+2020-11-19 13:59:16.401  INFO 15512 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-19 13:59:16.406  INFO 15512 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-19 13:59:16.471  INFO 15512 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-19 13:59:16.477  INFO 15512 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:864c05a3-cbb9-4a4b-af82-79f6978f6986 (H2 1.4)
+2020-11-19 13:59:16.530  INFO 15512 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.026s)
+2020-11-19 13:59:16.539  INFO 15512 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-11-19 13:59:16.571  INFO 15512 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-11-19 13:59:16.575  INFO 15512 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.1 - CreateTourSchema
+2020-11-19 13:59:16.610  INFO 15512 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.2 - AddTours
+2020-11-19 13:59:16.629  INFO 15512 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.3 - CreateTourRatingSchema
+2020-11-19 13:59:16.640  INFO 15512 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.4 - AddTourRatings
+2020-11-19 13:59:16.651  INFO 15512 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.1 - CreateSecuritySchema
+2020-11-19 13:59:16.663  INFO 15512 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.2 - AddUsers
+2020-11-19 13:59:16.673  INFO 15512 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.3 - CreateServicePackagesSchema
+2020-11-19 13:59:16.683  INFO 15512 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.4 - AddServicePackages
+2020-11-19 13:59:16.688 ERROR 15512 --- [main] o.f.core.internal.command.DbMigrate      : Migration of schema "PUBLIC" to version 2.4 - AddServicePackages failed! Please restore backups and roll back database and code!
+2020-11-19 13:59:16.694  WARN 15512 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: 
+Migration V2.4__AddServicePackages.sql failed
+---------------------------------------------
+SQL State  : 42S22
+Error Code : 42122
+Message    : Column "GENDER" not found; SQL statement:
+INSERT INTO My_Service_Package (id, name, description, gender) VALUES
+(1,  'coloration et meches', 'description', 'm'),
+(2,  'lissage', 'description', 'm'),
+(3,  'manicure pedicure', 'description', 'm'),
+(4,  'soins de visage', 'description', 'm'),
+(5,  'epilcation', 'description', 'm'),
+
+(6,  'beauté des mains', 'description', 'f'),
+(7,  'beauté des pieds', 'description', 'f'),
+(8,  'maquillage', 'description', 'f'),
+(9,  'epilcation', 'description', 'f'),
+(10,  'soins de visage', 'description', 'f') [42122-200]
+Location   : db/migration/V2.4__AddServicePackages.sql (C:\Users\lenovo\Desktop\explorecali\target\classes\db\migration\V2.4__AddServicePackages.sql)
+Line       : 1
+Statement  : INSERT INTO My_Service_Package (id, name, description, gender) VALUES
+(1,  'coloration et meches', 'description', 'm'),
+(2,  'lissage', 'description', 'm'),
+(3,  'manicure pedicure', 'description', 'm'),
+(4,  'soins de visage', 'description', 'm'),
+(5,  'epilcation', 'description', 'm'),
+
+(6,  'beauté des mains', 'description', 'f'),
+(7,  'beauté des pieds', 'description', 'f'),
+(8,  'maquillage', 'description', 'f'),
+(9,  'epilcation', 'description', 'f'),
+(10,  'soins de visage', 'description', 'f')
+
+2020-11-19 13:59:16.695  INFO 15512 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-11-19 13:59:16.697  INFO 15512 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-11-19 13:59:16.699  INFO 15512 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-11-19 13:59:16.707  INFO 15512 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-11-19 13:59:16.714 ERROR 15512 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: 
+Migration V2.4__AddServicePackages.sql failed
+---------------------------------------------
+SQL State  : 42S22
+Error Code : 42122
+Message    : Column "GENDER" not found; SQL statement:
+INSERT INTO My_Service_Package (id, name, description, gender) VALUES
+(1,  'coloration et meches', 'description', 'm'),
+(2,  'lissage', 'description', 'm'),
+(3,  'manicure pedicure', 'description', 'm'),
+(4,  'soins de visage', 'description', 'm'),
+(5,  'epilcation', 'description', 'm'),
+
+(6,  'beauté des mains', 'description', 'f'),
+(7,  'beauté des pieds', 'description', 'f'),
+(8,  'maquillage', 'description', 'f'),
+(9,  'epilcation', 'description', 'f'),
+(10,  'soins de visage', 'description', 'f') [42122-200]
+Location   : db/migration/V2.4__AddServicePackages.sql (C:\Users\lenovo\Desktop\explorecali\target\classes\db\migration\V2.4__AddServicePackages.sql)
+Line       : 1
+Statement  : INSERT INTO My_Service_Package (id, name, description, gender) VALUES
+(1,  'coloration et meches', 'description', 'm'),
+(2,  'lissage', 'description', 'm'),
+(3,  'manicure pedicure', 'description', 'm'),
+(4,  'soins de visage', 'description', 'm'),
+(5,  'epilcation', 'description', 'm'),
+
+(6,  'beauté des mains', 'description', 'f'),
+(7,  'beauté des pieds', 'description', 'f'),
+(8,  'maquillage', 'description', 'f'),
+(9,  'epilcation', 'description', 'f'),
+(10,  'soins de visage', 'description', 'f')
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1794)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:311)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1109)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.example.ec.StylifyApplication.main(StylifyApplication.java:20)
+Caused by: org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: 
+Migration V2.4__AddServicePackages.sql failed
+---------------------------------------------
+SQL State  : 42S22
+Error Code : 42122
+Message    : Column "GENDER" not found; SQL statement:
+INSERT INTO My_Service_Package (id, name, description, gender) VALUES
+(1,  'coloration et meches', 'description', 'm'),
+(2,  'lissage', 'description', 'm'),
+(3,  'manicure pedicure', 'description', 'm'),
+(4,  'soins de visage', 'description', 'm'),
+(5,  'epilcation', 'description', 'm'),
+
+(6,  'beauté des mains', 'description', 'f'),
+(7,  'beauté des pieds', 'description', 'f'),
+(8,  'maquillage', 'description', 'f'),
+(9,  'epilcation', 'description', 'f'),
+(10,  'soins de visage', 'description', 'f') [42122-200]
+Location   : db/migration/V2.4__AddServicePackages.sql (C:\Users\lenovo\Desktop\explorecali\target\classes\db\migration\V2.4__AddServicePackages.sql)
+Line       : 1
+Statement  : INSERT INTO My_Service_Package (id, name, description, gender) VALUES
+(1,  'coloration et meches', 'description', 'm'),
+(2,  'lissage', 'description', 'm'),
+(3,  'manicure pedicure', 'description', 'm'),
+(4,  'soins de visage', 'description', 'm'),
+(5,  'epilcation', 'description', 'm'),
+
+(6,  'beauté des mains', 'description', 'f'),
+(7,  'beauté des pieds', 'description', 'f'),
+(8,  'maquillage', 'description', 'f'),
+(9,  'epilcation', 'description', 'f'),
+(10,  'soins de visage', 'description', 'f')
+
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:369)
+	at org.flywaydb.core.internal.command.DbMigrate.access$200(DbMigrate.java:54)
+	at org.flywaydb.core.internal.command.DbMigrate$3.call(DbMigrate.java:282)
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:66)
+	at org.flywaydb.core.internal.command.DbMigrate.applyMigrations(DbMigrate.java:279)
+	at org.flywaydb.core.internal.command.DbMigrate.migrateGroup(DbMigrate.java:244)
+	at org.flywaydb.core.internal.command.DbMigrate.access$100(DbMigrate.java:54)
+	at org.flywaydb.core.internal.command.DbMigrate$2.call(DbMigrate.java:162)
+	at org.flywaydb.core.internal.command.DbMigrate$2.call(DbMigrate.java:159)
+	at org.flywaydb.core.internal.jdbc.TableLockingExecutionTemplate$1.call(TableLockingExecutionTemplate.java:38)
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:66)
+	at org.flywaydb.core.internal.jdbc.TableLockingExecutionTemplate.execute(TableLockingExecutionTemplate.java:33)
+	at org.flywaydb.core.internal.database.base.Connection.lock(Connection.java:129)
+	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory.lock(JdbcTableSchemaHistory.java:140)
+	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:159)
+	at org.flywaydb.core.internal.command.DbMigrate.migrate(DbMigrate.java:137)
+	at org.flywaydb.core.Flyway$1.execute(Flyway.java:199)
+	at org.flywaydb.core.Flyway$1.execute(Flyway.java:159)
+	at org.flywaydb.core.Flyway.execute(Flyway.java:530)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:159)
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:65)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1790)
+	... 19 common frames omitted
+Caused by: org.flywaydb.core.internal.sqlscript.FlywaySqlScriptException: 
+Migration V2.4__AddServicePackages.sql failed
+---------------------------------------------
+SQL State  : 42S22
+Error Code : 42122
+Message    : Column "GENDER" not found; SQL statement:
+INSERT INTO My_Service_Package (id, name, description, gender) VALUES
+(1,  'coloration et meches', 'description', 'm'),
+(2,  'lissage', 'description', 'm'),
+(3,  'manicure pedicure', 'description', 'm'),
+(4,  'soins de visage', 'description', 'm'),
+(5,  'epilcation', 'description', 'm'),
+
+(6,  'beauté des mains', 'description', 'f'),
+(7,  'beauté des pieds', 'description', 'f'),
+(8,  'maquillage', 'description', 'f'),
+(9,  'epilcation', 'description', 'f'),
+(10,  'soins de visage', 'description', 'f') [42122-200]
+Location   : db/migration/V2.4__AddServicePackages.sql (C:\Users\lenovo\Desktop\explorecali\target\classes\db\migration\V2.4__AddServicePackages.sql)
+Line       : 1
+Statement  : INSERT INTO My_Service_Package (id, name, description, gender) VALUES
+(1,  'coloration et meches', 'description', 'm'),
+(2,  'lissage', 'description', 'm'),
+(3,  'manicure pedicure', 'description', 'm'),
+(4,  'soins de visage', 'description', 'm'),
+(5,  'epilcation', 'description', 'm'),
+
+(6,  'beauté des mains', 'description', 'f'),
+(7,  'beauté des pieds', 'description', 'f'),
+(8,  'maquillage', 'description', 'f'),
+(9,  'epilcation', 'description', 'f'),
+(10,  'soins de visage', 'description', 'f')
+
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.handleException(DefaultSqlScriptExecutor.java:275)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:220)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.execute(DefaultSqlScriptExecutor.java:127)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.executeOnce(SqlMigrationExecutor.java:88)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.access$000(SqlMigrationExecutor.java:33)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor$1.call(SqlMigrationExecutor.java:77)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor$1.call(SqlMigrationExecutor.java:74)
+	at org.flywaydb.core.internal.database.DefaultExecutionStrategy.execute(DefaultExecutionStrategy.java:28)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.execute(SqlMigrationExecutor.java:74)
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:366)
+	... 41 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "GENDER" not found; SQL statement:
+INSERT INTO My_Service_Package (id, name, description, gender) VALUES
+(1,  'coloration et meches', 'description', 'm'),
+(2,  'lissage', 'description', 'm'),
+(3,  'manicure pedicure', 'description', 'm'),
+(4,  'soins de visage', 'description', 'm'),
+(5,  'epilcation', 'description', 'm'),
+
+(6,  'beauté des mains', 'description', 'f'),
+(7,  'beauté des pieds', 'description', 'f'),
+(8,  'maquillage', 'description', 'f'),
+(9,  'epilcation', 'description', 'f'),
+(10,  'soins de visage', 'description', 'f') [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.parseColumn(Parser.java:1450)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.flywaydb.core.internal.jdbc.JdbcTemplate.executeStatement(JdbcTemplate.java:244)
+	at org.flywaydb.core.internal.sqlscript.ParsedSqlStatement.execute(ParsedSqlStatement.java:111)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:208)
+	... 49 common frames omitted
+
+2020-11-19 14:01:44.095  INFO 12552 --- [main] com.example.ec.StylifyApplication        : Starting StylifyApplication on DESKTOP-7SLLO4E with PID 12552 (C:\Users\lenovo\Desktop\explorecali\target\classes started by lenovo in C:\Users\lenovo\Desktop\explorecali)
+2020-11-19 14:01:44.098 DEBUG 12552 --- [main] com.example.ec.StylifyApplication        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-11-19 14:01:44.099  INFO 12552 --- [main] com.example.ec.StylifyApplication        : The following profiles are active: default
+2020-11-19 14:01:44.802  INFO 12552 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-19 14:01:44.853  INFO 12552 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45ms. Found 4 JPA repository interfaces.
+2020-11-19 14:01:45.317  INFO 12552 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-19 14:01:45.323  INFO 12552 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-19 14:01:45.323  INFO 12552 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-19 14:01:45.446  INFO 12552 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-19 14:01:45.446  INFO 12552 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1293 ms
+2020-11-19 14:01:45.583  INFO 12552 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-19 14:01:45.588  INFO 12552 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-19 14:01:45.653  INFO 12552 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-19 14:01:45.660  INFO 12552 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:3af45ab0-4da6-4085-87ac-ec6ec2437371 (H2 1.4)
+2020-11-19 14:01:45.717  INFO 12552 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 13 migrations (execution time 00:00.030s)
+2020-11-19 14:01:45.725  INFO 12552 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-11-19 14:01:45.762  INFO 12552 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-11-19 14:01:45.767  INFO 12552 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.1 - CreateTourSchema
+2020-11-19 14:01:45.806  INFO 12552 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.2 - AddTours
+2020-11-19 14:01:45.825  INFO 12552 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.3 - CreateTourRatingSchema
+2020-11-19 14:01:45.838  INFO 12552 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.4 - AddTourRatings
+2020-11-19 14:01:45.850  INFO 12552 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.1 - CreateSecuritySchema
+2020-11-19 14:01:45.862  INFO 12552 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.2 - AddUsers
+2020-11-19 14:01:45.872  INFO 12552 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.3 - CreateServicePackagesSchema
+2020-11-19 14:01:45.887  INFO 12552 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.4 - AddServicePackages
+2020-11-19 14:01:45.897  INFO 12552 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.5 - AddServices
+2020-11-19 14:01:45.906  INFO 12552 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.6 - CreateServiceProviderSchema
+2020-11-19 14:01:45.914  INFO 12552 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.7 - AddServiceProviders
+2020-11-19 14:01:45.922  INFO 12552 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.8 - CreateClientSchema
+2020-11-19 14:01:45.930  INFO 12552 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 2.9 - AddClients
+2020-11-19 14:01:45.936  INFO 12552 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 13 migrations to schema "PUBLIC" (execution time 00:00.183s)
+2020-11-19 14:01:46.009  INFO 12552 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-19 14:01:46.051  INFO 12552 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-19 14:01:46.094  INFO 12552 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-11-19 14:01:46.213  INFO 12552 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-19 14:01:46.293  INFO 12552 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-19 14:01:46.651  INFO 12552 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-19 14:01:46.657  INFO 12552 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-19 14:01:46.952  WARN 12552 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-19 14:01:47.405  INFO 12552 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-19 14:01:47.407  INFO 12552 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-19 14:01:47.435  INFO 12552 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-19 14:01:47.443  INFO 12552 --- [main] com.example.ec.StylifyApplication        : Started StylifyApplication in 3.699 seconds (JVM running for 4.78)
+2020-11-19 14:01:50.808  INFO 12552 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-19 14:01:50.808  INFO 12552 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-19 14:01:50.822  INFO 12552 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
