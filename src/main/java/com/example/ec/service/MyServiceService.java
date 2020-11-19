@@ -14,4 +14,8 @@ public class MyServiceService {
     public Iterable<MyService> lookup() {
         return serviceRepository.findAll();
     }
+
+    public Iterable<MyService> getServicesByPackageId(Integer packageId) {
+        return serviceRepository.findByPackageId(packageId);
+    }
 }
