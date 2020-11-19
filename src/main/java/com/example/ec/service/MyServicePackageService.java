@@ -29,7 +29,7 @@ public class MyServicePackageService {
         return myServicePackageRepository.findAll();
     }
 
-    public Iterable<MyService> getServicePackageByGender(String gender) {
+    public Iterable<MyServicePackage> getServicePackageByGender(String gender) {
         return myServicePackageRepository.findByGender(gender);
     }
 }

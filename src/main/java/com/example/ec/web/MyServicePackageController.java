@@ -12,13 +12,14 @@ public class MyServicePackageController {
     @Autowired
     MyServicePackageService myServicePackageService;
 
-    @GetMapping("/service_packages")
+    @GetMapping
     public Iterable<MyServicePackage> getServicePackages() {
         return myServicePackageService.lookup();
     }
 
-    @RequestMapping(value = "/service_packages/byGender/{gender}", method = RequestMethod.GET)
-    public Iterable<MyService> getServicesByPackageId(@PathVariable(value="gender") String gender) {
+    @GetMapping("/gender/{gender}")
+    public Iterable<MyServicePackage> getServicesByByGender(@PathVariable  String gender) {
         return myServicePackageService.getServicePackageByGender(gender);
     }
+
 }

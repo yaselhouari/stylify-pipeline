@@ -5,5 +5,5 @@ import com.example.ec.domain.MyServicePackage;
 import org.springframework.data.repository.CrudRepository;
 
 public interface MyServicePackageRepository extends CrudRepository<MyServicePackage, Integer> {
-    Iterable<MyService> findByGender(String gender);
+    Iterable<MyServicePackage> findByGender(String gender);
 }
