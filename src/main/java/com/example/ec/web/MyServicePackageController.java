@@ -6,6 +6,9 @@ import com.example.ec.service.MyServicePackageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
 @RestController
 @RequestMapping("/service_packages")
 public class MyServicePackageController {
@@ -18,7 +21,7 @@ public class MyServicePackageController {
     }
 
     @GetMapping("/gender/{gender}")
-    public Iterable<MyServicePackage> getServicesByByGender(@PathVariable  String gender) {
+    public Iterable<MyServicePackage> getServicesByByGender(@PathVariable  String gender) throws UnknownHostException {
         return myServicePackageService.getServicePackageByGender(gender);
     }
 
