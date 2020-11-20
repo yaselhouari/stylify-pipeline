@@ -8,6 +8,8 @@ public class MyServiceProvider {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    @OneToOne(cascade = CascadeType.ALL)
+    private MyServiceProviderCatalog catalog;
     @Column
     private String firstName;
     @Column
@@ -32,8 +34,9 @@ public class MyServiceProvider {
     public MyServiceProvider() {
     }
 
-    public MyServiceProvider(Integer id, String firstName, String lastName, String gender, String mobile, String email, String birthDate, String location, String username, String password, String status) {
+    public MyServiceProvider(Integer id, MyServiceProviderCatalog catalog, String firstName, String lastName, String gender, String mobile, String email, String birthDate, String location, String username, String password, String status) {
         this.id = id;
+        this.catalog = catalog;
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
@@ -52,6 +55,14 @@ public class MyServiceProvider {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public MyServiceProviderCatalog getCatalog() {
+        return catalog;
+    }
+
+    public void setCatalog(MyServiceProviderCatalog catalog) {
+        this.catalog = catalog;
     }
 
     public String getFirstName() {
@@ -138,6 +149,7 @@ public class MyServiceProvider {
     public String toString() {
         return "MyServiceProvider{" +
                 "id=" + id +
+                ", catalog=" + catalog +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", gender='" + gender + '\'' +
@@ -157,6 +169,7 @@ public class MyServiceProvider {
         if (o == null || getClass() != o.getClass()) return false;
         MyServiceProvider that = (MyServiceProvider) o;
         return id.equals(that.id) &&
+                catalog.equals(that.catalog) &&
                 firstName.equals(that.firstName) &&
                 lastName.equals(that.lastName) &&
                 gender.equals(that.gender) &&
@@ -171,6 +184,6 @@ public class MyServiceProvider {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, firstName, lastName, gender, mobile, email, birthDate, location, username, password, status);
+        return Objects.hash(id, catalog, firstName, lastName, gender, mobile, email, birthDate, location, username, password, status);
     }
 }
