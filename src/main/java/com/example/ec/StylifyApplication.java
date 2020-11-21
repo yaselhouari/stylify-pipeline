@@ -1,5 +1,6 @@
 package com.example.ec;
 
+import com.example.ec.domain.MyServicePackage;
 import com.example.ec.service.MyServicePackageService;
 import com.example.ec.service.MyServiceProviderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +23,7 @@ public class StylifyApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-
+        servicePackage.createServicePackage(new MyServicePackage(11,"name","description", "o","icon"));
     }
     
 }

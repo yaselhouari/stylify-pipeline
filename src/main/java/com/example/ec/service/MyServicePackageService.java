@@ -16,7 +16,6 @@ public class MyServicePackageService {
     private MyServicePackageRepository myServicePackageRepository;
 
 
-
     public MyServicePackage createServicePackage(Integer id, String name, String description, String gender, String icon) {
         return myServicePackageRepository.save(new MyServicePackage(id, name, description, gender, icon));
     }
@@ -31,6 +30,10 @@ public class MyServicePackageService {
 
     public Iterable<MyServicePackage> getServicePackageByGender(String gender) {
         return myServicePackageRepository.findByGender(gender);
+    }
+
+    public MyServicePackage createServicePackage(MyServicePackage myServicePackage) {
+        return myServicePackageRepository.save(myServicePackage);
     }
 }
 
