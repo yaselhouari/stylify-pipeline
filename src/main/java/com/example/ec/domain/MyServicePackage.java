@@ -1,6 +1,10 @@
 package com.example.ec.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -20,6 +24,10 @@ public class MyServicePackage {
 
     @Column
     String icon;
+    @JsonIgnore
+    @OneToMany(mappedBy = "myServicePackage", fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL)
+    private List<MyService> myServices;
 
     public MyServicePackage() {
     }
@@ -70,6 +78,14 @@ public class MyServicePackage {
 
     public void setIcon(String icon) {
         this.icon = icon;
+    }
+
+    public List<MyService> getMyServices() {
+        return myServices;
+    }
+
+    public void setMyServices(List<MyService> myServices) {
+        this.myServices = myServices;
     }
 
     @Override

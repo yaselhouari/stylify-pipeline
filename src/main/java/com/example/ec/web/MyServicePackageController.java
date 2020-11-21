@@ -19,7 +19,7 @@ public class MyServicePackageController {
     @Autowired
     MyServicePackageService myServicePackageService;
 
-    @GetMapping
+    @GetMapping("service_packages")
     public Iterable<MyServicePackage> getServicePackages() {
         return myServicePackageService.lookup();
     }

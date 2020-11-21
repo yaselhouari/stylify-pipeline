@@ -1,19 +1,20 @@
 package com.example.ec.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
-public class MyService {
+public class MyService implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column
-    Integer packageId;
-
-    @Column
     String title;
+
 
     @Column
     String description;
@@ -24,16 +25,22 @@ public class MyService {
     @Column
     String duration;
 
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
+    @JoinColumn(name = "package_id", nullable = false)
+    private MyServicePackage myServicePackage;
+
     public MyService() {
+
     }
 
-    public MyService(Integer id, Integer packageId, String title, String description, String price, String duration) {
+    public MyService(Integer id, String title, String description, String price, String duration, MyServicePackage myServicePackage) {
         this.id = id;
-        this.packageId = packageId;
         this.title = title;
         this.description = description;
         this.price = price;
         this.duration = duration;
+        this.myServicePackage = myServicePackage;
     }
 
     public Integer getId() {
@@ -42,14 +49,6 @@ public class MyService {
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public Integer getPackageId() {
-        return packageId;
-    }
-
-    public void setPackageId(Integer packageId) {
-        this.packageId = packageId;
     }
 
     public String getTitle() {
@@ -84,15 +83,23 @@ public class MyService {
         this.duration = duration;
     }
 
+    public MyServicePackage getMyServicePackage() {
+        return myServicePackage;
+    }
+
+    public void setMyServicePackage(MyServicePackage myServicePackage) {
+        this.myServicePackage = myServicePackage;
+    }
+
     @Override
     public String toString() {
         return "MyService{" +
                 "id=" + id +
-                ", packageId=" + packageId +
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", price='" + price + '\'' +
                 ", duration='" + duration + '\'' +
+                ", myServicePackage=" + myServicePackage +
                 '}';
     }
 
@@ -102,15 +109,15 @@ public class MyService {
         if (o == null || getClass() != o.getClass()) return false;
         MyService myService = (MyService) o;
         return id.equals(myService.id) &&
-                packageId.equals(myService.packageId) &&
                 title.equals(myService.title) &&
                 description.equals(myService.description) &&
                 price.equals(myService.price) &&
-                duration.equals(myService.duration);
+                duration.equals(myService.duration) &&
+                myServicePackage.equals(myService.myServicePackage);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, packageId, title, description, price, duration);
+        return Objects.hash(id, title, description, price, duration, myServicePackage);
     }
 }
