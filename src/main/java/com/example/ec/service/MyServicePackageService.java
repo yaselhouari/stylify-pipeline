@@ -15,15 +15,6 @@ public class MyServicePackageService {
     @Autowired
     private MyServicePackageRepository myServicePackageRepository;
 
-
-    public MyServicePackage createServicePackage(Integer id, String name, String description, String gender, String icon) {
-        return myServicePackageRepository.save(new MyServicePackage(id, name, description, gender, icon));
-    }
-
-    public long total() {
-        return myServicePackageRepository.count();
-    }
-
     public Iterable<MyServicePackage> lookup() {
         return myServicePackageRepository.findAll();
     }
@@ -33,6 +24,14 @@ public class MyServicePackageService {
     }
 
     public MyServicePackage createServicePackage(MyServicePackage myServicePackage) {
+        return myServicePackageRepository.save(myServicePackage);
+    }
+
+    public void deleteServicePackage(MyServicePackage service) {
+        myServicePackageRepository.delete(service);
+    }
+
+    public MyServicePackage editServicePackage(MyServicePackage myServicePackage) {
         return myServicePackageRepository.save(myServicePackage);
     }
 }
