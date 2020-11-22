@@ -37,6 +37,10 @@ public class MyServiceProvider {
             cascade = CascadeType.ALL)
     private MyServiceProviderCatalog myServiceProviderCatalog;
 
+    @JsonIgnore
+    @OneToOne(mappedBy = "myServiceProvider", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private MyServiceProviderProfile myServiceProviderProfile;
+
     public MyServiceProvider() {
     }
 
