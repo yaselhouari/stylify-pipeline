@@ -1,5 +1,7 @@
 package com.example.ec.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Objects;
 
@@ -29,6 +31,11 @@ public class MyClient {
     private String password;
     @Column
     private String status;
+
+    @JsonIgnore
+    @OneToOne(mappedBy = "myClient", fetch = FetchType.EAGER,
+            cascade = CascadeType.ALL)
+    private MyClientProfile myClientProfile;
 
     public MyClient() {
     }
