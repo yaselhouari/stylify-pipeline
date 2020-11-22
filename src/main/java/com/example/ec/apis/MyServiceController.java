@@ -1,4 +1,4 @@
-package com.example.ec.web;
+package com.example.ec.apis;
 
 import com.example.ec.domain.MyService;
 import com.example.ec.service.MyServiceService;

@@ -1,6 +1,5 @@
-package com.example.ec.web;
+package com.example.ec.apis;
 
-import com.example.ec.domain.MyService;
 import com.example.ec.domain.MyServicePackage;
 import com.example.ec.service.MyServicePackageService;
 import org.apache.commons.io.IOUtils;
@@ -10,16 +9,15 @@ import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.InetAddress;
 import java.net.UnknownHostException;
-import java.util.Map;
 
 @RestController
+@RequestMapping("service_packages")
 public class MyServicePackageController {
     @Autowired
     MyServicePackageService myServicePackageService;
 
-    @GetMapping("service_packages")
+    @GetMapping
     public Iterable<MyServicePackage> getServicePackages() {
         return myServicePackageService.lookup();
     }

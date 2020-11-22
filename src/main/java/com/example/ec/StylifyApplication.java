@@ -24,14 +24,7 @@ public class StylifyApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        //Update package
-        MyServicePackage service = servicePackage.editServicePackage(new MyServicePackage(1, "new name", "new descriptin", "0", "icon"));
 
-        //Add a package service
-        //MyServicePackage service = servicePackage.createServicePackage(new MyServicePackage(11,"name","description", "o","icon"));
-
-        //Delete a package service
-        //servicePackage.deleteServicePackage(service);
 
     }
     
