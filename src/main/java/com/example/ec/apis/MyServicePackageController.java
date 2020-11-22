@@ -22,7 +22,7 @@ public class MyServicePackageController {
         return myServicePackageService.lookup();
     }
 
-    @GetMapping("/service_packages/gender/{gender}")
+    @GetMapping("/gender/{gender}")
     public Iterable<MyServicePackage> getServicesByByGender(@PathVariable  String gender) throws UnknownHostException {
         return myServicePackageService.getServicePackageByGender(gender);
     }
