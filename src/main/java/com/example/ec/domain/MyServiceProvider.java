@@ -1,6 +1,9 @@
 package com.example.ec.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -29,10 +32,15 @@ public class MyServiceProvider {
     @Column
     private String status;
 
+    @JsonIgnore
+    @OneToOne(mappedBy = "myServiceProvider", fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL)
+    private MyServiceProviderCatalog myServiceProviderCatalog;
+
     public MyServiceProvider() {
     }
 
-    public MyServiceProvider(Integer id, String firstName, String lastName, String gender, String mobile, String email, String birthDate, String location, String username, String password, String status) {
+    public MyServiceProvider(Integer id, String firstName, String lastName, String gender, String mobile, String email, String birthDate, String location, String username, String password, String status, MyServiceProviderCatalog myServiceProviderCatalog) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -44,6 +52,7 @@ public class MyServiceProvider {
         this.username = username;
         this.password = password;
         this.status = status;
+        this.myServiceProviderCatalog = myServiceProviderCatalog;
     }
 
     public Integer getId() {
@@ -134,6 +143,14 @@ public class MyServiceProvider {
         this.status = status;
     }
 
+    public MyServiceProviderCatalog getMyServiceProviderCatalog() {
+        return myServiceProviderCatalog;
+    }
+
+    public void setMyServiceProviderCatalog(MyServiceProviderCatalog myServiceProviderCatalog) {
+        this.myServiceProviderCatalog = myServiceProviderCatalog;
+    }
+
     @Override
     public String toString() {
         return "MyServiceProvider{" +
@@ -148,6 +165,7 @@ public class MyServiceProvider {
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", status='" + status + '\'' +
+                ", myServiceProviderCatalog=" + myServiceProviderCatalog +
                 '}';
     }
 
@@ -166,11 +184,12 @@ public class MyServiceProvider {
                 location.equals(that.location) &&
                 username.equals(that.username) &&
                 password.equals(that.password) &&
-                status.equals(that.status);
+                status.equals(that.status) &&
+                myServiceProviderCatalog.equals(that.myServiceProviderCatalog);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, firstName, lastName, gender, mobile, email, birthDate, location, username, password, status);
+        return Objects.hash(id, firstName, lastName, gender, mobile, email, birthDate, location, username, password, status, myServiceProviderCatalog);
     }
 }

@@ -1,0 +1,8 @@
+CREATE TABLE My_Service_Provider_Catalog (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  provider_id BIGINT NOT NULL,
+  description VARCHAR(2000) NOT NULL
+);
+
+ALTER TABLE My_Service_Provider_Catalog ADD CONSTRAINT FK_SERVICE_PROVIDER_ID FOREIGN KEY (provider_id) REFERENCES My_Service_PROVIDER(id);
+
