@@ -41,6 +41,11 @@ public class MyServiceProvider  implements Serializable {
     private MyServiceProviderProfile myServiceProviderProfile;
 
     @ManyToMany
+    @JoinTable(
+            name = "My_Appointment",
+            joinColumns = @JoinColumn(name = "service_provider_id"),
+            inverseJoinColumns = @JoinColumn(name = "client_id")
+    )
     private List<MyClient> myClients;
 
     public MyServiceProvider() {
