@@ -1,10 +1,11 @@
 package com.example.ec.domain;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
-public class MyClientProfile {
+public class MyClientProfile  implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;

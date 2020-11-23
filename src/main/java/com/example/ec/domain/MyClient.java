@@ -3,11 +3,12 @@ package com.example.ec.domain;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 
 @Entity
-public class MyClient {
+public class MyClient  implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,20 +34,18 @@ public class MyClient {
     @Column
     private String status;
 
-    @JsonIgnore
-    @OneToOne(mappedBy = "myClient", fetch = FetchType.EAGER,
+    @OneToOne(mappedBy = "myClient", fetch = FetchType.LAZY,
             cascade = CascadeType.ALL)
     private MyClientProfile myClientProfile;
 
-    @JsonIgnore
-    @OneToMany(mappedBy = "myClient", fetch = FetchType.EAGER,
+    @OneToMany(mappedBy = "myClient", fetch = FetchType.LAZY,
             cascade = CascadeType.ALL)
     private List<MyAppointment> myAppointments;
 
     public MyClient() {
     }
 
-    public MyClient(Integer id, String firstName, String lastName, String gender, String mobile, String email, String birthDate, String location, String username, String password, String status) {
+    public MyClient(Integer id, String firstName, String lastName, String gender, String mobile, String email, String birthDate, String location, String username, String password, String status, MyClientProfile myClientProfile, List<MyAppointment> myAppointments) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -58,6 +57,8 @@ public class MyClient {
         this.username = username;
         this.password = password;
         this.status = status;
+        this.myClientProfile = myClientProfile;
+        this.myAppointments = myAppointments;
     }
 
     public Integer getId() {
@@ -148,6 +149,22 @@ public class MyClient {
         this.status = status;
     }
 
+    public MyClientProfile getMyClientProfile() {
+        return myClientProfile;
+    }
+
+    public void setMyClientProfile(MyClientProfile myClientProfile) {
+        this.myClientProfile = myClientProfile;
+    }
+
+    public List<MyAppointment> getMyAppointments() {
+        return myAppointments;
+    }
+
+    public void setMyAppointments(List<MyAppointment> myAppointments) {
+        this.myAppointments = myAppointments;
+    }
+
     @Override
     public String toString() {
         return "MyClient{" +
@@ -162,6 +179,8 @@ public class MyClient {
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", status='" + status + '\'' +
+                ", myClientProfile=" + myClientProfile +
+                ", myAppointments=" + myAppointments +
                 '}';
     }
 
@@ -180,11 +199,13 @@ public class MyClient {
                 location.equals(myClient.location) &&
                 username.equals(myClient.username) &&
                 password.equals(myClient.password) &&
-                status.equals(myClient.status);
+                status.equals(myClient.status) &&
+                myClientProfile.equals(myClient.myClientProfile) &&
+                myAppointments.equals(myClient.myAppointments);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, firstName, lastName, gender, mobile, email, birthDate, location, username, password, status);
+        return Objects.hash(id, firstName, lastName, gender, mobile, email, birthDate, location, username, password, status, myClientProfile, myAppointments);
     }
 }

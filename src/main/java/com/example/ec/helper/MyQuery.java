@@ -17,14 +17,14 @@ public class MyQuery {
     public ArrayList<MyResult> getResulst() {
         ArrayList<MyResult> myResults = new ArrayList<>();
 
-        myResults.add(new MyResult("Anwar", "Fikri", "30", "94", "30"));
-        myResults.add(new MyResult("Redouane", "Al Asmar", "40", "90", "36"));
-        myResults.add(new MyResult("Omar", "Diab", "50", "90", "15"));
-        myResults.add(new MyResult("Khalid", "El Achkar", "50", "92", "40"));
-        myResults.add(new MyResult("Morad", "Salmi", "60", "94", "25"));
-        myResults.add(new MyResult("Walid", "El Kadiri", "65", "88", "20"));
-        myResults.add(new MyResult("Samih", "Farsi", "70", "90", "50"));
-        myResults.add(new MyResult("Salah", "Briki", "75", "91", "40"));
+        myResults.add(new MyResult("Anwar", "Fikri", 80, 10, "30"));
+        myResults.add(new MyResult("Redouane", "Al Asmar", 70, 20, "36"));
+        myResults.add(new MyResult("Omar", "Diab", 60, 30, "30"));
+        myResults.add(new MyResult("Khalid", "El Achkar", 50, 40, "40"));
+        myResults.add(new MyResult("Morad", "Salmi", 40, 94, "50"));
+        myResults.add(new MyResult("Walid", "El Kadiri", 30, 60, "20"));
+        myResults.add(new MyResult("Samih", "Farsi", 20, 70, "50"));
+        myResults.add(new MyResult("Salah", "Briki", 10, 80, "40"));
 
         return myResults;
     }

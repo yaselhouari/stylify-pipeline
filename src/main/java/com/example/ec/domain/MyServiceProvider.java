@@ -3,11 +3,12 @@ package com.example.ec.domain;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 
 @Entity
-public class MyServiceProvider {
+public class MyServiceProvider  implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -32,19 +33,20 @@ public class MyServiceProvider {
     @Column
     private String status;
 
-    @JsonIgnore
     @OneToOne(mappedBy = "myServiceProvider", fetch = FetchType.LAZY,
             cascade = CascadeType.ALL)
     private MyServiceProviderCatalog myServiceProviderCatalog;
 
-    @JsonIgnore
     @OneToOne(mappedBy = "myServiceProvider", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private MyServiceProviderProfile myServiceProviderProfile;
+
+    @OneToMany(mappedBy = "myServiceProvider", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<MyAppointment> myAppointments;
 
     public MyServiceProvider() {
     }
 
-    public MyServiceProvider(Integer id, String firstName, String lastName, String gender, String mobile, String email, String birthDate, String location, String username, String password, String status, MyServiceProviderCatalog myServiceProviderCatalog) {
+    public MyServiceProvider(Integer id, String firstName, String lastName, String gender, String mobile, String email, String birthDate, String location, String username, String password, String status, MyServiceProviderCatalog myServiceProviderCatalog, MyServiceProviderProfile myServiceProviderProfile, List<MyAppointment> myAppointments) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -57,6 +59,8 @@ public class MyServiceProvider {
         this.password = password;
         this.status = status;
         this.myServiceProviderCatalog = myServiceProviderCatalog;
+        this.myServiceProviderProfile = myServiceProviderProfile;
+        this.myAppointments = myAppointments;
     }
 
     public Integer getId() {
@@ -155,6 +159,22 @@ public class MyServiceProvider {
         this.myServiceProviderCatalog = myServiceProviderCatalog;
     }
 
+    public MyServiceProviderProfile getMyServiceProviderProfile() {
+        return myServiceProviderProfile;
+    }
+
+    public void setMyServiceProviderProfile(MyServiceProviderProfile myServiceProviderProfile) {
+        this.myServiceProviderProfile = myServiceProviderProfile;
+    }
+
+    public List<MyAppointment> getMyAppointments() {
+        return myAppointments;
+    }
+
+    public void setMyAppointments(List<MyAppointment> myAppointments) {
+        this.myAppointments = myAppointments;
+    }
+
     @Override
     public String toString() {
         return "MyServiceProvider{" +
@@ -170,6 +190,8 @@ public class MyServiceProvider {
                 ", password='" + password + '\'' +
                 ", status='" + status + '\'' +
                 ", myServiceProviderCatalog=" + myServiceProviderCatalog +
+                ", myServiceProviderProfile=" + myServiceProviderProfile +
+                ", myAppointments=" + myAppointments +
                 '}';
     }
 
@@ -189,11 +211,13 @@ public class MyServiceProvider {
                 username.equals(that.username) &&
                 password.equals(that.password) &&
                 status.equals(that.status) &&
-                myServiceProviderCatalog.equals(that.myServiceProviderCatalog);
+                myServiceProviderCatalog.equals(that.myServiceProviderCatalog) &&
+                myServiceProviderProfile.equals(that.myServiceProviderProfile) &&
+                myAppointments.equals(that.myAppointments);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, firstName, lastName, gender, mobile, email, birthDate, location, username, password, status, myServiceProviderCatalog);
+        return Objects.hash(id, firstName, lastName, gender, mobile, email, birthDate, location, username, password, status, myServiceProviderCatalog, myServiceProviderProfile, myAppointments);
     }
 }

@@ -3,11 +3,11 @@ package com.example.ec.domain;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
-import java.util.List;
+import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
-public class MyServiceProviderCatalog {
+public class MyServiceProviderCatalog  implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

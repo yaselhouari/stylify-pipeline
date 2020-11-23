@@ -13,7 +13,37 @@ import java.util.ArrayList;
 @RestController
 @RequestMapping("/search")
 public class SearchController {
-    public ArrayList<MyResult> postSearch(
+    @RequestMapping
+    public ArrayList<MyResult> serviceSearch(
+            @RequestParam(value="searchDate") String searchDate,
+            @RequestParam(value="searchServices") String searchServices,
+            @RequestParam(value="searchKeywords")String searchKeywords,
+            @RequestParam(value="locationType")String locationType) {
+        MySearchService searchService = new MySearchService(new MyQuery());
+        return searchService.getResulst();
+    }
+    @RequestMapping("/price")
+    public ArrayList<MyResult> serviceSearchByPrice(
+        @RequestParam(value="searchDate") String searchDate,
+        @RequestParam(value="searchServices") String searchServices,
+        @RequestParam(value="searchKeywords")String searchKeywords,
+        @RequestParam(value="locationType")String locationType) {
+        MySearchService searchService = new MySearchService(new MyQuery());
+        return searchService.getResulst();
+    }
+
+    @RequestMapping("/rating")
+    public ArrayList<MyResult> serviceSearchByRating(
+            @RequestParam(value="searchDate") String searchDate,
+            @RequestParam(value="searchServices") String searchServices,
+            @RequestParam(value="searchKeywords")String searchKeywords,
+            @RequestParam(value="locationType")String locationType) {
+        MySearchService searchService = new MySearchService(new MyQuery());
+        return searchService.getResulst();
+    }
+
+    @RequestMapping("/location")
+    public ArrayList<MyResult> serviceSearchByLocation(
             @RequestParam(value="searchDate") String searchDate,
             @RequestParam(value="searchServices") String searchServices,
             @RequestParam(value="searchKeywords")String searchKeywords,
