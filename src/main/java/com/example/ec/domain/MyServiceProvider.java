@@ -40,11 +40,13 @@ public class MyServiceProvider  implements Serializable {
     @OneToOne(mappedBy = "myServiceProvider", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private MyServiceProviderProfile myServiceProviderProfile;
 
+    @ManyToMany
+    private List<MyClient> myClients;
 
     public MyServiceProvider() {
     }
 
-    public MyServiceProvider(Integer id, String firstName, String lastName, String gender, String mobile, String email, String birthDate, String location, String username, String password, String status, MyServiceProviderCatalog myServiceProviderCatalog, MyServiceProviderProfile myServiceProviderProfile) {
+    public MyServiceProvider(Integer id, String firstName, String lastName, String gender, String mobile, String email, String birthDate, String location, String username, String password, String status, MyServiceProviderCatalog myServiceProviderCatalog, MyServiceProviderProfile myServiceProviderProfile, List<MyClient> myClients) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -58,6 +60,119 @@ public class MyServiceProvider  implements Serializable {
         this.status = status;
         this.myServiceProviderCatalog = myServiceProviderCatalog;
         this.myServiceProviderProfile = myServiceProviderProfile;
+        this.myClients = myClients;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(String birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public MyServiceProviderCatalog getMyServiceProviderCatalog() {
+        return myServiceProviderCatalog;
+    }
+
+    public void setMyServiceProviderCatalog(MyServiceProviderCatalog myServiceProviderCatalog) {
+        this.myServiceProviderCatalog = myServiceProviderCatalog;
+    }
+
+    public MyServiceProviderProfile getMyServiceProviderProfile() {
+        return myServiceProviderProfile;
+    }
+
+    public void setMyServiceProviderProfile(MyServiceProviderProfile myServiceProviderProfile) {
+        this.myServiceProviderProfile = myServiceProviderProfile;
+    }
+
+    public List<MyClient> getMyClients() {
+        return myClients;
+    }
+
+    public void setMyClients(List<MyClient> myClients) {
+        this.myClients = myClients;
     }
 
     @Override
@@ -76,6 +191,7 @@ public class MyServiceProvider  implements Serializable {
                 ", status='" + status + '\'' +
                 ", myServiceProviderCatalog=" + myServiceProviderCatalog +
                 ", myServiceProviderProfile=" + myServiceProviderProfile +
+                ", myClients=" + myClients +
                 '}';
     }
 
@@ -96,11 +212,12 @@ public class MyServiceProvider  implements Serializable {
                 Objects.equals(password, that.password) &&
                 Objects.equals(status, that.status) &&
                 Objects.equals(myServiceProviderCatalog, that.myServiceProviderCatalog) &&
-                Objects.equals(myServiceProviderProfile, that.myServiceProviderProfile);
+                Objects.equals(myServiceProviderProfile, that.myServiceProviderProfile) &&
+                Objects.equals(myClients, that.myClients);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, firstName, lastName, gender, mobile, email, birthDate, location, username, password, status, myServiceProviderCatalog, myServiceProviderProfile);
+        return Objects.hash(id, firstName, lastName, gender, mobile, email, birthDate, location, username, password, status, myServiceProviderCatalog, myServiceProviderProfile, myClients);
     }
 }
