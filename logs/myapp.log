@@ -11062,3 +11062,78 @@ java.lang.IllegalArgumentException: Invalid character found in method name [0x00
 2020-11-23 19:16:34.616  INFO 4720 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
 2020-11-23 19:16:34.691  INFO 4720 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
 2020-11-23 19:16:34.700  INFO 4720 --- [main] com.example.ec.StylifyApplication        : Started StylifyApplication in 3.716 seconds (JVM running for 4.951)
+2020-11-23 19:42:35.280  INFO 12728 --- [main] com.example.ec.StylifyApplication        : Starting StylifyApplication on DESKTOP-7SLLO4E with PID 12728 (C:\Users\lenovo\Desktop\explorecali\target\classes started by lenovo in C:\Users\lenovo\Desktop\explorecali)
+2020-11-23 19:42:35.284 DEBUG 12728 --- [main] com.example.ec.StylifyApplication        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-11-23 19:42:35.284  INFO 12728 --- [main] com.example.ec.StylifyApplication        : The following profiles are active: default
+2020-11-23 19:42:35.935  INFO 12728 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-23 19:42:36.054  INFO 12728 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 112ms. Found 7 JPA repository interfaces.
+2020-11-23 19:42:36.549  INFO 12728 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-23 19:42:36.555  INFO 12728 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-23 19:42:36.556  INFO 12728 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-23 19:42:36.691  INFO 12728 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-23 19:42:36.691  INFO 12728 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1361 ms
+2020-11-23 19:42:36.745  INFO 12728 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-23 19:42:36.815  INFO 12728 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-23 19:42:36.820  INFO 12728 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2020-11-23 19:42:36.942  INFO 12728 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-23 19:42:36.986  INFO 12728 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-23 19:42:37.021  INFO 12728 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-11-23 19:42:37.118  INFO 12728 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-23 19:42:37.213  INFO 12728 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-23 19:42:37.825  INFO 12728 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-23 19:42:37.838  INFO 12728 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-23 19:42:38.320  WARN 12728 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-23 19:42:38.511  INFO 12728 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-23 19:42:38.512  INFO 12728 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-23 19:42:38.603  INFO 12728 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-23 19:42:38.610  INFO 12728 --- [main] com.example.ec.StylifyApplication        : Started StylifyApplication in 3.671 seconds (JVM running for 4.665)
+2020-11-23 19:44:42.583  INFO 12512 --- [main] com.example.ec.StylifyApplication        : Starting StylifyApplication on DESKTOP-7SLLO4E with PID 12512 (C:\Users\lenovo\Desktop\explorecali\target\classes started by lenovo in C:\Users\lenovo\Desktop\explorecali)
+2020-11-23 19:44:42.586 DEBUG 12512 --- [main] com.example.ec.StylifyApplication        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-11-23 19:44:42.586  INFO 12512 --- [main] com.example.ec.StylifyApplication        : The following profiles are active: default
+2020-11-23 19:44:43.197  INFO 12512 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-23 19:44:43.259  INFO 12512 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55ms. Found 7 JPA repository interfaces.
+2020-11-23 19:44:43.730  INFO 12512 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-23 19:44:43.736  INFO 12512 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-23 19:44:43.736  INFO 12512 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-23 19:44:43.852  INFO 12512 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-23 19:44:43.852  INFO 12512 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1225 ms
+2020-11-23 19:44:43.906  INFO 12512 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-23 19:44:43.977  INFO 12512 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-23 19:44:43.981  INFO 12512 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2020-11-23 19:44:44.090  INFO 12512 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-23 19:44:44.128  INFO 12512 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-23 19:44:44.158  INFO 12512 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-11-23 19:44:44.243  INFO 12512 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-23 19:44:44.315  INFO 12512 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-23 19:44:44.789  INFO 12512 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-23 19:44:44.800  INFO 12512 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-23 19:44:45.278  WARN 12512 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-23 19:44:45.477  INFO 12512 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-23 19:44:45.478  INFO 12512 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-23 19:44:45.581  INFO 12512 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-23 19:44:45.590  INFO 12512 --- [main] com.example.ec.StylifyApplication        : Started StylifyApplication in 3.335 seconds (JVM running for 4.315)
+2020-11-23 19:45:52.729  INFO 15556 --- [main] com.example.ec.StylifyApplication        : Starting StylifyApplication on DESKTOP-7SLLO4E with PID 15556 (C:\Users\lenovo\Desktop\explorecali\target\classes started by lenovo in C:\Users\lenovo\Desktop\explorecali)
+2020-11-23 19:45:52.732 DEBUG 15556 --- [main] com.example.ec.StylifyApplication        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-11-23 19:45:52.732  INFO 15556 --- [main] com.example.ec.StylifyApplication        : The following profiles are active: default
+2020-11-23 19:45:53.315  INFO 15556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-23 19:45:53.377  INFO 15556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56ms. Found 7 JPA repository interfaces.
+2020-11-23 19:45:53.869  INFO 15556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-23 19:45:53.876  INFO 15556 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-23 19:45:53.876  INFO 15556 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-23 19:45:54.001  INFO 15556 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-23 19:45:54.001  INFO 15556 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1231 ms
+2020-11-23 19:45:54.058  INFO 15556 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-23 19:45:54.134  INFO 15556 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-23 19:45:54.138  INFO 15556 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2020-11-23 19:45:54.257  INFO 15556 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-23 19:45:54.297  INFO 15556 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-23 19:45:54.328  INFO 15556 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-11-23 19:45:54.422  INFO 15556 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-23 19:45:54.501  INFO 15556 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-23 19:45:55.067  INFO 15556 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-23 19:45:55.072  INFO 15556 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-23 19:45:55.522  WARN 15556 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-23 19:45:55.723  INFO 15556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-23 19:45:55.725  INFO 15556 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-23 19:45:55.803  INFO 15556 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-23 19:45:55.811  INFO 15556 --- [main] com.example.ec.StylifyApplication        : Started StylifyApplication in 3.391 seconds (JVM running for 4.328)
