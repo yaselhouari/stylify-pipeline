@@ -3,6 +3,7 @@ package com.example.ec.domain;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -36,6 +37,11 @@ public class MyClient {
     @OneToOne(mappedBy = "myClient", fetch = FetchType.EAGER,
             cascade = CascadeType.ALL)
     private MyClientProfile myClientProfile;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "myClient", fetch = FetchType.EAGER,
+            cascade = CascadeType.ALL)
+    private List<MyAppointment> myAppointments;
 
     public MyClient() {
     }
