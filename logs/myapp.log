@@ -10418,3 +10418,418 @@ select myappointm0_.client_id as client_i1_0_, myappointm0_.provider_id as provi
 2020-11-23 18:21:31.139  INFO 1912 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-11-23 18:21:31.140  INFO 1912 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2020-11-23 18:21:31.152  INFO 1912 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2020-11-23 18:36:21.331  INFO 6480 --- [main] com.example.ec.StylifyApplication        : Starting StylifyApplication on DESKTOP-7SLLO4E with PID 6480 (C:\Users\lenovo\Desktop\explorecali\target\classes started by lenovo in C:\Users\lenovo\Desktop\explorecali)
+2020-11-23 18:36:21.334 DEBUG 6480 --- [main] com.example.ec.StylifyApplication        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-11-23 18:36:21.334  INFO 6480 --- [main] com.example.ec.StylifyApplication        : The following profiles are active: default
+2020-11-23 18:36:21.957  INFO 6480 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-23 18:36:22.019  INFO 6480 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56ms. Found 8 JPA repository interfaces.
+2020-11-23 18:36:22.492  INFO 6480 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-23 18:36:22.498  INFO 6480 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-23 18:36:22.499  INFO 6480 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-23 18:36:22.626  INFO 6480 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-23 18:36:22.627  INFO 6480 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1250 ms
+2020-11-23 18:36:22.785  INFO 6480 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-23 18:36:22.791  INFO 6480 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-23 18:36:22.870  INFO 6480 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-23 18:36:22.878  INFO 6480 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:e75ba14e-5586-4c00-aec2-f05ba9061fa2 (H2 1.4)
+2020-11-23 18:36:22.941  INFO 6480 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 16 migrations (execution time 00:00.031s)
+2020-11-23 18:36:22.951  INFO 6480 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-11-23 18:36:22.989  INFO 6480 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-11-23 18:36:22.993  INFO 6480 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.1 - CreateServicePackagesSchema
+2020-11-23 18:36:23.021  INFO 6480 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.2 - AddServicePackages
+2020-11-23 18:36:23.039  INFO 6480 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.3 - CreateServiceSchema
+2020-11-23 18:36:23.061  INFO 6480 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.4 - AddServices
+2020-11-23 18:36:23.086  INFO 6480 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.5 - CreateServiceProviderSchema
+2020-11-23 18:36:23.100  INFO 6480 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.6 - AddServiceProviders
+2020-11-23 18:36:23.111  INFO 6480 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.7 - CreateClientSchema
+2020-11-23 18:36:23.121  INFO 6480 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.8 - AddClients
+2020-11-23 18:36:23.133  INFO 6480 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.9 - CreateCatalogSchema
+2020-11-23 18:36:23.145  INFO 6480 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.10 - AddCatalogs
+2020-11-23 18:36:23.155  INFO 6480 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.11 - CreateServiceProviderProfileSchema
+2020-11-23 18:36:23.164  INFO 6480 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.12 - AddServiceProviderProfiles
+2020-11-23 18:36:23.173  INFO 6480 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.13 - CreateClientProfileSchema
+2020-11-23 18:36:23.182  INFO 6480 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.14 - AddClientProfiles
+2020-11-23 18:36:23.190  INFO 6480 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.15 - CreateAppointmentSchema
+2020-11-23 18:36:23.202  INFO 6480 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.16 - AddAppointments
+2020-11-23 18:36:23.215  INFO 6480 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 16 migrations to schema "PUBLIC" (execution time 00:00.231s)
+2020-11-23 18:36:23.332  INFO 6480 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-23 18:36:23.375  INFO 6480 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-23 18:36:23.412  INFO 6480 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-11-23 18:36:23.539  INFO 6480 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-23 18:36:23.628  INFO 6480 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-23 18:36:23.778  WARN 6480 --- [task-1] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.example.ec.domain.MyAppointmentIdClass
+2020-11-23 18:36:23.779  WARN 6480 --- [task-1] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.example.ec.domain.MyAppointmentIdClass
+2020-11-23 18:36:24.080  INFO 6480 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-23 18:36:24.086  INFO 6480 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-23 18:36:24.510  WARN 6480 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-23 18:36:24.702  INFO 6480 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-23 18:36:24.704  INFO 6480 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-23 18:36:24.791  INFO 6480 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-23 18:36:24.799  INFO 6480 --- [main] com.example.ec.StylifyApplication        : Started StylifyApplication in 3.859 seconds (JVM running for 5.351)
+2020-11-23 18:36:38.036  INFO 6480 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-23 18:36:38.037  INFO 6480 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-23 18:36:38.059  INFO 6480 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 22 ms
+2020-11-23 18:41:31.009  INFO 12184 --- [main] com.example.ec.StylifyApplication        : Starting StylifyApplication on DESKTOP-7SLLO4E with PID 12184 (C:\Users\lenovo\Desktop\explorecali\target\classes started by lenovo in C:\Users\lenovo\Desktop\explorecali)
+2020-11-23 18:41:31.012 DEBUG 12184 --- [main] com.example.ec.StylifyApplication        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-11-23 18:41:31.012  INFO 12184 --- [main] com.example.ec.StylifyApplication        : The following profiles are active: default
+2020-11-23 18:41:31.724  INFO 12184 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-23 18:41:31.792  INFO 12184 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61ms. Found 8 JPA repository interfaces.
+2020-11-23 18:41:32.343  INFO 12184 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-23 18:41:32.349  INFO 12184 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-23 18:41:32.350  INFO 12184 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-23 18:41:32.512  INFO 12184 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-23 18:41:32.512  INFO 12184 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1440 ms
+2020-11-23 18:41:32.677  INFO 12184 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-23 18:41:32.684  INFO 12184 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-23 18:41:32.761  INFO 12184 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-23 18:41:32.769  INFO 12184 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:1688de34-a3dd-43fe-a1d8-0fe16c6aa05a (H2 1.4)
+2020-11-23 18:41:32.831  INFO 12184 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 16 migrations (execution time 00:00.031s)
+2020-11-23 18:41:32.844  INFO 12184 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-11-23 18:41:32.881  INFO 12184 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-11-23 18:41:32.885  INFO 12184 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.1 - CreateServicePackagesSchema
+2020-11-23 18:41:32.918  INFO 12184 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.2 - AddServicePackages
+2020-11-23 18:41:32.936  INFO 12184 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.3 - CreateServiceSchema
+2020-11-23 18:41:32.955  INFO 12184 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.4 - AddServices
+2020-11-23 18:41:32.979  INFO 12184 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.5 - CreateServiceProviderSchema
+2020-11-23 18:41:32.992  INFO 12184 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.6 - AddServiceProviders
+2020-11-23 18:41:33.006  INFO 12184 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.7 - CreateClientSchema
+2020-11-23 18:41:33.016  INFO 12184 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.8 - AddClients
+2020-11-23 18:41:33.029  INFO 12184 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.9 - CreateCatalogSchema
+2020-11-23 18:41:33.039  INFO 12184 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.10 - AddCatalogs
+2020-11-23 18:41:33.052  INFO 12184 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.11 - CreateServiceProviderProfileSchema
+2020-11-23 18:41:33.062  INFO 12184 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.12 - AddServiceProviderProfiles
+2020-11-23 18:41:33.071  INFO 12184 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.13 - CreateClientProfileSchema
+2020-11-23 18:41:33.080  INFO 12184 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.14 - AddClientProfiles
+2020-11-23 18:41:33.092  INFO 12184 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.15 - CreateAppointmentSchema
+2020-11-23 18:41:33.108  INFO 12184 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.16 - AddAppointments
+2020-11-23 18:41:33.131  INFO 12184 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 16 migrations to schema "PUBLIC" (execution time 00:00.255s)
+2020-11-23 18:41:33.276  INFO 12184 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-23 18:41:33.332  INFO 12184 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-23 18:41:33.383  INFO 12184 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-11-23 18:41:33.507  INFO 12184 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-23 18:41:33.612  INFO 12184 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-23 18:41:33.776  WARN 12184 --- [task-1] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.example.ec.domain.MyAppointmentIdClass
+2020-11-23 18:41:33.776  WARN 12184 --- [task-1] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.example.ec.domain.MyAppointmentIdClass
+2020-11-23 18:41:34.143  INFO 12184 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-23 18:41:34.149  INFO 12184 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-23 18:41:34.620  WARN 12184 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-23 18:41:34.814  INFO 12184 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-23 18:41:34.816  INFO 12184 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-23 18:41:34.898  INFO 12184 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-23 18:41:34.906  INFO 12184 --- [main] com.example.ec.StylifyApplication        : Started StylifyApplication in 4.314 seconds (JVM running for 5.685)
+2020-11-23 18:41:43.937  INFO 12184 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-23 18:41:43.938  INFO 12184 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-23 18:41:43.953  INFO 12184 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2020-11-23 18:44:16.248  INFO 4128 --- [main] com.example.ec.StylifyApplication        : Starting StylifyApplication on DESKTOP-7SLLO4E with PID 4128 (C:\Users\lenovo\Desktop\explorecali\target\classes started by lenovo in C:\Users\lenovo\Desktop\explorecali)
+2020-11-23 18:44:16.251 DEBUG 4128 --- [main] com.example.ec.StylifyApplication        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-11-23 18:44:16.251  INFO 4128 --- [main] com.example.ec.StylifyApplication        : The following profiles are active: default
+2020-11-23 18:44:16.919  INFO 4128 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-23 18:44:16.983  INFO 4128 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59ms. Found 8 JPA repository interfaces.
+2020-11-23 18:44:17.459  INFO 4128 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-23 18:44:17.467  INFO 4128 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-23 18:44:17.467  INFO 4128 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-23 18:44:17.591  INFO 4128 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-23 18:44:17.591  INFO 4128 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1286 ms
+2020-11-23 18:44:17.718  INFO 4128 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-23 18:44:17.724  INFO 4128 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-23 18:44:17.794  INFO 4128 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-23 18:44:17.801  INFO 4128 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:4334bbf4-c709-4e50-89a1-1afa501f8c74 (H2 1.4)
+2020-11-23 18:44:17.856  INFO 4128 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 16 migrations (execution time 00:00.025s)
+2020-11-23 18:44:17.867  INFO 4128 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-11-23 18:44:17.904  INFO 4128 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-11-23 18:44:17.907  INFO 4128 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.1 - CreateServicePackagesSchema
+2020-11-23 18:44:17.928  INFO 4128 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.2 - AddServicePackages
+2020-11-23 18:44:17.944  INFO 4128 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.3 - CreateServiceSchema
+2020-11-23 18:44:17.963  INFO 4128 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.4 - AddServices
+2020-11-23 18:44:17.985  INFO 4128 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.5 - CreateServiceProviderSchema
+2020-11-23 18:44:17.998  INFO 4128 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.6 - AddServiceProviders
+2020-11-23 18:44:18.008  INFO 4128 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.7 - CreateClientSchema
+2020-11-23 18:44:18.018  INFO 4128 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.8 - AddClients
+2020-11-23 18:44:18.029  INFO 4128 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.9 - CreateCatalogSchema
+2020-11-23 18:44:18.039  INFO 4128 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.10 - AddCatalogs
+2020-11-23 18:44:18.048  INFO 4128 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.11 - CreateServiceProviderProfileSchema
+2020-11-23 18:44:18.057  INFO 4128 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.12 - AddServiceProviderProfiles
+2020-11-23 18:44:18.065  INFO 4128 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.13 - CreateClientProfileSchema
+2020-11-23 18:44:18.073  INFO 4128 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.14 - AddClientProfiles
+2020-11-23 18:44:18.084  INFO 4128 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.15 - CreateAppointmentSchema
+2020-11-23 18:44:18.093  INFO 4128 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.16 - AddAppointments
+2020-11-23 18:44:18.103  INFO 4128 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 16 migrations to schema "PUBLIC" (execution time 00:00.205s)
+2020-11-23 18:44:18.198  INFO 4128 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-23 18:44:18.252  INFO 4128 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-23 18:44:18.288  INFO 4128 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-11-23 18:44:18.389  INFO 4128 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-23 18:44:18.474  INFO 4128 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-23 18:44:18.616  WARN 4128 --- [task-1] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.example.ec.domain.MyAppointmentIdClass
+2020-11-23 18:44:18.617  WARN 4128 --- [task-1] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.example.ec.domain.MyAppointmentIdClass
+2020-11-23 18:44:18.926  INFO 4128 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-23 18:44:18.932  INFO 4128 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-23 18:44:19.405  WARN 4128 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-23 18:44:19.611  INFO 4128 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-23 18:44:19.612  INFO 4128 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-23 18:44:19.694  INFO 4128 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-23 18:44:19.702  INFO 4128 --- [main] com.example.ec.StylifyApplication        : Started StylifyApplication in 3.813 seconds (JVM running for 5.232)
+2020-11-23 18:44:35.193  INFO 4128 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-23 18:44:35.194  INFO 4128 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-23 18:44:35.215  INFO 4128 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 21 ms
+2020-11-23 18:48:12.683  INFO 13692 --- [main] com.example.ec.StylifyApplication        : Starting StylifyApplication on DESKTOP-7SLLO4E with PID 13692 (C:\Users\lenovo\Desktop\explorecali\target\classes started by lenovo in C:\Users\lenovo\Desktop\explorecali)
+2020-11-23 18:48:12.685 DEBUG 13692 --- [main] com.example.ec.StylifyApplication        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-11-23 18:48:12.685  INFO 13692 --- [main] com.example.ec.StylifyApplication        : The following profiles are active: default
+2020-11-23 18:48:13.300  INFO 13692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-23 18:48:13.362  INFO 13692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56ms. Found 8 JPA repository interfaces.
+2020-11-23 18:48:13.821  INFO 13692 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-23 18:48:13.828  INFO 13692 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-23 18:48:13.828  INFO 13692 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-23 18:48:13.946  INFO 13692 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-23 18:48:13.946  INFO 13692 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1209 ms
+2020-11-23 18:48:14.062  INFO 13692 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-23 18:48:14.067  INFO 13692 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-23 18:48:14.132  INFO 13692 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-23 18:48:14.138  INFO 13692 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:327dd919-6851-428a-a43e-352f7e366ab5 (H2 1.4)
+2020-11-23 18:48:14.192  INFO 13692 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 16 migrations (execution time 00:00.025s)
+2020-11-23 18:48:14.201  INFO 13692 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-11-23 18:48:14.236  INFO 13692 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-11-23 18:48:14.239  INFO 13692 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.1 - CreateServicePackagesSchema
+2020-11-23 18:48:14.257  INFO 13692 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.2 - AddServicePackages
+2020-11-23 18:48:14.273  INFO 13692 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.3 - CreateServiceSchema
+2020-11-23 18:48:14.292  INFO 13692 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.4 - AddServices
+2020-11-23 18:48:14.314  INFO 13692 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.5 - CreateServiceProviderSchema
+2020-11-23 18:48:14.325  INFO 13692 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.6 - AddServiceProviders
+2020-11-23 18:48:14.336  INFO 13692 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.7 - CreateClientSchema
+2020-11-23 18:48:14.347  INFO 13692 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.8 - AddClients
+2020-11-23 18:48:14.358  INFO 13692 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.9 - CreateCatalogSchema
+2020-11-23 18:48:14.367  INFO 13692 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.10 - AddCatalogs
+2020-11-23 18:48:14.376  INFO 13692 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.11 - CreateServiceProviderProfileSchema
+2020-11-23 18:48:14.385  INFO 13692 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.12 - AddServiceProviderProfiles
+2020-11-23 18:48:14.393  INFO 13692 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.13 - CreateClientProfileSchema
+2020-11-23 18:48:14.403  INFO 13692 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.14 - AddClientProfiles
+2020-11-23 18:48:14.411  INFO 13692 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.15 - CreateAppointmentSchema
+2020-11-23 18:48:14.418  INFO 13692 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.16 - AddAppointments
+2020-11-23 18:48:14.428  INFO 13692 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 16 migrations to schema "PUBLIC" (execution time 00:00.198s)
+2020-11-23 18:48:14.506  INFO 13692 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-23 18:48:14.558  INFO 13692 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-23 18:48:14.603  INFO 13692 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-11-23 18:48:14.715  INFO 13692 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-23 18:48:14.803  INFO 13692 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-23 18:48:14.957  WARN 13692 --- [task-1] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.example.ec.domain.MyAppointmentIdClass
+2020-11-23 18:48:14.957  WARN 13692 --- [task-1] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.example.ec.domain.MyAppointmentIdClass
+2020-11-23 18:48:15.326  INFO 13692 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-23 18:48:15.332  INFO 13692 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-23 18:48:15.844  WARN 13692 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-23 18:48:16.046  INFO 13692 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-23 18:48:16.048  INFO 13692 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-23 18:48:16.139  INFO 13692 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-23 18:48:16.149  INFO 13692 --- [main] com.example.ec.StylifyApplication        : Started StylifyApplication in 3.77 seconds (JVM running for 4.93)
+2020-11-23 18:49:06.442  INFO 13692 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-23 18:49:06.442  INFO 13692 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-23 18:49:06.457  INFO 13692 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2020-11-23 18:51:10.353  INFO 13692 --- [http-nio-8080-exec-7] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x000x000x000x090x000x000x000x130x000x000x000x070x00d0x00e0x00f0x00a0x00u0x00l0x00t0x000x000x00$0x00j0x00d0x00b0x00c0x00:0x00h0x0020x00:0x00t0x00c0x00p0x00:0x00/0x00/0x00l0x00o0x00c0x00a0x00l0x00h0x00o0x00s0x00t0x00:0x0080x0000x0080x0000x00/0x00d0x00e0x00f0x00a0x00u0x00l0x00t0x000x000x000x000x000x000x000x000xff0xff0xff0xff0x000x000x00...]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:417)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:261)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+2020-11-23 18:53:45.646  INFO 13544 --- [main] com.example.ec.StylifyApplication        : Starting StylifyApplication on DESKTOP-7SLLO4E with PID 13544 (C:\Users\lenovo\Desktop\explorecali\target\classes started by lenovo in C:\Users\lenovo\Desktop\explorecali)
+2020-11-23 18:53:45.651 DEBUG 13544 --- [main] com.example.ec.StylifyApplication        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-11-23 18:53:45.651  INFO 13544 --- [main] com.example.ec.StylifyApplication        : The following profiles are active: default
+2020-11-23 18:53:46.393  INFO 13544 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-23 18:53:46.461  INFO 13544 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 62ms. Found 8 JPA repository interfaces.
+2020-11-23 18:53:47.053  INFO 13544 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-23 18:53:47.060  INFO 13544 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-23 18:53:47.060  INFO 13544 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-23 18:53:47.238  INFO 13544 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-23 18:53:47.239  INFO 13544 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1527 ms
+2020-11-23 18:53:47.303  INFO 13544 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-23 18:53:47.385  INFO 13544 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-23 18:53:47.391  INFO 13544 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:eaf556eb-efa4-429c-8e2f-00ee12a7d2e4'
+2020-11-23 18:53:47.481  INFO 13544 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-23 18:53:47.489  INFO 13544 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:eaf556eb-efa4-429c-8e2f-00ee12a7d2e4 (H2 1.4)
+2020-11-23 18:53:47.563  INFO 13544 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 16 migrations (execution time 00:00.032s)
+2020-11-23 18:53:47.573  INFO 13544 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-11-23 18:53:47.611  INFO 13544 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-11-23 18:53:47.614  INFO 13544 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.1 - CreateServicePackagesSchema
+2020-11-23 18:53:47.636  INFO 13544 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.2 - AddServicePackages
+2020-11-23 18:53:47.653  INFO 13544 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.3 - CreateServiceSchema
+2020-11-23 18:53:47.671  INFO 13544 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.4 - AddServices
+2020-11-23 18:53:47.697  INFO 13544 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.5 - CreateServiceProviderSchema
+2020-11-23 18:53:47.709  INFO 13544 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.6 - AddServiceProviders
+2020-11-23 18:53:47.721  INFO 13544 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.7 - CreateClientSchema
+2020-11-23 18:53:47.732  INFO 13544 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.8 - AddClients
+2020-11-23 18:53:47.743  INFO 13544 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.9 - CreateCatalogSchema
+2020-11-23 18:53:47.753  INFO 13544 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.10 - AddCatalogs
+2020-11-23 18:53:47.764  INFO 13544 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.11 - CreateServiceProviderProfileSchema
+2020-11-23 18:53:47.778  INFO 13544 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.12 - AddServiceProviderProfiles
+2020-11-23 18:53:47.792  INFO 13544 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.13 - CreateClientProfileSchema
+2020-11-23 18:53:47.803  INFO 13544 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.14 - AddClientProfiles
+2020-11-23 18:53:47.816  INFO 13544 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.15 - CreateAppointmentSchema
+2020-11-23 18:53:47.831  INFO 13544 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.16 - AddAppointments
+2020-11-23 18:53:47.846  INFO 13544 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 16 migrations to schema "PUBLIC" (execution time 00:00.241s)
+2020-11-23 18:53:47.937  INFO 13544 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-23 18:53:47.980  INFO 13544 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-23 18:53:48.030  INFO 13544 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-11-23 18:53:48.163  INFO 13544 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-23 18:53:48.263  INFO 13544 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-23 18:53:48.440  WARN 13544 --- [task-1] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.example.ec.domain.MyAppointmentIdClass
+2020-11-23 18:53:48.441  WARN 13544 --- [task-1] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.example.ec.domain.MyAppointmentIdClass
+2020-11-23 18:53:48.823  INFO 13544 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-23 18:53:48.831  INFO 13544 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-23 18:53:49.376  WARN 13544 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-23 18:53:49.598  INFO 13544 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-23 18:53:49.599  INFO 13544 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-23 18:53:49.690  INFO 13544 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-23 18:53:49.698  INFO 13544 --- [main] com.example.ec.StylifyApplication        : Started StylifyApplication in 4.5 seconds (JVM running for 5.792)
+2020-11-23 18:57:50.683  INFO 9052 --- [main] com.example.ec.StylifyApplication        : Starting StylifyApplication on DESKTOP-7SLLO4E with PID 9052 (C:\Users\lenovo\Desktop\explorecali\target\classes started by lenovo in C:\Users\lenovo\Desktop\explorecali)
+2020-11-23 18:57:50.686 DEBUG 9052 --- [main] com.example.ec.StylifyApplication        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-11-23 18:57:50.686  INFO 9052 --- [main] com.example.ec.StylifyApplication        : The following profiles are active: default
+2020-11-23 18:57:51.350  INFO 9052 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-23 18:57:51.412  INFO 9052 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56ms. Found 8 JPA repository interfaces.
+2020-11-23 18:57:51.852  INFO 9052 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-23 18:57:51.858  INFO 9052 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-23 18:57:51.859  INFO 9052 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-23 18:57:51.979  INFO 9052 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-23 18:57:51.979  INFO 9052 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1250 ms
+2020-11-23 18:57:52.031  INFO 9052 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-23 18:57:52.101  INFO 9052 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-23 18:57:52.105  INFO 9052 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2020-11-23 18:57:52.184  INFO 9052 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-23 18:57:52.191  INFO 9052 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:testdb (H2 1.4)
+2020-11-23 18:57:52.246  INFO 9052 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 16 migrations (execution time 00:00.028s)
+2020-11-23 18:57:52.255  INFO 9052 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-11-23 18:57:52.289  INFO 9052 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-11-23 18:57:52.294  INFO 9052 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.1 - CreateServicePackagesSchema
+2020-11-23 18:57:52.316  INFO 9052 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.2 - AddServicePackages
+2020-11-23 18:57:52.331  INFO 9052 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.3 - CreateServiceSchema
+2020-11-23 18:57:52.348  INFO 9052 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.4 - AddServices
+2020-11-23 18:57:52.369  INFO 9052 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.5 - CreateServiceProviderSchema
+2020-11-23 18:57:52.380  INFO 9052 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.6 - AddServiceProviders
+2020-11-23 18:57:52.391  INFO 9052 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.7 - CreateClientSchema
+2020-11-23 18:57:52.401  INFO 9052 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.8 - AddClients
+2020-11-23 18:57:52.411  INFO 9052 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.9 - CreateCatalogSchema
+2020-11-23 18:57:52.420  INFO 9052 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.10 - AddCatalogs
+2020-11-23 18:57:52.428  INFO 9052 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.11 - CreateServiceProviderProfileSchema
+2020-11-23 18:57:52.437  INFO 9052 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.12 - AddServiceProviderProfiles
+2020-11-23 18:57:52.446  INFO 9052 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.13 - CreateClientProfileSchema
+2020-11-23 18:57:52.454  INFO 9052 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.14 - AddClientProfiles
+2020-11-23 18:57:52.462  INFO 9052 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.15 - CreateAppointmentSchema
+2020-11-23 18:57:52.470  INFO 9052 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.16 - AddAppointments
+2020-11-23 18:57:52.480  INFO 9052 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 16 migrations to schema "PUBLIC" (execution time 00:00.196s)
+2020-11-23 18:57:52.559  INFO 9052 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-23 18:57:52.613  INFO 9052 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-23 18:57:52.658  INFO 9052 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-11-23 18:57:52.754  INFO 9052 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-23 18:57:52.836  INFO 9052 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-23 18:57:52.967  WARN 9052 --- [task-1] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.example.ec.domain.MyAppointmentIdClass
+2020-11-23 18:57:52.967  WARN 9052 --- [task-1] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.example.ec.domain.MyAppointmentIdClass
+2020-11-23 18:57:53.270  INFO 9052 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-23 18:57:53.277  INFO 9052 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-23 18:57:53.782  WARN 9052 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-23 18:57:53.970  INFO 9052 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-23 18:57:53.971  INFO 9052 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-23 18:57:54.048  INFO 9052 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-23 18:57:54.063  INFO 9052 --- [main] com.example.ec.StylifyApplication        : Started StylifyApplication in 3.708 seconds (JVM running for 4.834)
+2020-11-23 18:59:12.771  INFO 14084 --- [main] com.example.ec.StylifyApplication        : Starting StylifyApplication on DESKTOP-7SLLO4E with PID 14084 (C:\Users\lenovo\Desktop\explorecali\target\classes started by lenovo in C:\Users\lenovo\Desktop\explorecali)
+2020-11-23 18:59:12.775 DEBUG 14084 --- [main] com.example.ec.StylifyApplication        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-11-23 18:59:12.776  INFO 14084 --- [main] com.example.ec.StylifyApplication        : The following profiles are active: default
+2020-11-23 18:59:13.374  INFO 14084 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-23 18:59:13.436  INFO 14084 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57ms. Found 8 JPA repository interfaces.
+2020-11-23 18:59:13.890  INFO 14084 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-23 18:59:13.896  INFO 14084 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-23 18:59:13.896  INFO 14084 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-23 18:59:14.027  INFO 14084 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-23 18:59:14.027  INFO 14084 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1203 ms
+2020-11-23 18:59:14.083  INFO 14084 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-23 18:59:14.162  INFO 14084 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-23 18:59:14.167  INFO 14084 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2020-11-23 18:59:14.250  INFO 14084 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-23 18:59:14.258  INFO 14084 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:testdb (H2 1.4)
+2020-11-23 18:59:14.316  INFO 14084 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 16 migrations (execution time 00:00.026s)
+2020-11-23 18:59:14.325  INFO 14084 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-11-23 18:59:14.358  INFO 14084 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-11-23 18:59:14.363  INFO 14084 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.1 - CreateServicePackagesSchema
+2020-11-23 18:59:14.383  INFO 14084 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.2 - AddServicePackages
+2020-11-23 18:59:14.399  INFO 14084 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.3 - CreateServiceSchema
+2020-11-23 18:59:14.418  INFO 14084 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.4 - AddServices
+2020-11-23 18:59:14.440  INFO 14084 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.5 - CreateServiceProviderSchema
+2020-11-23 18:59:14.452  INFO 14084 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.6 - AddServiceProviders
+2020-11-23 18:59:14.464  INFO 14084 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.7 - CreateClientSchema
+2020-11-23 18:59:14.474  INFO 14084 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.8 - AddClients
+2020-11-23 18:59:14.486  INFO 14084 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.9 - CreateCatalogSchema
+2020-11-23 18:59:14.496  INFO 14084 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.10 - AddCatalogs
+2020-11-23 18:59:14.505  INFO 14084 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.11 - CreateServiceProviderProfileSchema
+2020-11-23 18:59:14.514  INFO 14084 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.12 - AddServiceProviderProfiles
+2020-11-23 18:59:14.523  INFO 14084 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.13 - CreateClientProfileSchema
+2020-11-23 18:59:14.531  INFO 14084 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.14 - AddClientProfiles
+2020-11-23 18:59:14.538  INFO 14084 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.15 - CreateAppointmentSchema
+2020-11-23 18:59:14.547  INFO 14084 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.16 - AddAppointments
+2020-11-23 18:59:14.559  INFO 14084 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 16 migrations to schema "PUBLIC" (execution time 00:00.206s)
+2020-11-23 18:59:14.657  INFO 14084 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-23 18:59:14.704  INFO 14084 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-23 18:59:14.749  INFO 14084 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-11-23 18:59:14.856  INFO 14084 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-23 18:59:14.950  INFO 14084 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-23 18:59:15.105  WARN 14084 --- [task-1] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.example.ec.domain.MyAppointmentIdClass
+2020-11-23 18:59:15.105  WARN 14084 --- [task-1] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.example.ec.domain.MyAppointmentIdClass
+2020-11-23 18:59:15.448  INFO 14084 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-23 18:59:15.455  INFO 14084 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-23 18:59:15.867  WARN 14084 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-23 18:59:16.045  INFO 14084 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-23 18:59:16.046  INFO 14084 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-23 18:59:16.120  INFO 14084 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-23 18:59:16.128  INFO 14084 --- [main] com.example.ec.StylifyApplication        : Started StylifyApplication in 3.735 seconds (JVM running for 4.754)
+2020-11-23 19:00:54.990  INFO 11408 --- [main] com.example.ec.StylifyApplication        : Starting StylifyApplication on DESKTOP-7SLLO4E with PID 11408 (C:\Users\lenovo\Desktop\explorecali\target\classes started by lenovo in C:\Users\lenovo\Desktop\explorecali)
+2020-11-23 19:00:54.993 DEBUG 11408 --- [main] com.example.ec.StylifyApplication        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-11-23 19:00:54.994  INFO 11408 --- [main] com.example.ec.StylifyApplication        : The following profiles are active: default
+2020-11-23 19:00:55.606  INFO 11408 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-23 19:00:55.669  INFO 11408 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57ms. Found 8 JPA repository interfaces.
+2020-11-23 19:00:56.110  INFO 11408 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-23 19:00:56.116  INFO 11408 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-23 19:00:56.117  INFO 11408 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-23 19:00:56.230  INFO 11408 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-23 19:00:56.230  INFO 11408 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1192 ms
+2020-11-23 19:00:56.278  INFO 11408 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-23 19:00:56.349  INFO 11408 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-23 19:00:56.353  INFO 11408 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2020-11-23 19:00:56.430  INFO 11408 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-23 19:00:56.436  INFO 11408 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:testdb (H2 1.4)
+2020-11-23 19:00:56.488  INFO 11408 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 16 migrations (execution time 00:00.024s)
+2020-11-23 19:00:56.497  INFO 11408 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-11-23 19:00:56.528  INFO 11408 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-11-23 19:00:56.532  INFO 11408 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.1 - CreateServicePackagesSchema
+2020-11-23 19:00:56.550  INFO 11408 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.2 - AddServicePackages
+2020-11-23 19:00:56.566  INFO 11408 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.3 - CreateServiceSchema
+2020-11-23 19:00:56.583  INFO 11408 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.4 - AddServices
+2020-11-23 19:00:56.604  INFO 11408 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.5 - CreateServiceProviderSchema
+2020-11-23 19:00:56.618  INFO 11408 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.6 - AddServiceProviders
+2020-11-23 19:00:56.628  INFO 11408 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.7 - CreateClientSchema
+2020-11-23 19:00:56.638  INFO 11408 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.8 - AddClients
+2020-11-23 19:00:56.647  INFO 11408 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.9 - CreateCatalogSchema
+2020-11-23 19:00:56.657  INFO 11408 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.10 - AddCatalogs
+2020-11-23 19:00:56.666  INFO 11408 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.11 - CreateServiceProviderProfileSchema
+2020-11-23 19:00:56.675  INFO 11408 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.12 - AddServiceProviderProfiles
+2020-11-23 19:00:56.684  INFO 11408 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.13 - CreateClientProfileSchema
+2020-11-23 19:00:56.692  INFO 11408 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.14 - AddClientProfiles
+2020-11-23 19:00:56.699  INFO 11408 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.15 - CreateAppointmentSchema
+2020-11-23 19:00:56.707  INFO 11408 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.16 - AddAppointments
+2020-11-23 19:00:56.717  INFO 11408 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 16 migrations to schema "PUBLIC" (execution time 00:00.193s)
+2020-11-23 19:00:56.808  INFO 11408 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-23 19:00:56.861  INFO 11408 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-23 19:00:56.895  INFO 11408 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-11-23 19:00:56.985  INFO 11408 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-23 19:00:57.062  INFO 11408 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-23 19:00:57.203  WARN 11408 --- [task-1] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.example.ec.domain.MyAppointmentIdClass
+2020-11-23 19:00:57.203  WARN 11408 --- [task-1] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.example.ec.domain.MyAppointmentIdClass
+2020-11-23 19:00:57.498  INFO 11408 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-23 19:00:57.504  INFO 11408 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-23 19:00:57.929  WARN 11408 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-23 19:00:58.113  INFO 11408 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-23 19:00:58.114  INFO 11408 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-23 19:00:58.196  INFO 11408 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-23 19:00:58.204  INFO 11408 --- [main] com.example.ec.StylifyApplication        : Started StylifyApplication in 3.562 seconds (JVM running for 4.722)
