@@ -38,14 +38,10 @@ public class MyClient  implements Serializable {
             cascade = CascadeType.ALL)
     private MyClientProfile myClientProfile;
 
-    @OneToMany(mappedBy = "myClient", fetch = FetchType.LAZY,
-            cascade = CascadeType.ALL)
-    private List<MyAppointment> myAppointments;
-
     public MyClient() {
     }
 
-    public MyClient(Integer id, String firstName, String lastName, String gender, String mobile, String email, String birthDate, String location, String username, String password, String status, MyClientProfile myClientProfile, List<MyAppointment> myAppointments) {
+    public MyClient(Integer id, String firstName, String lastName, String gender, String mobile, String email, String birthDate, String location, String username, String password, String status, MyClientProfile myClientProfile) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -58,7 +54,6 @@ public class MyClient  implements Serializable {
         this.password = password;
         this.status = status;
         this.myClientProfile = myClientProfile;
-        this.myAppointments = myAppointments;
     }
 
     public Integer getId() {
@@ -157,14 +152,6 @@ public class MyClient  implements Serializable {
         this.myClientProfile = myClientProfile;
     }
 
-    public List<MyAppointment> getMyAppointments() {
-        return myAppointments;
-    }
-
-    public void setMyAppointments(List<MyAppointment> myAppointments) {
-        this.myAppointments = myAppointments;
-    }
-
     @Override
     public String toString() {
         return "MyClient{" +
@@ -180,7 +167,6 @@ public class MyClient  implements Serializable {
                 ", password='" + password + '\'' +
                 ", status='" + status + '\'' +
                 ", myClientProfile=" + myClientProfile +
-                ", myAppointments=" + myAppointments +
                 '}';
     }
 
@@ -189,23 +175,22 @@ public class MyClient  implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         MyClient myClient = (MyClient) o;
-        return id.equals(myClient.id) &&
-                firstName.equals(myClient.firstName) &&
-                lastName.equals(myClient.lastName) &&
-                gender.equals(myClient.gender) &&
-                mobile.equals(myClient.mobile) &&
-                email.equals(myClient.email) &&
-                birthDate.equals(myClient.birthDate) &&
-                location.equals(myClient.location) &&
-                username.equals(myClient.username) &&
-                password.equals(myClient.password) &&
-                status.equals(myClient.status) &&
-                myClientProfile.equals(myClient.myClientProfile) &&
-                myAppointments.equals(myClient.myAppointments);
+        return Objects.equals(id, myClient.id) &&
+                Objects.equals(firstName, myClient.firstName) &&
+                Objects.equals(lastName, myClient.lastName) &&
+                Objects.equals(gender, myClient.gender) &&
+                Objects.equals(mobile, myClient.mobile) &&
+                Objects.equals(email, myClient.email) &&
+                Objects.equals(birthDate, myClient.birthDate) &&
+                Objects.equals(location, myClient.location) &&
+                Objects.equals(username, myClient.username) &&
+                Objects.equals(password, myClient.password) &&
+                Objects.equals(status, myClient.status) &&
+                Objects.equals(myClientProfile, myClient.myClientProfile);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, firstName, lastName, gender, mobile, email, birthDate, location, username, password, status, myClientProfile, myAppointments);
+        return Objects.hash(id, firstName, lastName, gender, mobile, email, birthDate, location, username, password, status, myClientProfile);
     }
 }
