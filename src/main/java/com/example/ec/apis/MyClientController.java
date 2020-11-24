@@ -8,13 +8,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/clients")
 public class MyClientController {
     @Autowired
     MyClientService myService;
 
-    @GetMapping
-    public Iterable<MyClient> getAllServices() {
+git    public Iterable<MyClient> getAllServices() {
         return myService.lookup();
     }
 }
