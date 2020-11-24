@@ -12,16 +12,18 @@ public class MyResult {
     public double price;
     public double rate;
     public String time;
+    public double locationDifference;
 
     public MyResult() {
     }
 
-    public MyResult(String firstName, String lastName, double price, double rate, String time) {
+    public MyResult(String firstName, String lastName, double price, double rate, String time, double locationDifference) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.price = price;
         this.rate = rate;
         this.time = time;
+        this.locationDifference = locationDifference;
     }
 
     public String getFirstName() {
@@ -64,6 +66,14 @@ public class MyResult {
         this.time = time;
     }
 
+    public double getLocationDifference() {
+        return locationDifference;
+    }
+
+    public void setLocationDifference(double locationDifference) {
+        this.locationDifference = locationDifference;
+    }
+
     @Override
     public String toString() {
         return "MyResult{" +
@@ -72,6 +82,7 @@ public class MyResult {
                 ", price=" + price +
                 ", rate=" + rate +
                 ", time='" + time + '\'' +
+                ", locationDifference=" + locationDifference +
                 '}';
     }
 
@@ -82,13 +93,14 @@ public class MyResult {
         MyResult myResult = (MyResult) o;
         return Double.compare(myResult.price, price) == 0 &&
                 Double.compare(myResult.rate, rate) == 0 &&
-                firstName.equals(myResult.firstName) &&
-                lastName.equals(myResult.lastName) &&
-                time.equals(myResult.time);
+                Double.compare(myResult.locationDifference, locationDifference) == 0 &&
+                Objects.equals(firstName, myResult.firstName) &&
+                Objects.equals(lastName, myResult.lastName) &&
+                Objects.equals(time, myResult.time);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(firstName, lastName, price, rate, time);
+        return Objects.hash(firstName, lastName, price, rate, time, locationDifference);
     }
 }
