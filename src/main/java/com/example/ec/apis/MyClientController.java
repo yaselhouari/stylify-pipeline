@@ -12,7 +12,7 @@ public class MyClientController {
     @Autowired
     MyClientService myService;
 
-git    public Iterable<MyClient> getAllServices() {
+    public Iterable<MyClient> getAllServices() {
         return myService.lookup();
     }
 }
