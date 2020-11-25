@@ -30,8 +30,9 @@ public class MyServicePackageController {
     @RequestMapping(value = "/icons/{packageId}.png", method = RequestMethod.GET, produces = MediaType.IMAGE_PNG_VALUE)
     public @ResponseBody byte[] getImageAsByteArrayById(@PathVariable Integer packageId) throws IOException {
         String url = "/static/icons/" + packageId + ".png";
-        System.out.println(url);
-        InputStream in = getClass().getResourceAsStream("/static/icons/" + packageId + ".png");
+        ClassLoader cl = this.getClass().getClassLoader();
+        System.out.println("The url is: " + url);
+        InputStream in = getClass().getResourceAsStream(url);
         return IOUtils.toByteArray(in);
     }
 
