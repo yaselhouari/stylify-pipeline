@@ -34,10 +34,12 @@ public class MyClient  implements Serializable {
     @Column
     private String status;
 
+    @JsonIgnore
     @OneToOne(mappedBy = "myClient", fetch = FetchType.LAZY,
             cascade = CascadeType.ALL)
     private MyClientProfile myClientProfile;
 
+    @JsonIgnore
     @ManyToMany
     @JoinTable(
             name = "My_Appointment",
