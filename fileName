@@ -1,92 +1,233 @@
 SET DB_CLOSE_DELAY -1;        
 ;             
-CREATE USER IF NOT EXISTS "SA" SALT '6a91f14401f337d9' HASH 'f08f4661a4355cba3de7d77db714c0b36ec6543c611bfda1c7abb13783f833e4' ADMIN;         
-CREATE SEQUENCE "PUBLIC"."SYSTEM_SEQUENCE_4E718CB0_EBAF_41D8_B355_FED5BAA4FDAD" START WITH 1 BELONGS_TO_TABLE;
-CREATE SEQUENCE "PUBLIC"."SYSTEM_SEQUENCE_1C6FF9BF_B524_4F58_AD15_BAEA8BE43941" START WITH 1 BELONGS_TO_TABLE;
-CREATE SEQUENCE "PUBLIC"."SYSTEM_SEQUENCE_5FE44E56_1DFD_4830_A039_2481018D6F4A" START WITH 1 BELONGS_TO_TABLE;
-CREATE SEQUENCE "PUBLIC"."SYSTEM_SEQUENCE_94347485_5FD3_48A6_9887_6068F0B5C445" START WITH 1 BELONGS_TO_TABLE;
-CREATE SEQUENCE "PUBLIC"."SYSTEM_SEQUENCE_4D73FB49_E30C_4885_BD75_459918F583A3" START WITH 1 BELONGS_TO_TABLE;
-CREATE SEQUENCE "PUBLIC"."SYSTEM_SEQUENCE_E2730934_5F3F_464E_8977_ACEAE92662F3" START WITH 1 BELONGS_TO_TABLE;
-CREATE SEQUENCE "PUBLIC"."SYSTEM_SEQUENCE_9BABD100_D243_4063_B41B_68A0B5771455" START WITH 1 BELONGS_TO_TABLE;
+CREATE USER IF NOT EXISTS "SA" SALT '60d0dc253efdfe20' HASH '2aa9f747a34ce18861f65ac11b00fcf22773394e09610ceeca3af2d5e3308e73' ADMIN;         
+CREATE SEQUENCE "PUBLIC"."SYSTEM_SEQUENCE_1263B13A_7677_490B_BDC1_3F3A81D105C6" START WITH 9 BELONGS_TO_TABLE;
+CREATE SEQUENCE "PUBLIC"."SYSTEM_SEQUENCE_0D9207E0_0DAB_44E1_8E7E_91EFE7AEBE32" START WITH 9 BELONGS_TO_TABLE;
+CREATE SEQUENCE "PUBLIC"."SYSTEM_SEQUENCE_297C0815_EDB4_4362_A085_C0371A3261EA" START WITH 9 BELONGS_TO_TABLE;
+CREATE SEQUENCE "PUBLIC"."SYSTEM_SEQUENCE_76EE715E_569A_4D61_ABC9_8B917CB089B5" START WITH 51 BELONGS_TO_TABLE;               
+CREATE SEQUENCE "PUBLIC"."SYSTEM_SEQUENCE_2A6BBFFD_97B4_4138_BDC6_FB4DD3B87DEE" START WITH 9 BELONGS_TO_TABLE;
+CREATE SEQUENCE "PUBLIC"."SYSTEM_SEQUENCE_3C158C79_16FB_4BBA_893B_5D812BABC946" START WITH 9 BELONGS_TO_TABLE;
+CREATE SEQUENCE "PUBLIC"."SYSTEM_SEQUENCE_82CD1E1A_49D7_469C_B488_D98F090D3D79" START WITH 11 BELONGS_TO_TABLE;               
+CREATE MEMORY TABLE "PUBLIC"."flyway_schema_history"(
+    "installed_rank" INT NOT NULL,
+    "version" VARCHAR(50),
+    "description" VARCHAR(200) NOT NULL,
+    "type" VARCHAR(20) NOT NULL,
+    "script" VARCHAR(1000) NOT NULL,
+    "checksum" INT,
+    "installed_by" VARCHAR(100) NOT NULL,
+    "installed_on" TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    "execution_time" INT NOT NULL,
+    "success" BOOLEAN NOT NULL
+);             
+ALTER TABLE "PUBLIC"."flyway_schema_history" ADD CONSTRAINT "PUBLIC"."flyway_schema_history_pk" PRIMARY KEY("installed_rank");
+-- 15 +/- SELECT COUNT(*) FROM PUBLIC.flyway_schema_history;  
+INSERT INTO "PUBLIC"."flyway_schema_history" VALUES
+(-1, NULL, '<< Flyway Schema History table created >>', 'TABLE', '', NULL, 'SA', TIMESTAMP '2020-11-25 12:53:06.101839', 0, TRUE),
+(1, '1.1', 'CreateServicePackagesSchema', 'SQL', 'V1.1__CreateServicePackagesSchema.sql', 1932208295, 'SA', TIMESTAMP '2020-11-25 12:53:06.133824', 4, TRUE),
+(2, '1.2', 'AddServicePackages', 'SQL', 'V1.2__AddServicePackages.sql', -1582378337, 'SA', TIMESTAMP '2020-11-25 12:53:06.150831', 2, TRUE),
+(3, '1.3', 'CreateServiceSchema', 'SQL', 'V1.3__CreateServiceSchema.sql', -603888143, 'SA', TIMESTAMP '2020-11-25 12:53:06.170825', 5, TRUE),
+(4, '1.4', 'AddServices', 'SQL', 'V1.4__AddServices.sql', -1774693911, 'SA', TIMESTAMP '2020-11-25 12:53:06.193824', 11, TRUE),
+(5, '1.5', 'CreateServiceProviderSchema', 'SQL', 'V1.5__CreateServiceProviderSchema.sql', -1244532945, 'SA', TIMESTAMP '2020-11-25 12:53:06.206824', 2, TRUE),
+(6, '1.6', 'AddServiceProviders', 'SQL', 'V1.6__AddServiceProviders.sql', 717328051, 'SA', TIMESTAMP '2020-11-25 12:53:06.219841', 2, TRUE),
+(7, '1.7', 'CreateClientSchema', 'SQL', 'V1.7__CreateClientSchema.sql', 18345946, 'SA', TIMESTAMP '2020-11-25 12:53:06.230824', 1, TRUE),
+(8, '1.8', 'AddClients', 'SQL', 'V1.8__AddClients.sql', -452367625, 'SA', TIMESTAMP '2020-11-25 12:53:06.240823', 2, TRUE),
+(9, '1.9', 'CreateCatalogSchema', 'SQL', 'V1.9__CreateCatalogSchema.sql', 100355458, 'SA', TIMESTAMP '2020-11-25 12:53:06.250824', 1, TRUE),
+(10, '1.10', 'AddCatalogs', 'SQL', 'V1.10__AddCatalogs.sql', 22181537, 'SA', TIMESTAMP '2020-11-25 12:53:06.260822', 1, TRUE),
+(11, '1.11', 'CreateServiceProviderProfileSchema', 'SQL', 'V1.11__CreateServiceProviderProfileSchema.sql', -1510307472, 'SA', TIMESTAMP '2020-11-25 12:53:06.268823', 1, TRUE),
+(12, '1.12', 'AddServiceProviderProfiles', 'SQL', 'V1.12__AddServiceProviderProfiles.sql', -1805028543, 'SA', TIMESTAMP '2020-11-25 12:53:06.276823', 1, TRUE),
+(13, '1.13', 'CreateClientProfileSchema', 'SQL', 'V1.13__CreateClientProfileSchema.sql', -1517087667, 'SA', TIMESTAMP '2020-11-25 12:53:06.284822', 1, TRUE),
+(14, '1.14', 'AddClientProfiles', 'SQL', 'V1.14__AddClientProfiles.sql', -1728485284, 'SA', TIMESTAMP '2020-11-25 12:53:06.291822', 1, TRUE);      
+CREATE INDEX "PUBLIC"."flyway_schema_history_s_idx" ON "PUBLIC"."flyway_schema_history"("success");           
+CREATE MEMORY TABLE "PUBLIC"."MY_SERVICE_PACKAGE"(
+    "ID" BIGINT DEFAULT NEXT VALUE FOR "PUBLIC"."SYSTEM_SEQUENCE_82CD1E1A_49D7_469C_B488_D98F090D3D79" NOT NULL NULL_TO_DEFAULT SEQUENCE "PUBLIC"."SYSTEM_SEQUENCE_82CD1E1A_49D7_469C_B488_D98F090D3D79",
+    "NAME" VARCHAR(50) NOT NULL,
+    "DESCRIPTION" VARCHAR(2000) NOT NULL,
+    "GENDER" VARCHAR(20),
+    "ICON" VARCHAR(2000)
+);           
+ALTER TABLE "PUBLIC"."MY_SERVICE_PACKAGE" ADD CONSTRAINT "PUBLIC"."CONSTRAINT_C" PRIMARY KEY("ID");           
+-- 10 +/- SELECT COUNT(*) FROM PUBLIC.MY_SERVICE_PACKAGE;     
+INSERT INTO "PUBLIC"."MY_SERVICE_PACKAGE" VALUES
+(1, 'coloration et meches', 'description', 'm', '/icons/1.png'),
+(2, 'lissage', 'description', 'm', '/icons/2.png'),
+(3, 'manicure pedicure', 'description', 'm', '/icons/3.png'),
+(4, 'soins de visage', 'description', 'm', '/icons/4.png'),
+(5, 'epilcation', 'description', 'm', '/icons/5.png'),
+(6, STRINGDECODE('beaut\u00e9 des mains'), 'description', 'f', '/icons/6.png'),
+(7, STRINGDECODE('beaut\u00e9 des pieds'), 'description', 'f', '/icons/7.png'),
+(8, 'maquillage', 'description', 'f', '/icons/8.png'),
+(9, 'epilcation', 'description', 'f', '/icons/9.png'),
+(10, 'soins de visage', 'description', 'f', '/icons/10.png');  
+CREATE MEMORY TABLE "PUBLIC"."MY_SERVICE"(
+    "ID" BIGINT DEFAULT NEXT VALUE FOR "PUBLIC"."SYSTEM_SEQUENCE_76EE715E_569A_4D61_ABC9_8B917CB089B5" NOT NULL NULL_TO_DEFAULT SEQUENCE "PUBLIC"."SYSTEM_SEQUENCE_76EE715E_569A_4D61_ABC9_8B917CB089B5",
+    "PACKAGE_ID" CHAR(2) NOT NULL,
+    "TITLE" VARCHAR(100) NOT NULL,
+    "DESCRIPTION" VARCHAR(2000) NOT NULL,
+    "PRICE" VARCHAR(10) NOT NULL,
+    "DURATION" VARCHAR(32) NOT NULL
+);          
+ALTER TABLE "PUBLIC"."MY_SERVICE" ADD CONSTRAINT "PUBLIC"."CONSTRAINT_3" PRIMARY KEY("ID");   
+-- 49 +/- SELECT COUNT(*) FROM PUBLIC.MY_SERVICE;             
+INSERT INTO "PUBLIC"."MY_SERVICE" VALUES
+(1, '1', 'coloration cheveux', 'description', '100', '1:00'),
+(2, '1', 'coloration barbe', 'description', '100', '1:00'),
+(3, '1', 'coloration moustache', 'description', '100', '1:00'),
+(4, '1', STRINGDECODE('m\u00e8ches pour cheveux'), 'description', '100', '1:00'),
+(5, '2', STRINGDECODE('d\u00e9frisage'), 'description', '100', '1:00'),
+(6, '2', STRINGDECODE('k\u00e9ratine'), 'description', '100', '1:00'),
+(7, '2', 'protein', 'description', '100', '1:00'),
+(8, '2', 'pack lissage (lissage + coupe + barbe)', 'description', '100', '1:00'),
+(9, '3', 'manucure normal', 'description', '100', '1:00'),
+(10, '3', STRINGDECODE('manucure fa\u00e7on spa'), 'description', '100', '1:00'),
+(11, '3', 'pedicure normal', 'description', '100', '1:00'),
+(12, '3', STRINGDECODE('pedicure fa\u00e7on spa'), 'description', '100', '1:00'),
+(13, '4', 'soin black mask', 'description', '100', '1:00'),
+(14, '4', 'soin hydratant', 'description', '100', '1:00'),
+(15, '4', 'soin de visage express 30 min', 'description', '100', '1:00'),
+(16, '4', 'soin de visage profond avec extraction des points noirs', 'description', '100', '1:00'),
+(17, '5', 'nez-narines', 'description', '100', '1:00'),
+(18, '5', 'oreilles', 'description', '100', '1:00'),
+(19, '5', 'contour de barbe', 'description', '100', '1:00'),
+(20, '5', 'visage complet', 'description', '100', '1:00'),
+(21, '6', 'pose vernis permanent', 'description', '100', '1:00'),
+(22, '6', 'manucure avec vernis permanent', 'description', '100', '1:00'),
+(23, '6', 'pose vernis french', 'description', '100', '1:00'),
+(24, '6', 'manucure avec french', 'description', '100', '1:00'),
+(25, '6', 'pose vernis simple', 'description', '100', '1:00'),
+(26, '6', 'manucure avec pose vernis simple', 'description', '100', '1:00'),
+(27, '7', 'pedicure avec vernis simplme', 'description', '100', '1:00'),
+(28, '7', 'pedicure french', 'description', '100', '1:00'),
+(29, '7', 'pedicure avec vernis permanent', 'description', '100', '1:00'),
+(30, '7', 'pedicure avec retrait vernis permanent', 'description', '100', '1:00'),
+(31, '8', 'maquillage de jour', 'description', '100', '1:00'),
+(32, '8', 'maquillage de nuit', 'description', '100', '1:00'),
+(33, '8', 'maquillage et faux cils', 'description', '100', '1:00'),
+(34, '9', 'sourcils', 'description', '100', '1:00'),
+(35, '9', 'visage', 'description', '100', '1:00'),
+(36, '9', 'duvet', 'description', '100', '1:00'),
+(37, '9', 'demis-bras', 'description', '100', '1:00'),
+(38, '9', 'bras', 'description', '100', '1:00'),
+(39, '9', 'jambes', 'description', '100', '1:00'),
+(40, '9', 'demi-jambes', 'description', '100', '1:00'),
+(41, '9', 'aiselle', 'description', '100', '1:00'),
+(42, '9', STRINGDECODE('maillot br\u00e9silien'), 'description', '100', '1:00'),
+(43, '9', 'bord de maillot', 'description', '100', '1:00'),
+(44, '9', STRINGDECODE('maillot int\u00e9gral'), 'description', '100', '1:00'),
+(46, '9', STRINGDECODE('\u00e9pilation compl\u00e8te'), 'description', '100', '1:00'),
+(47, '10', 'soin black mask', 'description', '100', '1:00'),
+(48, '10', 'soin hydratant', 'description', '100', '1:00'),
+(49, '10', 'soin de visage express 30 mins', 'description', '100', '1:00'),
+(50, '10', 'soin de visage profond avec extraction des points noirs', 'description', '100', '1:00');   
+CREATE MEMORY TABLE "PUBLIC"."MY_SERVICE_PROVIDER"(
+    "ID" BIGINT DEFAULT NEXT VALUE FOR "PUBLIC"."SYSTEM_SEQUENCE_2A6BBFFD_97B4_4138_BDC6_FB4DD3B87DEE" NOT NULL NULL_TO_DEFAULT SEQUENCE "PUBLIC"."SYSTEM_SEQUENCE_2A6BBFFD_97B4_4138_BDC6_FB4DD3B87DEE",
+    "FIRST_NAME" VARCHAR(100) NOT NULL,
+    "LAST_NAME" VARCHAR(100) NOT NULL,
+    "GENDER" VARCHAR(1) NOT NULL,
+    "MOBILE" VARCHAR(10) NOT NULL,
+    "EMAIL" VARCHAR(50) NOT NULL,
+    "BIRTH_DATE" VARCHAR(10) NOT NULL,
+    "LOCATION" VARCHAR(50) NOT NULL,
+    "USERNAME" VARCHAR(100) NOT NULL,
+    "PASSWORD" VARCHAR(100) NOT NULL,
+    "STATUS" VARCHAR(100) NOT NULL
+); 
+ALTER TABLE "PUBLIC"."MY_SERVICE_PROVIDER" ADD CONSTRAINT "PUBLIC"."CONSTRAINT_E" PRIMARY KEY("ID");          
+-- 8 +/- SELECT COUNT(*) FROM PUBLIC.MY_SERVICE_PROVIDER;     
+INSERT INTO "PUBLIC"."MY_SERVICE_PROVIDER" VALUES
+(1, 'Anouar', 'Fikri', 'm', '0000000000', 'email@gmail.com', '01-01-1990', 'Service Provider Location', 'Service Provider Username', 'Service Provider Password', 'Service Provider Status'),
+(2, 'Redouane', 'Al Asmar', 'm', '0000000000', 'email@gmail.com', '01-01-1990', 'Service Provider Location', 'Service Provider Username', 'Service Provider Password', 'Service Provider Status'),
+(3, 'Omar', 'Diab', 'm', '0000000000', 'email@gmail.com', '01-01-1990', 'Service Provider Location', 'Service Provider Username', 'Service Provider Password', 'Service Provider Status'),
+(4, 'khalid', 'Al Achkar', 'm', '0000000000', 'email@gmail.com', '01-01-1990', 'Service Provider Location', 'Service Provider Username', 'Service Provider Password', 'Service Provider Status'),
+(5, 'Morad', 'Salmi', 'm', '0000000000', 'email@gmail.com', '01-01-1990', 'Service Provider Location', 'Service Provider Username', 'Service Provider Password', 'Service Provider Status'),
+(6, 'Walid', 'El Kadiri', 'm', '0000000000', 'email@gmail.com', '01-01-1990', 'Service Provider Location', 'Service Provider Username', 'Service Provider Password', 'Service Provider Status'),
+(7, 'Samih', 'Farsi', 'm', '0000000000', 'email@gmail.com', '01-01-1990', 'Service Provider Location', 'Service Provider Username', 'Service Provider Password', 'Service Provider Status'),
+(8, 'Salah', 'Brikti', 'm', '0000000000', 'email@gmail.com', '01-01-1990', 'Service Provider Location', 'Service Provider Username', 'Service Provider Password', 'Service Provider Status');              
+CREATE MEMORY TABLE "PUBLIC"."MY_CLIENT"(
+    "ID" BIGINT DEFAULT NEXT VALUE FOR "PUBLIC"."SYSTEM_SEQUENCE_1263B13A_7677_490B_BDC1_3F3A81D105C6" NOT NULL NULL_TO_DEFAULT SEQUENCE "PUBLIC"."SYSTEM_SEQUENCE_1263B13A_7677_490B_BDC1_3F3A81D105C6",
+    "FIRST_NAME" VARCHAR(100) NOT NULL,
+    "LAST_NAME" VARCHAR(100) NOT NULL,
+    "GENDER" VARCHAR(1) NOT NULL,
+    "MOBILE" VARCHAR(10) NOT NULL,
+    "EMAIL" VARCHAR(50) NOT NULL,
+    "BIRTH_DATE" VARCHAR(10) NOT NULL,
+    "LOCATION" VARCHAR(50) NOT NULL,
+    "USERNAME" VARCHAR(100) NOT NULL,
+    "PASSWORD" VARCHAR(100) NOT NULL,
+    "STATUS" VARCHAR(100) NOT NULL
+);           
+ALTER TABLE "PUBLIC"."MY_CLIENT" ADD CONSTRAINT "PUBLIC"."CONSTRAINT_CD" PRIMARY KEY("ID");   
+-- 8 +/- SELECT COUNT(*) FROM PUBLIC.MY_CLIENT;               
+INSERT INTO "PUBLIC"."MY_CLIENT" VALUES
+(1, 'Anouar', 'Fikri', 'm', '0000000000', 'email@gmail.com', '01-01-1990', 'Client Location', 'Client Username', 'Client Password', 'Client Status'),
+(2, 'Redouane', 'Al Asmar', 'm', '0000000000', 'email@gmail.com', '01-01-1990', 'Client Location', 'Client Username', 'Client Password', 'Client Status'),
+(3, 'Omar', 'Diab', 'm', '0000000000', 'email@gmail.com', '01-01-1990', 'Client Location', 'Client Username', 'Client Password', 'Client Status'),
+(4, 'khalid', 'Al Achkar', 'm', '0000000000', 'email@gmail.com', '01-01-1990', 'Client Location', 'Client Username', 'Client Password', 'Client Status'),
+(5, 'Morad', 'Salmi', 'm', '0000000000', 'email@gmail.com', '01-01-1990', 'Client Location', 'Client Username', 'Client Password', 'Client Status'),
+(6, 'Walid', 'El Kadiri', 'm', '0000000000', 'email@gmail.com', '01-01-1990', 'Client Location', 'Client Username', 'Client Password', 'Client Status'),
+(7, 'Samih', 'Farsi', 'm', '0000000000', 'email@gmail.com', '01-01-1990', 'Client Location', 'Client Username', 'Client Password', 'Client Status'),
+(8, 'Salah', 'Brikti', 'm', '0000000000', 'email@gmail.com', '01-01-1990', 'Client Location', 'Client Username', 'Client Password', 'Client Status');        
+CREATE MEMORY TABLE "PUBLIC"."MY_SERVICE_PROVIDER_CATALOG"(
+    "ID" BIGINT DEFAULT NEXT VALUE FOR "PUBLIC"."SYSTEM_SEQUENCE_0D9207E0_0DAB_44E1_8E7E_91EFE7AEBE32" NOT NULL NULL_TO_DEFAULT SEQUENCE "PUBLIC"."SYSTEM_SEQUENCE_0D9207E0_0DAB_44E1_8E7E_91EFE7AEBE32",
+    "PROVIDER_ID" BIGINT NOT NULL,
+    "DESCRIPTION" VARCHAR(2000) NOT NULL
+);      
+ALTER TABLE "PUBLIC"."MY_SERVICE_PROVIDER_CATALOG" ADD CONSTRAINT "PUBLIC"."CONSTRAINT_C6" PRIMARY KEY("ID"); 
+-- 8 +/- SELECT COUNT(*) FROM PUBLIC.MY_SERVICE_PROVIDER_CATALOG;             
+INSERT INTO "PUBLIC"."MY_SERVICE_PROVIDER_CATALOG" VALUES
+(1, 1, 'description'),
+(2, 2, 'description'),
+(3, 3, 'description'),
+(4, 4, 'description'),
+(5, 5, 'description'),
+(6, 6, 'description'),
+(7, 7, 'description'),
+(8, 8, 'description');     
+CREATE MEMORY TABLE "PUBLIC"."MY_SERVICE_PROVIDER_PROFILE"(
+    "ID" BIGINT DEFAULT NEXT VALUE FOR "PUBLIC"."SYSTEM_SEQUENCE_297C0815_EDB4_4362_A085_C0371A3261EA" NOT NULL NULL_TO_DEFAULT SEQUENCE "PUBLIC"."SYSTEM_SEQUENCE_297C0815_EDB4_4362_A085_C0371A3261EA",
+    "PROVIDER_ID" BIGINT NOT NULL
+); 
+ALTER TABLE "PUBLIC"."MY_SERVICE_PROVIDER_PROFILE" ADD CONSTRAINT "PUBLIC"."CONSTRAINT_9" PRIMARY KEY("ID");  
+-- 8 +/- SELECT COUNT(*) FROM PUBLIC.MY_SERVICE_PROVIDER_PROFILE;             
+INSERT INTO "PUBLIC"."MY_SERVICE_PROVIDER_PROFILE" VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5),
+(6, 6),
+(7, 7),
+(8, 8);             
+CREATE MEMORY TABLE "PUBLIC"."MY_CLIENT_PROFILE"(
+    "ID" BIGINT DEFAULT NEXT VALUE FOR "PUBLIC"."SYSTEM_SEQUENCE_3C158C79_16FB_4BBA_893B_5D812BABC946" NOT NULL NULL_TO_DEFAULT SEQUENCE "PUBLIC"."SYSTEM_SEQUENCE_3C158C79_16FB_4BBA_893B_5D812BABC946",
+    "CLIENT_ID" BIGINT NOT NULL
+);             
+ALTER TABLE "PUBLIC"."MY_CLIENT_PROFILE" ADD CONSTRAINT "PUBLIC"."CONSTRAINT_37" PRIMARY KEY("ID");           
+-- 8 +/- SELECT COUNT(*) FROM PUBLIC.MY_CLIENT_PROFILE;       
+INSERT INTO "PUBLIC"."MY_CLIENT_PROFILE" VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5),
+(6, 6),
+(7, 7),
+(8, 8);       
 CREATE MEMORY TABLE "PUBLIC"."MY_APPOINTMENT"(
     "SERVICE_PROVIDER_ID" INTEGER NOT NULL,
     "CLIENT_ID" INTEGER NOT NULL
 );             
 -- 0 +/- SELECT COUNT(*) FROM PUBLIC.MY_APPOINTMENT;          
-CREATE MEMORY TABLE "PUBLIC"."MY_CLIENT"(
-    "ID" INTEGER DEFAULT NEXT VALUE FOR "PUBLIC"."SYSTEM_SEQUENCE_4D73FB49_E30C_4885_BD75_459918F583A3" NOT NULL NULL_TO_DEFAULT SEQUENCE "PUBLIC"."SYSTEM_SEQUENCE_4D73FB49_E30C_4885_BD75_459918F583A3",
-    "BIRTH_DATE" VARCHAR(255),
-    "EMAIL" VARCHAR(255),
-    "FIRST_NAME" VARCHAR(255),
-    "GENDER" VARCHAR(255),
-    "LAST_NAME" VARCHAR(255),
-    "LOCATION" VARCHAR(255),
-    "MOBILE" VARCHAR(255),
-    "PASSWORD" VARCHAR(255),
-    "STATUS" VARCHAR(255),
-    "USERNAME" VARCHAR(255)
-);              
-ALTER TABLE "PUBLIC"."MY_CLIENT" ADD CONSTRAINT "PUBLIC"."CONSTRAINT_C" PRIMARY KEY("ID");    
--- 0 +/- SELECT COUNT(*) FROM PUBLIC.MY_CLIENT;               
-CREATE MEMORY TABLE "PUBLIC"."MY_CLIENT_PROFILE"(
-    "ID" VARCHAR(255) DEFAULT NEXT VALUE FOR "PUBLIC"."SYSTEM_SEQUENCE_E2730934_5F3F_464E_8977_ACEAE92662F3" NOT NULL NULL_TO_DEFAULT SEQUENCE "PUBLIC"."SYSTEM_SEQUENCE_E2730934_5F3F_464E_8977_ACEAE92662F3",
-    "CLIENT_ID" INTEGER NOT NULL
-);      
-ALTER TABLE "PUBLIC"."MY_CLIENT_PROFILE" ADD CONSTRAINT "PUBLIC"."CONSTRAINT_3" PRIMARY KEY("ID");            
--- 0 +/- SELECT COUNT(*) FROM PUBLIC.MY_CLIENT_PROFILE;       
-CREATE MEMORY TABLE "PUBLIC"."MY_SERVICE"(
-    "ID" INTEGER DEFAULT NEXT VALUE FOR "PUBLIC"."SYSTEM_SEQUENCE_94347485_5FD3_48A6_9887_6068F0B5C445" NOT NULL NULL_TO_DEFAULT SEQUENCE "PUBLIC"."SYSTEM_SEQUENCE_94347485_5FD3_48A6_9887_6068F0B5C445",
-    "DESCRIPTION" VARCHAR(255),
-    "DURATION" VARCHAR(255),
-    "PRICE" VARCHAR(255),
-    "TITLE" VARCHAR(255),
-    "PACKAGE_ID" INTEGER NOT NULL
-);            
-ALTER TABLE "PUBLIC"."MY_SERVICE" ADD CONSTRAINT "PUBLIC"."CONSTRAINT_33" PRIMARY KEY("ID");  
--- 0 +/- SELECT COUNT(*) FROM PUBLIC.MY_SERVICE;              
-CREATE MEMORY TABLE "PUBLIC"."MY_SERVICE_PACKAGE"(
-    "ID" INTEGER DEFAULT NEXT VALUE FOR "PUBLIC"."SYSTEM_SEQUENCE_5FE44E56_1DFD_4830_A039_2481018D6F4A" NOT NULL NULL_TO_DEFAULT SEQUENCE "PUBLIC"."SYSTEM_SEQUENCE_5FE44E56_1DFD_4830_A039_2481018D6F4A",
-    "DESCRIPTION" VARCHAR(255),
-    "GENDER" VARCHAR(255),
-    "ICON" VARCHAR(255),
-    "NAME" VARCHAR(255)
-);            
-ALTER TABLE "PUBLIC"."MY_SERVICE_PACKAGE" ADD CONSTRAINT "PUBLIC"."CONSTRAINT_C0" PRIMARY KEY("ID");          
--- 0 +/- SELECT COUNT(*) FROM PUBLIC.MY_SERVICE_PACKAGE;      
-CREATE MEMORY TABLE "PUBLIC"."MY_SERVICE_PROVIDER"(
-    "ID" INTEGER DEFAULT NEXT VALUE FOR "PUBLIC"."SYSTEM_SEQUENCE_1C6FF9BF_B524_4F58_AD15_BAEA8BE43941" NOT NULL NULL_TO_DEFAULT SEQUENCE "PUBLIC"."SYSTEM_SEQUENCE_1C6FF9BF_B524_4F58_AD15_BAEA8BE43941",
-    "BIRTH_DATE" VARCHAR(255),
-    "EMAIL" VARCHAR(255),
-    "FIRST_NAME" VARCHAR(255),
-    "GENDER" VARCHAR(255),
-    "LAST_NAME" VARCHAR(255),
-    "LOCATION" VARCHAR(255),
-    "MOBILE" VARCHAR(255),
-    "PASSWORD" VARCHAR(255),
-    "STATUS" VARCHAR(255),
-    "USERNAME" VARCHAR(255)
-);    
-ALTER TABLE "PUBLIC"."MY_SERVICE_PROVIDER" ADD CONSTRAINT "PUBLIC"."CONSTRAINT_E" PRIMARY KEY("ID");          
--- 0 +/- SELECT COUNT(*) FROM PUBLIC.MY_SERVICE_PROVIDER;     
-CREATE MEMORY TABLE "PUBLIC"."MY_SERVICE_PROVIDER_CATALOG"(
-    "ID" INTEGER DEFAULT NEXT VALUE FOR "PUBLIC"."SYSTEM_SEQUENCE_4E718CB0_EBAF_41D8_B355_FED5BAA4FDAD" NOT NULL NULL_TO_DEFAULT SEQUENCE "PUBLIC"."SYSTEM_SEQUENCE_4E718CB0_EBAF_41D8_B355_FED5BAA4FDAD",
-    "DESCRIPTION" VARCHAR(255),
-    "PROVIDER_ID" INTEGER NOT NULL
-);              
-ALTER TABLE "PUBLIC"."MY_SERVICE_PROVIDER_CATALOG" ADD CONSTRAINT "PUBLIC"."CONSTRAINT_C6" PRIMARY KEY("ID"); 
--- 0 +/- SELECT COUNT(*) FROM PUBLIC.MY_SERVICE_PROVIDER_CATALOG;             
-CREATE MEMORY TABLE "PUBLIC"."MY_SERVICE_PROVIDER_PROFILE"(
-    "ID" VARCHAR(255) DEFAULT NEXT VALUE FOR "PUBLIC"."SYSTEM_SEQUENCE_9BABD100_D243_4063_B41B_68A0B5771455" NOT NULL NULL_TO_DEFAULT SEQUENCE "PUBLIC"."SYSTEM_SEQUENCE_9BABD100_D243_4063_B41B_68A0B5771455",
-    "PROVIDER_ID" INTEGER NOT NULL
-);          
-ALTER TABLE "PUBLIC"."MY_SERVICE_PROVIDER_PROFILE" ADD CONSTRAINT "PUBLIC"."CONSTRAINT_9" PRIMARY KEY("ID");  
--- 0 +/- SELECT COUNT(*) FROM PUBLIC.MY_SERVICE_PROVIDER_PROFILE;             
 ALTER TABLE "PUBLIC"."MY_CLIENT_PROFILE" ADD CONSTRAINT "PUBLIC"."UK_EQNUFDN9XNJBMF6I3WH95HPWB" UNIQUE("CLIENT_ID");          
 ALTER TABLE "PUBLIC"."MY_SERVICE_PROVIDER_PROFILE" ADD CONSTRAINT "PUBLIC"."UK_UFWV6PYIBCN264OU7U9JJRS9" UNIQUE("PROVIDER_ID");               
 ALTER TABLE "PUBLIC"."MY_SERVICE_PROVIDER_CATALOG" ADD CONSTRAINT "PUBLIC"."UK_D12GOA4LHI3UP4EOV1APSCNLS" UNIQUE("PROVIDER_ID");              
+ALTER TABLE "PUBLIC"."MY_SERVICE_PROVIDER_CATALOG" ADD CONSTRAINT "PUBLIC"."FK_SERVICE_PROVIDER_ID" FOREIGN KEY("PROVIDER_ID") REFERENCES "PUBLIC"."MY_SERVICE_PROVIDER"("ID") NOCHECK;       
 ALTER TABLE "PUBLIC"."MY_SERVICE" ADD CONSTRAINT "PUBLIC"."FK9WRP169B6JF4389D18MO94VDE" FOREIGN KEY("PACKAGE_ID") REFERENCES "PUBLIC"."MY_SERVICE_PACKAGE"("ID") NOCHECK;     
 ALTER TABLE "PUBLIC"."MY_SERVICE_PROVIDER_CATALOG" ADD CONSTRAINT "PUBLIC"."FK87OTHSV8RBWEEJKX5BEDCQT44" FOREIGN KEY("PROVIDER_ID") REFERENCES "PUBLIC"."MY_SERVICE_PROVIDER"("ID") NOCHECK;  
 ALTER TABLE "PUBLIC"."MY_CLIENT_PROFILE" ADD CONSTRAINT "PUBLIC"."FK6Y9PXYRE0C41G4FD908THW246" FOREIGN KEY("CLIENT_ID") REFERENCES "PUBLIC"."MY_CLIENT"("ID") NOCHECK;        
+ALTER TABLE "PUBLIC"."MY_CLIENT_PROFILE" ADD CONSTRAINT "PUBLIC"."FK_PROFILE_CLIENT_ID" FOREIGN KEY("CLIENT_ID") REFERENCES "PUBLIC"."MY_CLIENT"("ID") NOCHECK;               
 ALTER TABLE "PUBLIC"."MY_APPOINTMENT" ADD CONSTRAINT "PUBLIC"."FKH86MO9YTCMT8DOBB615OTQ2HN" FOREIGN KEY("SERVICE_PROVIDER_ID") REFERENCES "PUBLIC"."MY_SERVICE_PROVIDER"("ID") NOCHECK;       
 ALTER TABLE "PUBLIC"."MY_SERVICE_PROVIDER_PROFILE" ADD CONSTRAINT "PUBLIC"."FK9XWFRP5D2YNGMY4K2R9S6MPY5" FOREIGN KEY("PROVIDER_ID") REFERENCES "PUBLIC"."MY_SERVICE_PROVIDER"("ID") NOCHECK;  
+ALTER TABLE "PUBLIC"."MY_SERVICE" ADD CONSTRAINT "PUBLIC"."FK_SERVICE_PACKAGE_ID" FOREIGN KEY("PACKAGE_ID") REFERENCES "PUBLIC"."MY_SERVICE_PACKAGE"("ID") NOCHECK;           
+ALTER TABLE "PUBLIC"."MY_SERVICE_PROVIDER_PROFILE" ADD CONSTRAINT "PUBLIC"."FK_PROFILE_PROVIDER_ID" FOREIGN KEY("PROVIDER_ID") REFERENCES "PUBLIC"."MY_SERVICE_PROVIDER"("ID") NOCHECK;       
 ALTER TABLE "PUBLIC"."MY_APPOINTMENT" ADD CONSTRAINT "PUBLIC"."FKB7S45QYEPIHEFC7CTHS3QF59B" FOREIGN KEY("CLIENT_ID") REFERENCES "PUBLIC"."MY_CLIENT"("ID") NOCHECK;           
