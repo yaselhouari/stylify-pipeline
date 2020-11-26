@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -39,6 +40,18 @@ public class MyServiceProvider  implements Serializable {
 
     @OneToOne(mappedBy = "myServiceProvider", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private MyServiceProviderProfile myServiceProviderProfile;
+
+    @ManyToMany
+    @JoinTable(
+            name = "MyAppointment",
+            joinColumns = @JoinColumn(name = "my_client_id"),
+            inverseJoinColumns = @JoinColumn(name = "my_provider_id")
+    )
+    private List<MyClient> myClients = new ArrayList<MyClient>();
+
+    public void addClient(MyClient myClient) {
+        myClients.add(myClient);
+    }
 
     public MyServiceProvider() {
     }
