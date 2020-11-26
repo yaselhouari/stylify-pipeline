@@ -43,7 +43,7 @@ public class MyClient  implements Serializable {
     @ManyToMany(mappedBy = "myClients")
     private List<MyService> myServices = new ArrayList<MyService>();
 
-    public void addServiceProvider(MyService myService) {
+    public void addService(MyService myService) {
         myServices.add(myService);
     }
 

@@ -56,6 +56,11 @@ public class StylifyApplication implements CommandLineRunner {
         services.add(service3);
         serviceRepository.saveAll(services);
 
+        service1.addClient(client1);
+        service2.addClient(client2);
+        service3.addClient(client3);
+        serviceRepository.saveAll(services);
+
     }
     
 }
