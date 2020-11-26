@@ -25,9 +25,8 @@ public class MyService implements Serializable {
     @Column
     String duration;
 
-    @JsonIgnore
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
-    @JoinColumn(name = "package_id", nullable = false)
+    @JoinColumn(name = "package_id", nullable = true)
     private MyServicePackage myServicePackage;
 
     public MyService() {
@@ -41,6 +40,13 @@ public class MyService implements Serializable {
         this.price = price;
         this.duration = duration;
         this.myServicePackage = myServicePackage;
+    }
+
+    public MyService(String title, String description, String price, String duration) {
+        this.title = title;
+        this.description = description;
+        this.price = price;
+        this.duration = duration;
     }
 
     public Integer getId() {

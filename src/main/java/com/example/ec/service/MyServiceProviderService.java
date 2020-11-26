@@ -22,4 +22,9 @@ public class MyServiceProviderService {
     public Iterable<MyServiceProvider> lookup() {
         return myServiceProviderRepository.findAll();
     }
+
+    public Object getById(int id) {
+
+        return myServiceProviderRepository.findById(id);
+    }
 }

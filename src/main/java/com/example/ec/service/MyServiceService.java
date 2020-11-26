@@ -24,4 +24,8 @@ public class MyServiceService {
         Optional<MyServicePackage> myServicePackage= servicePackageRepository.findById(packageId);
         return serviceRepository.findByMyServicePackage(myServicePackage);
     }
+
+    public MyService create(MyService myService) {
+        return serviceRepository.save(myService);
+    }
 }
