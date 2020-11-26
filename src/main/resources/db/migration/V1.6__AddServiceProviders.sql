@@ -1,4 +1,4 @@
-INSERT INTO My_Service_Provider(id, first_name, last_name, gender, mobile, email, birth_date,location, username, password, status) VALUES
+/*INSERT INTO My_Service_Provider(id, first_name, last_name, gender, mobile, email, birth_date,location, username, password, status) VALUES
 (1, 'Anouar', 'Fikri', 'm', '0000000000', 'email@gmail.com', '01-01-1990', 'Service Provider Location', 'Service Provider Username', 'Service Provider Password', 'Service Provider Status'),
 (2, 'Redouane', 'Al Asmar', 'm', '0000000000', 'email@gmail.com', '01-01-1990', 'Service Provider Location', 'Service Provider Username', 'Service Provider Password', 'Service Provider Status'),
 (3, 'Omar', 'Diab', 'm', '0000000000', 'email@gmail.com', '01-01-1990', 'Service Provider Location', 'Service Provider Username', 'Service Provider Password', 'Service Provider Status'),
@@ -6,4 +6,4 @@ INSERT INTO My_Service_Provider(id, first_name, last_name, gender, mobile, email
 (5, 'Morad', 'Salmi', 'm', '0000000000', 'email@gmail.com', '01-01-1990', 'Service Provider Location', 'Service Provider Username', 'Service Provider Password', 'Service Provider Status'),
 (6, 'Walid', 'El Kadiri', 'm', '0000000000', 'email@gmail.com', '01-01-1990', 'Service Provider Location', 'Service Provider Username', 'Service Provider Password', 'Service Provider Status'),
 (7, 'Samih', 'Farsi', 'm', '0000000000', 'email@gmail.com', '01-01-1990', 'Service Provider Location', 'Service Provider Username', 'Service Provider Password', 'Service Provider Status'),
-(8, 'Salah', 'Brikti', 'm', '0000000000', 'email@gmail.com', '01-01-1990', 'Service Provider Location', 'Service Provider Username', 'Service Provider Password', 'Service Provider Status');
+(8, 'Salah', 'Brikti', 'm', '0000000000', 'email@gmail.com', '01-01-1990', 'Service Provider Location', 'Service Provider Username', 'Service Provider Password', 'Service Provider Status');*/

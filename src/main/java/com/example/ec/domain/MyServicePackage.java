@@ -25,10 +25,6 @@ public class MyServicePackage  implements Serializable {
 
     @Column
     String icon;
-    @JsonIgnore
-    @OneToMany(mappedBy = "myServicePackage", fetch = FetchType.LAZY,
-            cascade = CascadeType.ALL)
-    private List<MyService> myServices;
 
     public MyServicePackage() {
     }
@@ -39,6 +35,10 @@ public class MyServicePackage  implements Serializable {
         this.description = description;
         this.gender = gender;
         this.icon = icon;
+    }
+
+    public MyServicePackage(int id) {
+        this.id = id;
     }
 
     public Integer getId() {
@@ -79,14 +79,6 @@ public class MyServicePackage  implements Serializable {
 
     public void setIcon(String icon) {
         this.icon = icon;
-    }
-
-    public List<MyService> getMyServices() {
-        return myServices;
-    }
-
-    public void setMyServices(List<MyService> myServices) {
-        this.myServices = myServices;
     }
 
     @Override

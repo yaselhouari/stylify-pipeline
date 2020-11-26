@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -25,21 +27,28 @@ public class MyService implements Serializable {
     @Column
     String duration;
 
-    @ManyToOne(fetch = FetchType.EAGER, optional = false)
-    @JoinColumn(name = "package_id", nullable = true)
-    private MyServicePackage myServicePackage;
+    @ManyToMany
+    @JoinTable(
+            name = "MyAppointment",
+            joinColumns = @JoinColumn(name = "my_client_id"),
+            inverseJoinColumns = @JoinColumn(name = "my_service_id")
+    )
+    private List<MyClient> myClients = new ArrayList<MyClient>();
+
+    public void addClient(MyClient myClient) {
+        myClients.add(myClient);
+    }
 
     public MyService() {
 
     }
 
-    public MyService(Integer id, String title, String description, String price, String duration, MyServicePackage myServicePackage) {
+    public MyService(Integer id, String title, String description, String price, String duration) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.price = price;
         this.duration = duration;
-        this.myServicePackage = myServicePackage;
     }
 
     public MyService(String title, String description, String price, String duration) {
@@ -89,13 +98,7 @@ public class MyService implements Serializable {
         this.duration = duration;
     }
 
-    public MyServicePackage getMyServicePackage() {
-        return myServicePackage;
-    }
 
-    public void setMyServicePackage(MyServicePackage myServicePackage) {
-        this.myServicePackage = myServicePackage;
-    }
 
     @Override
     public String toString() {
@@ -105,7 +108,6 @@ public class MyService implements Serializable {
                 ", description='" + description + '\'' +
                 ", price='" + price + '\'' +
                 ", duration='" + duration + '\'' +
-                ", myServicePackage=" + myServicePackage +
                 '}';
     }
 
@@ -118,12 +120,11 @@ public class MyService implements Serializable {
                 title.equals(myService.title) &&
                 description.equals(myService.description) &&
                 price.equals(myService.price) &&
-                duration.equals(myService.duration) &&
-                myServicePackage.equals(myService.myServicePackage);
+                duration.equals(myService.duration);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, title, description, price, duration, myServicePackage);
+        return Objects.hash(id, title, description, price, duration);
     }
 }

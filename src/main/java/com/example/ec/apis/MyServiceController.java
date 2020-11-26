@@ -16,8 +16,8 @@ public class MyServiceController {
         return myService.lookup();
     }
 
-    @GetMapping("/packageId/{packageId}")
+    /*@GetMapping("/packageId/{packageId}")
     public Iterable<MyService> getServicesByPackageId(@PathVariable Integer packageId) {
         return myService.getServicesByPackageId(packageId);
-    }
+    }*/
 }

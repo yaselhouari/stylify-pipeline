@@ -8,5 +8,4 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.Optional;
 
 public interface MyServiceRepository extends CrudRepository<MyService, Integer> {
-    Iterable<MyService> findByMyServicePackage(Optional<MyServicePackage> myServicePackage);
 }
