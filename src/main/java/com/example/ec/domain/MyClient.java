@@ -39,20 +39,10 @@ public class MyClient  implements Serializable {
             cascade = CascadeType.ALL)
     private MyClientProfile myClientProfile;
 
-    @JsonIgnore
-    @ManyToMany
-    @JoinTable(
-            name = "My_Appointment",
-            joinColumns = @JoinColumn(name = "client_id"),
-            inverseJoinColumns = @JoinColumn(name = "service_provider_id")
-    )
-    private List<MyServiceProvider> myServiceProviders;
-
-
     public MyClient() {
     }
 
-    public MyClient(Integer id, String firstName, String lastName, String gender, String mobile, String email, String birthDate, String location, String username, String password, String status, MyClientProfile myClientProfile, List<MyServiceProvider> myServiceProviders) {
+    public MyClient(Integer id, String firstName, String lastName, String gender, String mobile, String email, String birthDate, String location, String username, String password, String status, MyClientProfile myClientProfile) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -65,7 +55,6 @@ public class MyClient  implements Serializable {
         this.password = password;
         this.status = status;
         this.myClientProfile = myClientProfile;
-        this.myServiceProviders = myServiceProviders;
     }
 
     public Integer getId() {
@@ -164,14 +153,6 @@ public class MyClient  implements Serializable {
         this.myClientProfile = myClientProfile;
     }
 
-    public List<MyServiceProvider> getMyServiceProviders() {
-        return myServiceProviders;
-    }
-
-    public void setMyServiceProviders(List<MyServiceProvider> myServiceProviders) {
-        this.myServiceProviders = myServiceProviders;
-    }
-
     @Override
     public String toString() {
         return "MyClient{" +
@@ -187,7 +168,6 @@ public class MyClient  implements Serializable {
                 ", password='" + password + '\'' +
                 ", status='" + status + '\'' +
                 ", myClientProfile=" + myClientProfile +
-                ", myServiceProviders=" + myServiceProviders +
                 '}';
     }
 
@@ -207,12 +187,11 @@ public class MyClient  implements Serializable {
                 Objects.equals(username, myClient.username) &&
                 Objects.equals(password, myClient.password) &&
                 Objects.equals(status, myClient.status) &&
-                Objects.equals(myClientProfile, myClient.myClientProfile) &&
-                Objects.equals(myServiceProviders, myClient.myServiceProviders);
+                Objects.equals(myClientProfile, myClient.myClientProfile);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, firstName, lastName, gender, mobile, email, birthDate, location, username, password, status, myClientProfile, myServiceProviders);
+        return Objects.hash(id, firstName, lastName, gender, mobile, email, birthDate, location, username, password, status, myClientProfile);
     }
 }

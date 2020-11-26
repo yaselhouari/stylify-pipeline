@@ -40,18 +40,10 @@ public class MyServiceProvider  implements Serializable {
     @OneToOne(mappedBy = "myServiceProvider", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private MyServiceProviderProfile myServiceProviderProfile;
 
-    @ManyToMany
-    @JoinTable(
-            name = "My_Appointment",
-            joinColumns = @JoinColumn(name = "service_provider_id"),
-            inverseJoinColumns = @JoinColumn(name = "client_id")
-    )
-    private List<MyClient> myClients;
-
     public MyServiceProvider() {
     }
 
-    public MyServiceProvider(Integer id, String firstName, String lastName, String gender, String mobile, String email, String birthDate, String location, String username, String password, String status, MyServiceProviderCatalog myServiceProviderCatalog, MyServiceProviderProfile myServiceProviderProfile, List<MyClient> myClients) {
+    public MyServiceProvider(Integer id, String firstName, String lastName, String gender, String mobile, String email, String birthDate, String location, String username, String password, String status, MyServiceProviderCatalog myServiceProviderCatalog, MyServiceProviderProfile myServiceProviderProfile) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -65,7 +57,6 @@ public class MyServiceProvider  implements Serializable {
         this.status = status;
         this.myServiceProviderCatalog = myServiceProviderCatalog;
         this.myServiceProviderProfile = myServiceProviderProfile;
-        this.myClients = myClients;
     }
 
     public Integer getId() {
@@ -172,14 +163,6 @@ public class MyServiceProvider  implements Serializable {
         this.myServiceProviderProfile = myServiceProviderProfile;
     }
 
-    public List<MyClient> getMyClients() {
-        return myClients;
-    }
-
-    public void setMyClients(List<MyClient> myClients) {
-        this.myClients = myClients;
-    }
-
     @Override
     public String toString() {
         return "MyServiceProvider{" +
@@ -196,7 +179,6 @@ public class MyServiceProvider  implements Serializable {
                 ", status='" + status + '\'' +
                 ", myServiceProviderCatalog=" + myServiceProviderCatalog +
                 ", myServiceProviderProfile=" + myServiceProviderProfile +
-                ", myClients=" + myClients +
                 '}';
     }
 
@@ -217,12 +199,11 @@ public class MyServiceProvider  implements Serializable {
                 Objects.equals(password, that.password) &&
                 Objects.equals(status, that.status) &&
                 Objects.equals(myServiceProviderCatalog, that.myServiceProviderCatalog) &&
-                Objects.equals(myServiceProviderProfile, that.myServiceProviderProfile) &&
-                Objects.equals(myClients, that.myClients);
+                Objects.equals(myServiceProviderProfile, that.myServiceProviderProfile);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, firstName, lastName, gender, mobile, email, birthDate, location, username, password, status, myServiceProviderCatalog, myServiceProviderProfile, myClients);
+        return Objects.hash(id, firstName, lastName, gender, mobile, email, birthDate, location, username, password, status, myServiceProviderCatalog, myServiceProviderProfile);
     }
 }
