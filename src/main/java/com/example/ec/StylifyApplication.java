@@ -41,7 +41,37 @@ public class StylifyApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
+        //Add Service Providers
+            //Login
+            //Subscribe
+            //Provide documents
+            //Set working hours
+            //Mobile Verification
+        //Add Clients
+            //Login
+            //Subscribe
+            //Mobile verification
+        //Add services to service providers
+            //Create catalog
+            //Set prices for services
+        //Clients search for services
+            //Keywords
+            //Location
+            //Time needs work
+            //Price
+        //Communication between clients and providers
+            //Confirmation
+        //Client rating services
+        //Clients rating apps
+        
         //Appointments();
+        //AddServicesToProviders();
+        //AddRatingToServiceProvider()
+
+
+    }
+
+    private void AddServicesToProviders() {
         MyServiceProvider myServiceProvider = new MyServiceProvider();
 
         MyService service11 = new MyService();
