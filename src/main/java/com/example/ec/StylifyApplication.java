@@ -15,6 +15,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,6 +42,21 @@ public class StylifyApplication implements CommandLineRunner {
 		SpringApplication.run(StylifyApplication.class, args);
 	}
 
+	@Autowired
+    public void authenticationManager(AuthenticationManagerBuilder builder, MyClientRepository myClient) throws Exception {
+        if(myClient.count() == 0) {
+            MyClient client = new MyClient();
+            client.setUsername("user");
+            client.setPassword("user");
+            myClient.save(client);
+        }
+        builder.userDetailsService(new UserDetailsService() {
+            @Override
+            public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
+                return new CustomerUserDetails(myClient.findByUsername(s));
+            }
+        });
+    }
     @Override
     public void run(String... args) throws Exception {
 
