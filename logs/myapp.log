@@ -10304,3 +10304,345 @@ java.lang.IllegalArgumentException: There is no PasswordEncoder mapped for the i
 2020-11-27 14:33:33.247  INFO 11512 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2020-11-27 14:33:33.260  INFO 11512 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
 2020-11-27 14:33:33.503  WARN 11512 --- [http-nio-8080-exec-1] o.s.s.o.provider.endpoint.TokenEndpoint  : Handling error: IllegalArgumentException, There is no PasswordEncoder mapped for the id "null"
+2020-11-27 14:34:49.146  INFO 11496 --- [main] com.example.ec.StylifyApplication        : Starting StylifyApplication on DESKTOP-7SLLO4E with PID 11496 (C:\Users\lenovo\Desktop\explorecali\target\classes started by lenovo in C:\Users\lenovo\Desktop\explorecali)
+2020-11-27 14:34:49.148 DEBUG 11496 --- [main] com.example.ec.StylifyApplication        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-11-27 14:34:49.148  INFO 11496 --- [main] com.example.ec.StylifyApplication        : The following profiles are active: default
+2020-11-27 14:34:49.733  INFO 11496 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-27 14:34:49.795  INFO 11496 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56ms. Found 7 JPA repository interfaces.
+2020-11-27 14:34:50.269  INFO 11496 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-27 14:34:50.275  INFO 11496 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-27 14:34:50.275  INFO 11496 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-27 14:34:50.389  INFO 11496 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-27 14:34:50.389  INFO 11496 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1205 ms
+2020-11-27 14:34:50.440  INFO 11496 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-27 14:34:50.507  INFO 11496 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-27 14:34:50.511  INFO 11496 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2020-11-27 14:34:50.605  INFO 11496 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-27 14:34:50.612  INFO 11496 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:testdb (H2 1.4)
+2020-11-27 14:34:50.661  INFO 11496 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 15 migrations (execution time 00:00.022s)
+2020-11-27 14:34:50.670  INFO 11496 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-11-27 14:34:50.700  INFO 11496 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-11-27 14:34:50.704  INFO 11496 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.1 - CreateServicePackagesSchema
+2020-11-27 14:34:50.724  INFO 11496 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.2 - AddServicePackages
+2020-11-27 14:34:50.735  INFO 11496 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.3 - CreateServiceSchema
+2020-11-27 14:34:50.744  INFO 11496 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.4 - AddServices
+2020-11-27 14:34:50.753  INFO 11496 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.5 - CreateServiceProviderSchema
+2020-11-27 14:34:50.762  INFO 11496 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.6 - AddServiceProviders
+2020-11-27 14:34:50.771  INFO 11496 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.7 - CreateClientSchema
+2020-11-27 14:34:50.781  INFO 11496 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.8 - AddClients
+2020-11-27 14:34:50.790  INFO 11496 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.9 - CreateCatalogSchema
+2020-11-27 14:34:50.802  INFO 11496 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.10 - AddCatalogs
+2020-11-27 14:34:50.810  INFO 11496 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.11 - CreateServiceProviderProfileSchema
+2020-11-27 14:34:50.818  INFO 11496 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.12 - AddServiceProviderProfiles
+2020-11-27 14:34:50.825  INFO 11496 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.13 - CreateClientProfileSchema
+2020-11-27 14:34:50.833  INFO 11496 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.14 - AddClientProfiles
+2020-11-27 14:34:50.839  INFO 11496 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.15 - CreateMyAppointmentSchema
+2020-11-27 14:34:50.847  INFO 11496 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 15 migrations to schema "PUBLIC" (execution time 00:00.151s)
+2020-11-27 14:34:50.913  INFO 11496 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-27 14:34:50.951  INFO 11496 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-27 14:34:50.987  INFO 11496 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-11-27 14:34:51.100  INFO 11496 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-27 14:34:51.172  INFO 11496 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-27 14:34:51.647  INFO 11496 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-27 14:34:51.652  INFO 11496 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-27 14:34:52.576  INFO 11496 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@129c322f, org.springframework.security.web.context.SecurityContextPersistenceFilter@14bf9fd0, org.springframework.security.web.header.HeaderWriterFilter@27a6384b, org.springframework.security.web.authentication.logout.LogoutFilter@344a065a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@79631db0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@470b5213, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@18b58c77, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1bbef3c7, org.springframework.security.web.session.SessionManagementFilter@6549ce71, org.springframework.security.web.access.ExceptionTranslationFilter@33837bd4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@62615be]
+2020-11-27 14:34:52.585  INFO 11496 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfiguration$NotOAuthRequestMatcher@1a947424, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@62d6ac, org.springframework.security.web.context.SecurityContextPersistenceFilter@5ba36c83, org.springframework.security.web.header.HeaderWriterFilter@1e3dc24f, org.springframework.security.web.authentication.logout.LogoutFilter@1ab21633, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@1405aa6a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5342032a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@239d9cb7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@103e9972, org.springframework.security.web.session.SessionManagementFilter@3ea8ff31, org.springframework.security.web.access.ExceptionTranslationFilter@10830d50, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2078bf0a]
+2020-11-27 14:34:52.600  INFO 11496 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@67823972, org.springframework.security.web.context.SecurityContextPersistenceFilter@4cb773c5, org.springframework.security.web.header.HeaderWriterFilter@471a9e8c, org.springframework.security.web.csrf.CsrfFilter@10b3ea72, org.springframework.security.web.authentication.logout.LogoutFilter@580154b3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@259aec72, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@446cc036, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@1f1574c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@126f2eb8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2c4eae94, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3f33bb6f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@16c9e378, org.springframework.security.web.session.SessionManagementFilter@40277077, org.springframework.security.web.access.ExceptionTranslationFilter@48751d8a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3e89f5bc]
+2020-11-27 14:34:52.631  WARN 11496 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-27 14:34:52.806  INFO 11496 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-27 14:34:52.807  INFO 11496 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-27 14:34:52.823  INFO 11496 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-27 14:34:52.832  INFO 11496 --- [main] com.example.ec.StylifyApplication        : Started StylifyApplication in 3.994 seconds (JVM running for 4.949)
+2020-11-27 14:35:05.173  INFO 11496 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-27 14:35:05.173  INFO 11496 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-27 14:35:05.186  INFO 11496 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2020-11-27 14:35:05.430  WARN 11496 --- [http-nio-8080-exec-1] o.s.s.o.provider.endpoint.TokenEndpoint  : Handling error: IllegalArgumentException, There is no PasswordEncoder mapped for the id "null"
+2020-11-27 14:35:45.009  INFO 11496 --- [http-nio-8080-exec-2] o.s.s.o.provider.endpoint.TokenEndpoint  : Handling error: HttpRequestMethodNotSupportedException, Request method 'GET' not supported
+2020-11-27 14:36:01.159  WARN 11496 --- [http-nio-8080-exec-3] o.s.s.o.provider.endpoint.TokenEndpoint  : Handling error: IllegalArgumentException, There is no PasswordEncoder mapped for the id "null"
+2020-11-27 14:43:37.547  INFO 12216 --- [main] com.example.ec.StylifyApplication        : Starting StylifyApplication on DESKTOP-7SLLO4E with PID 12216 (C:\Users\lenovo\Desktop\explorecali\target\classes started by lenovo in C:\Users\lenovo\Desktop\explorecali)
+2020-11-27 14:43:37.550 DEBUG 12216 --- [main] com.example.ec.StylifyApplication        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-11-27 14:43:37.550  INFO 12216 --- [main] com.example.ec.StylifyApplication        : The following profiles are active: default
+2020-11-27 14:43:38.175  INFO 12216 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-27 14:43:38.235  INFO 12216 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54ms. Found 7 JPA repository interfaces.
+2020-11-27 14:43:38.690  INFO 12216 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-27 14:43:38.696  INFO 12216 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-27 14:43:38.696  INFO 12216 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-27 14:43:38.814  INFO 12216 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-27 14:43:38.814  INFO 12216 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1209 ms
+2020-11-27 14:43:38.866  INFO 12216 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-27 14:43:38.936  INFO 12216 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-27 14:43:38.940  INFO 12216 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2020-11-27 14:43:39.035  INFO 12216 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-27 14:43:39.042  INFO 12216 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:testdb (H2 1.4)
+2020-11-27 14:43:39.091  INFO 12216 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 15 migrations (execution time 00:00.023s)
+2020-11-27 14:43:39.099  INFO 12216 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-11-27 14:43:39.128  INFO 12216 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-11-27 14:43:39.131  INFO 12216 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.1 - CreateServicePackagesSchema
+2020-11-27 14:43:39.154  INFO 12216 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.2 - AddServicePackages
+2020-11-27 14:43:39.167  INFO 12216 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.3 - CreateServiceSchema
+2020-11-27 14:43:39.177  INFO 12216 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.4 - AddServices
+2020-11-27 14:43:39.188  INFO 12216 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.5 - CreateServiceProviderSchema
+2020-11-27 14:43:39.198  INFO 12216 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.6 - AddServiceProviders
+2020-11-27 14:43:39.208  INFO 12216 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.7 - CreateClientSchema
+2020-11-27 14:43:39.217  INFO 12216 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.8 - AddClients
+2020-11-27 14:43:39.229  INFO 12216 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.9 - CreateCatalogSchema
+2020-11-27 14:43:39.241  INFO 12216 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.10 - AddCatalogs
+2020-11-27 14:43:39.248  INFO 12216 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.11 - CreateServiceProviderProfileSchema
+2020-11-27 14:43:39.256  INFO 12216 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.12 - AddServiceProviderProfiles
+2020-11-27 14:43:39.263  INFO 12216 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.13 - CreateClientProfileSchema
+2020-11-27 14:43:39.271  INFO 12216 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.14 - AddClientProfiles
+2020-11-27 14:43:39.277  INFO 12216 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.15 - CreateMyAppointmentSchema
+2020-11-27 14:43:39.283  INFO 12216 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 15 migrations to schema "PUBLIC" (execution time 00:00.159s)
+2020-11-27 14:43:39.346  INFO 12216 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-27 14:43:39.383  INFO 12216 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-27 14:43:39.419  INFO 12216 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-11-27 14:43:39.527  INFO 12216 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-27 14:43:39.597  INFO 12216 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-27 14:43:40.052  INFO 12216 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-27 14:43:40.057  INFO 12216 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-27 14:43:41.070  INFO 12216 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@169d4aba, org.springframework.security.web.context.SecurityContextPersistenceFilter@3605ab16, org.springframework.security.web.header.HeaderWriterFilter@20f99c18, org.springframework.security.web.authentication.logout.LogoutFilter@23d23d98, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1e3dc24f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@50e24ea4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6719f206, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@612bb755, org.springframework.security.web.session.SessionManagementFilter@42805abe, org.springframework.security.web.access.ExceptionTranslationFilter@20518250, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6d7677d8]
+2020-11-27 14:43:41.079  INFO 12216 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfiguration$NotOAuthRequestMatcher@32cec678, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@14eb96e9, org.springframework.security.web.context.SecurityContextPersistenceFilter@16f8df70, org.springframework.security.web.header.HeaderWriterFilter@6d5de79a, org.springframework.security.web.authentication.logout.LogoutFilter@7682bf66, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@ff8e36d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6f0ae0ee, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6de9bba2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@10b3ea72, org.springframework.security.web.session.SessionManagementFilter@796642ae, org.springframework.security.web.access.ExceptionTranslationFilter@19fc0ef7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6f27730b]
+2020-11-27 14:43:41.094  INFO 12216 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@e4bb10b, org.springframework.security.web.context.SecurityContextPersistenceFilter@51da7b08, org.springframework.security.web.header.HeaderWriterFilter@3e73f5e7, org.springframework.security.web.csrf.CsrfFilter@14293540, org.springframework.security.web.authentication.logout.LogoutFilter@b87ea8b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6c46dc02, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6e7fa4b0, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@178c6261, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@32cde414, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@580154b3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@79fc4e99, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@78e50fca, org.springframework.security.web.session.SessionManagementFilter@495bc9e7, org.springframework.security.web.access.ExceptionTranslationFilter@63ad5fe7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@50013a15]
+2020-11-27 14:43:41.126  WARN 12216 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-27 14:43:41.299  INFO 12216 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-27 14:43:41.301  INFO 12216 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-27 14:43:41.319  INFO 12216 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-27 14:43:41.328  INFO 12216 --- [main] com.example.ec.StylifyApplication        : Started StylifyApplication in 4.117 seconds (JVM running for 5.211)
+2020-11-27 14:43:47.692  INFO 12216 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-27 14:43:47.692  INFO 12216 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-27 14:43:47.705  INFO 12216 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2020-11-27 14:43:48.030  WARN 12216 --- [http-nio-8080-exec-1] o.s.s.o.provider.endpoint.TokenEndpoint  : Handling error: IllegalArgumentException, There is no PasswordEncoder mapped for the id "null"
+2020-11-27 18:27:43.305  INFO 2284 --- [main] com.example.ec.StylifyApplication        : The following profiles are active: default
+2020-11-27 18:27:44.109  INFO 2284 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-27 18:27:44.183  INFO 2284 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67ms. Found 8 JPA repository interfaces.
+2020-11-27 18:27:44.345  WARN 2284 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'dataSource' defined in BeanDefinition defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Cannot register bean definition [Root bean: class [org.springframework.aop.scope.ScopedProxyFactoryBean]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in BeanDefinition defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]] for bean 'dataSource': There is already [Root bean: class [null]; scope=refresh; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=false; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]] bound.
+2020-11-27 18:27:44.357  INFO 2284 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-11-27 18:27:44.360 ERROR 2284 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'dataSource', defined in BeanDefinition defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class], could not be registered. A bean with that name has already been defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2020-11-27 18:29:46.286  INFO 15928 --- [main] com.example.ec.StylifyApplication        : The following profiles are active: default
+2020-11-27 18:29:46.982  INFO 15928 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-27 18:29:47.046  INFO 15928 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59ms. Found 8 JPA repository interfaces.
+2020-11-27 18:29:47.189  WARN 15928 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'dataSource' defined in BeanDefinition defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Cannot register bean definition [Root bean: class [org.springframework.aop.scope.ScopedProxyFactoryBean]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in BeanDefinition defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]] for bean 'dataSource': There is already [Root bean: class [null]; scope=refresh; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=false; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]] bound.
+2020-11-27 18:29:47.201  INFO 15928 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-11-27 18:29:47.204 ERROR 15928 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'dataSource', defined in BeanDefinition defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class], could not be registered. A bean with that name has already been defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2020-11-27 18:33:55.196  INFO 16304 --- [main] com.example.ec.StylifyApplication        : The following profiles are active: default
+2020-11-27 18:33:55.863  INFO 16304 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-27 18:33:55.925  INFO 16304 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57ms. Found 8 JPA repository interfaces.
+2020-11-27 18:33:56.070  WARN 16304 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'dataSource' defined in BeanDefinition defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Cannot register bean definition [Root bean: class [org.springframework.aop.scope.ScopedProxyFactoryBean]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in BeanDefinition defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]] for bean 'dataSource': There is already [Root bean: class [null]; scope=refresh; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=false; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]] bound.
+2020-11-27 18:33:56.083  INFO 16304 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-11-27 18:33:56.085 ERROR 16304 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'dataSource', defined in BeanDefinition defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class], could not be registered. A bean with that name has already been defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2020-11-27 18:35:35.249  INFO 12428 --- [main] com.example.ec.StylifyApplication        : The following profiles are active: default
+2020-11-27 18:35:35.935  INFO 12428 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-27 18:35:35.999  INFO 12428 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59ms. Found 8 JPA repository interfaces.
+2020-11-27 18:35:36.304  INFO 12428 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8be78763-547c-3212-9bd1-80b5a3849a9d
+2020-11-27 18:35:36.399  INFO 12428 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$dbfe9067] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-27 18:35:36.623  INFO 12428 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-27 18:35:36.631  INFO 12428 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-27 18:35:36.632  INFO 12428 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-27 18:35:36.780  INFO 12428 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-27 18:35:36.780  INFO 12428 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1521 ms
+2020-11-27 18:35:36.984  INFO 12428 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-27 18:35:37.074  INFO 12428 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-27 18:35:37.078  INFO 12428 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2020-11-27 18:35:37.231  INFO 12428 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-27 18:35:37.241  INFO 12428 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:testdb (H2 1.4)
+2020-11-27 18:35:37.303  INFO 12428 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 15 migrations (execution time 00:00.027s)
+2020-11-27 18:35:37.313  INFO 12428 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-11-27 18:35:37.348  INFO 12428 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-11-27 18:35:37.352  INFO 12428 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.1 - CreateServicePackagesSchema
+2020-11-27 18:35:37.374  INFO 12428 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.2 - AddServicePackages
+2020-11-27 18:35:37.386  INFO 12428 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.3 - CreateServiceSchema
+2020-11-27 18:35:37.397  INFO 12428 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.4 - AddServices
+2020-11-27 18:35:37.409  INFO 12428 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.5 - CreateServiceProviderSchema
+2020-11-27 18:35:37.420  INFO 12428 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.6 - AddServiceProviders
+2020-11-27 18:35:37.440  INFO 12428 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.7 - CreateClientSchema
+2020-11-27 18:35:37.457  INFO 12428 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.8 - AddClients
+2020-11-27 18:35:37.471  INFO 12428 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.9 - CreateCatalogSchema
+2020-11-27 18:35:37.490  INFO 12428 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.10 - AddCatalogs
+2020-11-27 18:35:37.504  INFO 12428 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.11 - CreateServiceProviderProfileSchema
+2020-11-27 18:35:37.518  INFO 12428 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.12 - AddServiceProviderProfiles
+2020-11-27 18:35:37.529  INFO 12428 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.13 - CreateClientProfileSchema
+2020-11-27 18:35:37.543  INFO 12428 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.14 - AddClientProfiles
+2020-11-27 18:35:37.555  INFO 12428 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.15 - CreateMyAppointmentSchema
+2020-11-27 18:35:37.565  INFO 12428 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 15 migrations to schema "PUBLIC" (execution time 00:00.222s)
+2020-11-27 18:35:37.694  INFO 12428 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-27 18:35:37.770  INFO 12428 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-27 18:35:37.818  INFO 12428 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-11-27 18:35:37.943  INFO 12428 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-27 18:35:38.044  INFO 12428 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-27 18:35:38.694  INFO 12428 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-27 18:35:38.700  INFO 12428 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-27 18:35:39.182  WARN 12428 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-27 18:35:39.514  INFO 12428 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 20809c48-36ba-4c93-84c0-cbc9c8be5997
+
+2020-11-27 18:35:39.623  INFO 12428 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5e72c82a, org.springframework.security.web.context.SecurityContextPersistenceFilter@53551fef, org.springframework.security.web.header.HeaderWriterFilter@50008974, org.springframework.security.web.csrf.CsrfFilter@1e466d, org.springframework.security.web.authentication.logout.LogoutFilter@7fad28ac, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@556a6320, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5f4f6f89, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@aaa7000, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@da11873, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@55202ba6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1cfb7450, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@64fba3e6, org.springframework.security.web.session.SessionManagementFilter@71de1091, org.springframework.security.web.access.ExceptionTranslationFilter@4745bcc6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@66e218d8]
+2020-11-27 18:35:40.029  INFO 12428 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-11-27 18:35:40.111  INFO 12428 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-27 18:35:40.113  INFO 12428 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-27 18:35:40.196  INFO 12428 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-27 18:35:40.208  INFO 12428 --- [main] com.example.ec.StylifyApplication        : Started StylifyApplication in 6.166 seconds (JVM running for 7.136)
+2020-11-27 18:35:40.837  INFO 12428 --- [RMI TCP Connection(3)-192.168.99.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-27 18:35:40.837  INFO 12428 --- [RMI TCP Connection(3)-192.168.99.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-27 18:35:40.847  INFO 12428 --- [RMI TCP Connection(3)-192.168.99.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2020-11-27 18:41:31.953  WARN 12428 --- [http-nio-8080-exec-7] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+2020-11-27 18:41:39.922  WARN 12428 --- [http-nio-8080-exec-5] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+2020-11-27 18:44:36.911  INFO 13364 --- [main] com.example.ec.StylifyApplication        : The following profiles are active: default
+2020-11-27 18:44:36.986  WARN 13364 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.example.ec.StylifyApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'homeController' for bean class [com.example.ec.controllers.HomeController] conflicts with existing, non-compatible bean definition of same name and class [com.example.ec.apis.HomeController]
+2020-11-27 18:44:37.003 ERROR 13364 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.example.ec.StylifyApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'homeController' for bean class [com.example.ec.controllers.HomeController] conflicts with existing, non-compatible bean definition of same name and class [com.example.ec.apis.HomeController]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:189)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:319)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:236)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:280)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:96)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:707)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:533)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.example.ec.StylifyApplication.main(StylifyApplication.java:50)
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'homeController' for bean class [com.example.ec.controllers.HomeController] conflicts with existing, non-compatible bean definition of same name and class [com.example.ec.apis.HomeController]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:349)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:287)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:132)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:296)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:250)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:207)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:175)
+	... 14 common frames omitted
+
+2020-11-27 18:45:16.500  INFO 5348 --- [main] com.example.ec.StylifyApplication        : The following profiles are active: default
+2020-11-27 18:45:16.566  WARN 5348 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.example.ec.StylifyApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'homeController' for bean class [com.example.ec.controllers.HomeController] conflicts with existing, non-compatible bean definition of same name and class [com.example.ec.apis.HomeController]
+2020-11-27 18:45:16.575 ERROR 5348 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.example.ec.StylifyApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'homeController' for bean class [com.example.ec.controllers.HomeController] conflicts with existing, non-compatible bean definition of same name and class [com.example.ec.apis.HomeController]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:189)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:319)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:236)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:280)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:96)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:707)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:533)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.example.ec.StylifyApplication.main(StylifyApplication.java:50)
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'homeController' for bean class [com.example.ec.controllers.HomeController] conflicts with existing, non-compatible bean definition of same name and class [com.example.ec.apis.HomeController]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:349)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:287)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:132)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:296)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:250)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:207)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:175)
+	... 14 common frames omitted
+
+2020-11-27 18:46:00.461  INFO 13800 --- [main] com.example.ec.StylifyApplication        : The following profiles are active: default
+2020-11-27 18:46:01.165  INFO 13800 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-27 18:46:01.231  INFO 13800 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61ms. Found 8 JPA repository interfaces.
+2020-11-27 18:46:01.524  INFO 13800 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b1c4024c-b87b-340e-aeee-632e5452080a
+2020-11-27 18:46:01.610  INFO 13800 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$7fcaceed] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-27 18:46:01.791  INFO 13800 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-27 18:46:01.796  INFO 13800 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-27 18:46:01.797  INFO 13800 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-27 18:46:01.939  INFO 13800 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-27 18:46:01.939  INFO 13800 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1469 ms
+2020-11-27 18:46:02.142  INFO 13800 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-27 18:46:02.210  INFO 13800 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-27 18:46:02.214  INFO 13800 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2020-11-27 18:46:02.352  INFO 13800 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.4.4 by Redgate
+2020-11-27 18:46:02.360  INFO 13800 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:testdb (H2 1.4)
+2020-11-27 18:46:02.412  INFO 13800 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 15 migrations (execution time 00:00.023s)
+2020-11-27 18:46:02.420  INFO 13800 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-11-27 18:46:02.449  INFO 13800 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-11-27 18:46:02.453  INFO 13800 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.1 - CreateServicePackagesSchema
+2020-11-27 18:46:02.470  INFO 13800 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.2 - AddServicePackages
+2020-11-27 18:46:02.487  INFO 13800 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.3 - CreateServiceSchema
+2020-11-27 18:46:02.497  INFO 13800 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.4 - AddServices
+2020-11-27 18:46:02.507  INFO 13800 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.5 - CreateServiceProviderSchema
+2020-11-27 18:46:02.516  INFO 13800 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.6 - AddServiceProviders
+2020-11-27 18:46:02.524  INFO 13800 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.7 - CreateClientSchema
+2020-11-27 18:46:02.532  INFO 13800 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.8 - AddClients
+2020-11-27 18:46:02.539  INFO 13800 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.9 - CreateCatalogSchema
+2020-11-27 18:46:02.551  INFO 13800 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.10 - AddCatalogs
+2020-11-27 18:46:02.558  INFO 13800 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.11 - CreateServiceProviderProfileSchema
+2020-11-27 18:46:02.568  INFO 13800 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.12 - AddServiceProviderProfiles
+2020-11-27 18:46:02.576  INFO 13800 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.13 - CreateClientProfileSchema
+2020-11-27 18:46:02.585  INFO 13800 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.14 - AddClientProfiles
+2020-11-27 18:46:02.593  INFO 13800 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.15 - CreateMyAppointmentSchema
+2020-11-27 18:46:02.600  INFO 13800 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 15 migrations to schema "PUBLIC" (execution time 00:00.154s)
+2020-11-27 18:46:02.704  INFO 13800 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-27 18:46:02.744  INFO 13800 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-27 18:46:02.778  INFO 13800 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-11-27 18:46:02.873  INFO 13800 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-27 18:46:02.954  INFO 13800 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-27 18:46:03.450  INFO 13800 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-27 18:46:03.456  INFO 13800 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-27 18:46:04.264  INFO 13800 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@68f75a35, org.springframework.security.web.context.SecurityContextPersistenceFilter@2ea4e762, org.springframework.security.web.header.HeaderWriterFilter@632b96b8, org.springframework.security.web.authentication.logout.LogoutFilter@1e288c76, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@47c356e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@74919649, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@50b624da, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@50e0b472, org.springframework.security.web.session.SessionManagementFilter@21dd9203, org.springframework.security.web.access.ExceptionTranslationFilter@7db2b614, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@107ebdad]
+2020-11-27 18:46:04.273  INFO 13800 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfiguration$NotOAuthRequestMatcher@4942e6af, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@73a1a1b4, org.springframework.security.web.context.SecurityContextPersistenceFilter@147097ad, org.springframework.security.web.header.HeaderWriterFilter@6f25ed2b, org.springframework.security.web.authentication.logout.LogoutFilter@45375bdf, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@64fba3e6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3539cf45, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7535307c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@669daa93, org.springframework.security.web.session.SessionManagementFilter@6f69e2d8, org.springframework.security.web.access.ExceptionTranslationFilter@75fa9254, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@55315a00]
+2020-11-27 18:46:04.274  INFO 13800 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4f55a864, org.springframework.security.web.context.SecurityContextPersistenceFilter@3fb1948c, org.springframework.security.web.header.HeaderWriterFilter@1fc8047f, org.springframework.security.web.authentication.logout.LogoutFilter@5d84b088, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@13b4ee4e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7c39193f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@230d013b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2c2edbe7, org.springframework.security.web.session.SessionManagementFilter@29fc83c5, org.springframework.security.web.access.ExceptionTranslationFilter@58c36104, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4a3333be]
+2020-11-27 18:46:04.328  WARN 13800 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-27 18:46:05.006  INFO 13800 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-11-27 18:46:05.079  INFO 13800 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-27 18:46:05.081  INFO 13800 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-27 18:46:05.160  INFO 13800 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-27 18:46:05.172  INFO 13800 --- [main] com.example.ec.StylifyApplication        : Started StylifyApplication in 5.884 seconds (JVM running for 6.801)
+2020-11-27 18:46:05.585  INFO 13800 --- [RMI TCP Connection(1)-192.168.99.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-27 18:46:05.586  INFO 13800 --- [RMI TCP Connection(1)-192.168.99.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-27 18:46:05.595  INFO 13800 --- [RMI TCP Connection(1)-192.168.99.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-11-27 18:47:07.773  WARN 13800 --- [http-nio-8080-exec-6] o.s.s.o.provider.endpoint.TokenEndpoint  : Handling error: InvalidGrantException, Bad credentials

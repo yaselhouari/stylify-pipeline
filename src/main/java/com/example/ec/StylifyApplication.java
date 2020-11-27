@@ -4,6 +4,8 @@ import com.example.ec.domain.MyClient;
 import com.example.ec.domain.MyService;
 import com.example.ec.domain.MyServicePackage;
 import com.example.ec.domain.MyServiceProvider;
+import com.example.ec.entities.Role;
+import com.example.ec.entities.User;
 import com.example.ec.repo.MyClientRepository;
 import com.example.ec.repo.MyServicePackageRepository;
 import com.example.ec.repo.MyServiceProviderRepository;
@@ -11,16 +13,23 @@ import com.example.ec.repo.MyServiceRepository;
 import com.example.ec.service.MyServicePackageService;
 import com.example.ec.service.MyServiceProviderService;
 import com.example.ec.service.MyServiceService;
+import com.example.ec.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.FilterType;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @SpringBootApplication
@@ -36,27 +45,30 @@ public class StylifyApplication implements CommandLineRunner {
     @Autowired
     private MyServiceProviderRepository providerRepository;
 
-
-
     public static void main(String[] args) {
-		SpringApplication.run(StylifyApplication.class, args);
+
+        SpringApplication.run(StylifyApplication.class, args);
 	}
 
-	@Autowired
-    public void authenticationManager(AuthenticationManagerBuilder builder, MyClientRepository myClient) throws Exception {
-        if(myClient.count() == 0) {
-            MyClient client = new MyClient();
-            client.setUsername("user");
-            client.setPassword("user");
-            myClient.save(client);
-        }
-        builder.userDetailsService(new UserDetailsService() {
-            @Override
-            public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
-                return new CustomerUserDetails(myClient.findByUsername(s));
-            }
-        });
+
+    @Bean
+    public CommandLineRunner setupDefaultUser(UserService service) {
+        return args -> {
+            service.save(new User(
+                    "user", //username
+                    "user", //password
+                    Arrays.asList(new Role("USER"), new Role("ACTUATOR")),//roles
+                    true//Active
+            ));
+        };
     }
+
+    @Bean
+    public PasswordEncoder getPasswordEncoder(){
+        return new BCryptPasswordEncoder();
+    }
+
+
     @Override
     public void run(String... args) throws Exception {
 
