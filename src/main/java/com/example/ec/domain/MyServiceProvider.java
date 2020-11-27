@@ -41,9 +41,17 @@ public class MyServiceProvider  implements Serializable {
     @OneToOne(mappedBy = "myServiceProvider", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private MyServiceProviderProfile myServiceProviderProfile;
 
+    @OneToMany(
+            mappedBy = "myServiceProvider",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true,
+            fetch = FetchType.EAGER
 
+    )
+    private List<MyService> myServices = new ArrayList<MyService>();
 
     public MyServiceProvider() {
+
     }
 
     public MyServiceProvider(Integer id, String firstName, String lastName, String gender, String mobile, String email, String birthDate, String location, String username, String password, String status, MyServiceProviderCatalog myServiceProviderCatalog, MyServiceProviderProfile myServiceProviderProfile) {
@@ -60,6 +68,14 @@ public class MyServiceProvider  implements Serializable {
         this.status = status;
         this.myServiceProviderCatalog = myServiceProviderCatalog;
         this.myServiceProviderProfile = myServiceProviderProfile;
+    }
+
+    public List<MyService> getMyServices() {
+        return myServices;
+    }
+
+    public void setMyServices(List<MyService> myServices) {
+        this.myServices = myServices;
     }
 
     public Integer getId() {

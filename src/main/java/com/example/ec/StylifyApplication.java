@@ -3,8 +3,10 @@ package com.example.ec;
 import com.example.ec.domain.MyClient;
 import com.example.ec.domain.MyService;
 import com.example.ec.domain.MyServicePackage;
+import com.example.ec.domain.MyServiceProvider;
 import com.example.ec.repo.MyClientRepository;
 import com.example.ec.repo.MyServicePackageRepository;
+import com.example.ec.repo.MyServiceProviderRepository;
 import com.example.ec.repo.MyServiceRepository;
 import com.example.ec.service.MyServicePackageService;
 import com.example.ec.service.MyServiceProviderService;
@@ -27,6 +29,9 @@ public class StylifyApplication implements CommandLineRunner {
     @Autowired
     private MyServicePackageRepository packageRepository;
 
+    @Autowired
+    private MyServiceProviderRepository providerRepository;
+
 
 
     public static void main(String[] args) {
@@ -36,6 +41,27 @@ public class StylifyApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
+        //Appointments();
+        MyServiceProvider myServiceProvider = new MyServiceProvider();
+
+        MyService service11 = new MyService();
+        service11.setMyServiceProvider(myServiceProvider);
+        MyService service22 = new MyService();
+        service22.setMyServiceProvider(myServiceProvider);
+        MyService service33 = new MyService();
+        service33.setMyServiceProvider(myServiceProvider);
+
+        List<MyService> services = new ArrayList<>();
+        services.add(service11);
+        services.add(service22);
+        services.add(service33);
+
+
+        myServiceProvider.setMyServices(services);
+        providerRepository.save(myServiceProvider);
+    }
+
+    private void Appointments() {
         MyClient client1 = new MyClient();
         MyClient client2 = new MyClient();
         MyClient client3 = new MyClient();
@@ -60,7 +86,6 @@ public class StylifyApplication implements CommandLineRunner {
         service2.addClient(client2);
         service3.addClient(client3);
         serviceRepository.saveAll(services);
-
     }
-    
+
 }

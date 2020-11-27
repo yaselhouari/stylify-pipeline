@@ -35,6 +35,18 @@ public class MyService implements Serializable {
     )
     private List<MyClient> myClients = new ArrayList<MyClient>();
 
+    public MyServiceProvider getMyServiceProvider() {
+        return myServiceProvider;
+    }
+
+    public void setMyServiceProvider(MyServiceProvider myServiceProvider) {
+        this.myServiceProvider = myServiceProvider;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "my_service_provider_id")
+    private MyServiceProvider myServiceProvider;
+
     public void addClient(MyClient myClient) {
         myClients.add(myClient);
     }
