@@ -72,34 +72,28 @@ public class StylifyApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-            //CrudProvider();
-            //AddServicesToProvider();
-            //Login (not yet)
-            //Subscribe (not yet)
-            //Provide documents (not yet)
-            //Set working hours (not yet)
-            //Mobile Verification (not yet)
-            //Add Clients
-            //CrudClient();
+        //CrudProvider();
+        //AddServicesToProvider(); //Catalog
+        //CrudClient();
+
+        Appointments();
+        //Login (not yet)
+        //Subscribe (not yet)
+        //Provide documents (not yet)
+        //Set working hours (not yet)
+        //Mobile Verification (not yet)
         //Login  (not yet)
-            //Subscribe (not yet)
-            //Mobile verification (not yet)
-        //Add services to service providers
-            //Create catalog
-            //Set prices for services
-        //Clients search for services
-            //Keywords
-            //Location
-            //Time needs work
-            //Price
-        //Communication between clients and providers
-            //Confirmation
-        //Client rating services
-        //Clients rating apps
-        
-        //Appointments();
-        //AddServicesToProviders();
-        //AddRatingToServiceProvider()
+        //Subscribe (not yet)
+        //Mobile verification (not yet)
+        //Clients search for services  (not yet)
+        //Keywords (not yet)
+        //Location (not yet)
+        //Time needs work (not yet)
+        //Price (not yet)
+        //Communication between clients and providers (not yet)
+        //Client rating services  (not yet)
+        //Clients rating apps  (not yet)
+        //AddRatingToServiceProvider() (not yet)
 
 
     }
@@ -168,9 +162,7 @@ public class StylifyApplication implements CommandLineRunner {
         MyClient client3 = new MyClient();
 
         List<MyClient> clients = new ArrayList<>();
-        clients.add(client1);
-        clients.add(client2);
-        clients.add(client3);
+        clients = Arrays.asList(client1, client2, client3);
         clientRepository.saveAll(clients);
 
         MyService service1 = new MyService();
@@ -178,9 +170,7 @@ public class StylifyApplication implements CommandLineRunner {
         MyService service3 = new MyService();
 
         List<MyService> services = new ArrayList<>();
-        services.add(service1);
-        services.add(service2);
-        services.add(service3);
+        services = Arrays.asList(service1, service2, service3);
         serviceRepository.saveAll(services);
 
         service1.addClient(client1);
