@@ -72,16 +72,18 @@ public class StylifyApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        //Add Service Providers
-            //Login
-            //Subscribe
-            //Provide documents
-            //Set working hours
-            //Mobile Verification
-        //Add Clients
-            //Login
-            //Subscribe
-            //Mobile verification
+            //CrudProvider();
+            //AddServicesToProvider();
+            //Login (not yet)
+            //Subscribe (not yet)
+            //Provide documents (not yet)
+            //Set working hours (not yet)
+            //Mobile Verification (not yet)
+            //Add Clients
+            //CrudClient();
+        //Login  (not yet)
+            //Subscribe (not yet)
+            //Mobile verification (not yet)
         //Add services to service providers
             //Create catalog
             //Set prices for services
@@ -100,6 +102,44 @@ public class StylifyApplication implements CommandLineRunner {
         //AddRatingToServiceProvider()
 
 
+    }
+
+    private void CrudClient() {
+        MyClient client = new MyClient();
+        clientRepository.save(client);
+        client.setFirstName("yassine");
+        clientRepository.save(client);
+        MyClient anotherclient =new MyClient();
+        clientRepository.save(anotherclient);
+        clientRepository.delete(anotherclient);
+    }
+
+    private void AddServicesToProvider() {
+        MyService service1 = new MyService();
+        MyService service2 = new MyService();
+        MyService service3 = new MyService();
+
+        MyServiceProvider provider = new MyServiceProvider();
+        List<MyService> services =    Arrays.asList(service1, service2, service3);
+
+        service1.setMyServiceProvider(provider);
+        service2.setMyServiceProvider(provider);
+        service3.setMyServiceProvider(provider);
+
+        provider.setMyServices(services);
+        providerRepository.save(provider);
+    }
+
+    private void CrudProvider() {
+        MyServiceProvider provider = new MyServiceProvider();
+        providerRepository.save(provider);
+
+        provider.setFirstName("Yassine");
+        providerRepository.save(provider);
+
+        MyServiceProvider anotherProvider = new MyServiceProvider();
+        providerRepository.save(anotherProvider);
+        providerRepository.delete(anotherProvider);
     }
 
     private void AddServicesToProviders() {
