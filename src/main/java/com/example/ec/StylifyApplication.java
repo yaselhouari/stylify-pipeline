@@ -75,16 +75,10 @@ public class StylifyApplication implements CommandLineRunner {
         //CrudProvider();
         //AddServicesToProvider(); //Catalog
         //CrudClient();
+        //Appointments();
 
-        Appointments();
-        //Login (not yet)
-        //Subscribe (not yet)
-        //Provide documents (not yet)
         //Set working hours (not yet)
-        //Mobile Verification (not yet)
-        //Login  (not yet)
-        //Subscribe (not yet)
-        //Mobile verification (not yet)
+        //Set Display Package and services for research
         //Clients search for services  (not yet)
         //Keywords (not yet)
         //Location (not yet)
@@ -93,7 +87,13 @@ public class StylifyApplication implements CommandLineRunner {
         //Communication between clients and providers (not yet)
         //Client rating services  (not yet)
         //Clients rating apps  (not yet)
-        //AddRatingToServiceProvider() (not yet)
+        //Provide documents (not yet)
+        //Login (not yet)
+        //Subscribe (not yet)
+        //Mobile Verification (not yet)
+
+
+
 
 
     }
