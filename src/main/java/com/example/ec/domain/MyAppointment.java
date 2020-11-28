@@ -54,7 +54,7 @@ public class MyAppointment implements Serializable {
     }
 
     @Override
-    public boolean equals(Object o) {ؤ
+    public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         MyAppointment that = (MyAppointment) o;

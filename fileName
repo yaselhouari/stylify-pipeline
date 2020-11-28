@@ -24,9 +24,9 @@ ALTER TABLE "PUBLIC"."flyway_schema_history" ADD CONSTRAINT "PUBLIC"."flyway_sch
 -- 15 +/- SELECT COUNT(*) FROM PUBLIC.flyway_schema_history;  
 INSERT INTO "PUBLIC"."flyway_schema_history" VALUES
 (-1, NULL, '<< Flyway Schema History table created >>', 'TABLE', '', NULL, 'SA', TIMESTAMP '2020-11-25 12:53:06.101839', 0, TRUE),
-(1, '1.1', 'CreateServicePackagesSchema', 'SQL', 'V1.1__CreateServicePackagesSchema.sql', 1932208295, 'SA', TIMESTAMP '2020-11-25 12:53:06.133824', 4, TRUE),
+(1, '1.1', 'CreateServicePackagesSchema', 'SQL', 'V1.1__CreateDisplayServicePackagesSchema.sql', 1932208295, 'SA', TIMESTAMP '2020-11-25 12:53:06.133824', 4, TRUE),
 (2, '1.2', 'AddServicePackages', 'SQL', 'V1.2__AddServicePackages.sql', -1582378337, 'SA', TIMESTAMP '2020-11-25 12:53:06.150831', 2, TRUE),
-(3, '1.3', 'CreateServiceSchema', 'SQL', 'V1.3__CreateServiceSchema.sql', -603888143, 'SA', TIMESTAMP '2020-11-25 12:53:06.170825', 5, TRUE),
+(3, '1.3', 'CreateServiceSchema', 'SQL', 'V1.2__CreateDisplayServicesSchema.sql', -603888143, 'SA', TIMESTAMP '2020-11-25 12:53:06.170825', 5, TRUE),
 (4, '1.4', 'AddServices', 'SQL', 'V1.4__AddServices.sql', -1774693911, 'SA', TIMESTAMP '2020-11-25 12:53:06.193824', 11, TRUE),
 (5, '1.5', 'CreateServiceProviderSchema', 'SQL', 'V1.5__CreateServiceProviderSchema.sql', -1244532945, 'SA', TIMESTAMP '2020-11-25 12:53:06.206824', 2, TRUE),
 (6, '1.6', 'AddServiceProviders', 'SQL', 'V1.6__AddServiceProviders.sql', 717328051, 'SA', TIMESTAMP '2020-11-25 12:53:06.219841', 2, TRUE),

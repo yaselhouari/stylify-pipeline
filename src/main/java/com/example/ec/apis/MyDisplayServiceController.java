@@ -1,18 +1,19 @@
 package com.example.ec.apis;
 
+import com.example.ec.domain.MyDisplayService;
 import com.example.ec.domain.MyService;
-import com.example.ec.service.MyServiceService;
+import com.example.ec.service.MyDisplayServiceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/services")
-public class MyServiceController {
+public class MyDisplayServiceController {
     @Autowired
-    MyServiceService myService;
+    MyDisplayServiceService myService;
 
     @GetMapping
-    public Iterable<MyService> getAllServices() {
+    public Iterable<MyDisplayService> getAllServices() {
         return myService.lookup();
     }
 

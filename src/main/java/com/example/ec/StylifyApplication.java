@@ -2,29 +2,16 @@ package com.example.ec;
 
 import com.example.ec.domain.MyClient;
 import com.example.ec.domain.MyService;
-import com.example.ec.domain.MyServicePackage;
 import com.example.ec.domain.MyServiceProvider;
 import com.example.ec.entities.Role;
 import com.example.ec.entities.User;
-import com.example.ec.repo.MyClientRepository;
-import com.example.ec.repo.MyServicePackageRepository;
-import com.example.ec.repo.MyServiceProviderRepository;
-import com.example.ec.repo.MyServiceRepository;
-import com.example.ec.service.MyServicePackageService;
-import com.example.ec.service.MyServiceProviderService;
-import com.example.ec.service.MyServiceService;
+import com.example.ec.repo.*;
 import com.example.ec.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.FilterType;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
@@ -40,8 +27,7 @@ public class StylifyApplication implements CommandLineRunner {
     @Autowired
     private MyServiceRepository serviceRepository;
     @Autowired
-    private MyServicePackageRepository packageRepository;
-
+    private MyDisplayServicePackageRepository packageRepository;
     @Autowired
     private MyServiceProviderRepository providerRepository;
 
@@ -76,9 +62,9 @@ public class StylifyApplication implements CommandLineRunner {
         //AddServicesToProvider(); //Catalog
         //CrudClient();
         //Appointments();
+        //Set Display Package and services for research
 
         //Set working hours (not yet)
-        //Set Display Package and services for research
         //Clients search for services  (not yet)
         //Keywords (not yet)
         //Location (not yet)

@@ -1,7 +1,7 @@
 package com.example.ec.apis;
 
-import com.example.ec.domain.MyServicePackage;
-import com.example.ec.service.MyServicePackageService;
+import com.example.ec.domain.MyDisplayServicePackage;
+import com.example.ec.service.MyDisplayServicePackageService;
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -13,18 +13,18 @@ import java.net.UnknownHostException;
 
 @RestController
 @RequestMapping("service_packages")
-public class MyServicePackageController {
+public class MyDisplayServicePackageController {
     @Autowired
-    MyServicePackageService myServicePackageService;
+    MyDisplayServicePackageService myDisplayServicePackageService;
 
     @GetMapping
-    public Iterable<MyServicePackage> getServicePackages() {
-        return myServicePackageService.lookup();
+    public Iterable<MyDisplayServicePackage> getServicePackages() {
+        return myDisplayServicePackageService.lookup();
     }
 
     @GetMapping("/gender/{gender}")
-    public Iterable<MyServicePackage> getServicesByByGender(@PathVariable  String gender) throws UnknownHostException {
-        return myServicePackageService.getServicePackageByGender(gender);
+    public Iterable<MyDisplayServicePackage> getServicesByByGender(@PathVariable  String gender) throws UnknownHostException {
+        return myDisplayServicePackageService.getServicePackageByGender(gender);
     }
 
     @RequestMapping(value = "/icons/{packageId}.png", method = RequestMethod.GET, produces = MediaType.IMAGE_PNG_VALUE)

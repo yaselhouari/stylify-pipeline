@@ -1,15 +1,11 @@
 package com.example.ec.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.List;
 import java.util.Objects;
 
 @Entity
-public class MyServicePackage  implements Serializable {
+public class MyDisplayServicePackage implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -26,10 +22,10 @@ public class MyServicePackage  implements Serializable {
     @Column
     String icon;
 
-    public MyServicePackage() {
+    public MyDisplayServicePackage() {
     }
 
-    public MyServicePackage(Integer id, String name, String description, String gender, String icon) {
+    public MyDisplayServicePackage(Integer id, String name, String description, String gender, String icon) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -37,7 +33,7 @@ public class MyServicePackage  implements Serializable {
         this.icon = icon;
     }
 
-    public MyServicePackage(int id) {
+    public MyDisplayServicePackage(int id) {
         this.id = id;
     }
 
@@ -96,7 +92,7 @@ public class MyServicePackage  implements Serializable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        MyServicePackage that = (MyServicePackage) o;
+        MyDisplayServicePackage that = (MyDisplayServicePackage) o;
         return id.equals(that.id) &&
                 name.equals(that.name) &&
                 description.equals(that.description) &&

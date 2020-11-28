@@ -1,19 +1,20 @@
 package com.example.ec.service;
 
+import com.example.ec.domain.MyDisplayService;
 import com.example.ec.domain.MyService;
 import com.example.ec.repo.MyDisplayServicePackageRepository;
-import com.example.ec.repo.MyServiceRepository;
+import com.example.ec.repo.MyDisplayServiceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class MyServiceService {
+public class MyDisplayServiceService {
     @Autowired
-    MyServiceRepository serviceRepository;
+    MyDisplayServiceRepository serviceRepository;
     @Autowired
     MyDisplayServicePackageRepository servicePackageRepository;
 
-    public Iterable<MyService> lookup() {
+    public Iterable<MyDisplayService> lookup() {
         return serviceRepository.findAll();
     }
 
@@ -22,7 +23,7 @@ public class MyServiceService {
         return serviceRepository.findByMyServicePackage(myServicePackage);
     }*/
 
-    public MyService create(MyService myService) {
+    public MyDisplayService create(MyDisplayService myService) {
         return serviceRepository.save(myService);
     }
 }
