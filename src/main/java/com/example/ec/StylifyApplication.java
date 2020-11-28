@@ -1,8 +1,8 @@
 package com.example.ec;
 
-import com.example.ec.domain.MyClient;
-import com.example.ec.domain.MyService;
-import com.example.ec.domain.MyServiceProvider;
+import com.example.ec.entities.MyClient;
+import com.example.ec.entities.MyService;
+import com.example.ec.entities.MyServiceProvider;
 import com.example.ec.entities.Role;
 import com.example.ec.entities.User;
 import com.example.ec.repo.*;
@@ -57,14 +57,23 @@ public class StylifyApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-
-        //CrudProvider();
-        //AddServicesToProvider(); //Catalog
         //CrudClient();
+        //CrudProvider();
         //Appointments();
+
+        //AddServicesToProvider(); //Catalog
+            //Set working hours (not yet)
+                //Fixed Days
+                //On demande
+                //Both
+            //Get display services
+            //Create services based on display services
+            //Attach them to providers
+            //Display them in the catalog
+
+
         //Set Display Package and services for research
 
-        //Set working hours (not yet)
         //Clients search for services  (not yet)
         //Keywords (not yet)
         //Location (not yet)

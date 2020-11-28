@@ -1,7 +1,6 @@
 package com.example.ec.apis;
 
-import com.example.ec.domain.MyDisplayService;
-import com.example.ec.domain.MyService;
+import com.example.ec.entities.MyDisplayService;
 import com.example.ec.service.MyDisplayServiceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

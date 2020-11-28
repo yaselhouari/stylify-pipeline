@@ -1,4 +1,4 @@
-package com.example.ec.domain;
+package com.example.ec.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -42,9 +42,6 @@ public class MyClient  implements Serializable {
 
     @ManyToMany(mappedBy = "myClients")
     private List<MyService> myServices = new ArrayList<MyService>();
-
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    private List<MyRole> roles;
 
     public void addService(MyService myService) {
         myServices.add(myService);
@@ -162,14 +159,6 @@ public class MyClient  implements Serializable {
 
     public void setMyClientProfile(MyClientProfile myClientProfile) {
         this.myClientProfile = myClientProfile;
-    }
-
-    public List<MyRole> getRoles() {
-        return roles;
-    }
-
-    public void setRoles(List<MyRole> roles) {
-        this.roles = roles;
     }
 
     @Override

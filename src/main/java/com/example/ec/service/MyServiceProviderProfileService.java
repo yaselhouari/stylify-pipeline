@@ -1,6 +1,6 @@
 package com.example.ec.service;
 
-import com.example.ec.domain.MyServiceProviderProfile;
+import com.example.ec.entities.MyServiceProviderProfile;
 import com.example.ec.repo.MyServiceProviderProfileRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

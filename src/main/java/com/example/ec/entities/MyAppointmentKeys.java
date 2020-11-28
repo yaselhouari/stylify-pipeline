@@ -1,4 +1,4 @@
-package com.example.ec.domain;
+package com.example.ec.entities;
 
 import java.io.Serializable;
 import java.util.Objects;

@@ -1,6 +1,6 @@
 package com.example.ec.apis;
 
-import com.example.ec.domain.MyClientProfile;
+import com.example.ec.entities.MyClientProfile;
 import com.example.ec.service.MyClientProfileService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

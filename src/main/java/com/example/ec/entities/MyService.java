@@ -1,6 +1,4 @@
-package com.example.ec.domain;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
+package com.example.ec.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;

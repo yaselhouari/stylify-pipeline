@@ -1,6 +1,6 @@
 package com.example.ec.apis;
 
-import com.example.ec.domain.MyDisplayServicePackage;
+import com.example.ec.entities.MyDisplayServicePackage;
 import com.example.ec.service.MyDisplayServicePackageService;
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;

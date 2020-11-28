@@ -1,6 +1,6 @@
 package com.example.ec.service;
 
-import com.example.ec.domain.*;
+import com.example.ec.entities.MyDisplayServicePackage;
 import com.example.ec.repo.MyDisplayServicePackageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

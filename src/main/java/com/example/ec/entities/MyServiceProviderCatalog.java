@@ -1,4 +1,4 @@
-package com.example.ec.domain;
+package com.example.ec.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -7,31 +7,42 @@ import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
-public class MyServiceProviderProfile  implements Serializable {
+public class MyServiceProviderCatalog  implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private Integer id;
+
+    @Column
+    private String description;
 
     @JsonIgnore
     @OneToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name = "provider_id", nullable = false)
     private MyServiceProvider myServiceProvider;
 
-    public MyServiceProviderProfile() {
-
+    public MyServiceProviderCatalog() {
     }
 
-    public MyServiceProviderProfile(String id, MyServiceProvider myServiceProvider) {
+    public MyServiceProviderCatalog(Integer id, String description, MyServiceProvider myServiceProvider) {
         this.id = id;
+        this.description = description;
         this.myServiceProvider = myServiceProvider;
     }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public MyServiceProvider getMyServiceProvider() {
@@ -44,8 +55,9 @@ public class MyServiceProviderProfile  implements Serializable {
 
     @Override
     public String toString() {
-        return "MyServiceProviderProfile{" +
-                "id='" + id + '\'' +
+        return "MyServiceProviderCatalog{" +
+                "id=" + id +
+                ", description='" + description + '\'' +
                 ", myServiceProvider=" + myServiceProvider +
                 '}';
     }
@@ -54,13 +66,14 @@ public class MyServiceProviderProfile  implements Serializable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        MyServiceProviderProfile that = (MyServiceProviderProfile) o;
+        MyServiceProviderCatalog that = (MyServiceProviderCatalog) o;
         return id.equals(that.id) &&
+                description.equals(that.description) &&
                 myServiceProvider.equals(that.myServiceProvider);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, myServiceProvider);
+        return Objects.hash(id, description, myServiceProvider);
     }
 }

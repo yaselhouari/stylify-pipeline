@@ -15,7 +15,5 @@ import lombok.ToString;
 @Setter
 @ToString
 public class Role extends BaseEntity {
-
     private String name;
-    
 }
