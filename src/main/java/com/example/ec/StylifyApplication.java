@@ -157,6 +157,7 @@ public class StylifyApplication implements CommandLineRunner {
     }
 
     private void Appointments() {
+        //Getting the client
         MyClient client1 = new MyClient();
         MyClient client2 = new MyClient();
         MyClient client3 = new MyClient();
@@ -165,12 +166,24 @@ public class StylifyApplication implements CommandLineRunner {
         clients = Arrays.asList(client1, client2, client3);
         clientRepository.saveAll(clients);
 
+        //Getting the servies
         MyService service1 = new MyService();
         MyService service2 = new MyService();
         MyService service3 = new MyService();
 
+        //Getting the provider
+        MyServiceProvider provider = new MyServiceProvider();
+        providerRepository.save(provider);
+
         List<MyService> services = new ArrayList<>();
         services = Arrays.asList(service1, service2, service3);
+
+        service1.setMyServiceProvider(provider);
+        service2.setMyServiceProvider(provider);
+        service3.setMyServiceProvider(provider);
+
+        provider.setMyServices(services);
+
         serviceRepository.saveAll(services);
 
         service1.addClient(client1);
