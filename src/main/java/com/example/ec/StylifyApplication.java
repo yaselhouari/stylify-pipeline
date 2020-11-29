@@ -60,12 +60,13 @@ public class StylifyApplication implements CommandLineRunner {
         //CrudClient();
         //CrudProvider();
         //Appointments();
+        //AddServicesToProvider();
+        //Create the Schedule
+            //Set working hours
+            //Fixed Days
+            //On demande
+            //Both
 
-        //AddServicesToProvider(); //Catalog
-            //Set working hours (not yet)
-                //Fixed Days
-                //On demande
-                //Both
             //Get display services
             //Create services based on display services
             //Attach them to providers
