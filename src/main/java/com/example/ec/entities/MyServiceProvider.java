@@ -48,6 +48,10 @@ public class MyServiceProvider  implements Serializable {
     )
     private List<MyService> myServices = new ArrayList<MyService>();
 
+    @OneToOne(mappedBy = "myServiceProvider", fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL)
+    private MyServiceProviderSchedule myServiceProviderSchedule;
+
     public MyServiceProvider() {
 
     }
@@ -66,6 +70,14 @@ public class MyServiceProvider  implements Serializable {
         this.status = status;
         this.myServiceProviderCatalog = myServiceProviderCatalog;
         this.myServiceProviderProfile = myServiceProviderProfile;
+    }
+
+    public MyServiceProviderSchedule getMyServiceProviderSchedule() {
+        return myServiceProviderSchedule;
+    }
+
+    public void setMyServiceProviderSchedule(MyServiceProviderSchedule myServiceProviderSchedule) {
+        this.myServiceProviderSchedule = myServiceProviderSchedule;
     }
 
     public List<MyService> getMyServices() {
@@ -196,6 +208,8 @@ public class MyServiceProvider  implements Serializable {
                 ", status='" + status + '\'' +
                 ", myServiceProviderCatalog=" + myServiceProviderCatalog +
                 ", myServiceProviderProfile=" + myServiceProviderProfile +
+                ", myServices=" + myServices +
+                ", myServiceProviderSchedule=" + myServiceProviderSchedule +
                 '}';
     }
 
@@ -216,11 +230,13 @@ public class MyServiceProvider  implements Serializable {
                 Objects.equals(password, that.password) &&
                 Objects.equals(status, that.status) &&
                 Objects.equals(myServiceProviderCatalog, that.myServiceProviderCatalog) &&
-                Objects.equals(myServiceProviderProfile, that.myServiceProviderProfile);
+                Objects.equals(myServiceProviderProfile, that.myServiceProviderProfile) &&
+                Objects.equals(myServices, that.myServices) &&
+                Objects.equals(myServiceProviderSchedule, that.myServiceProviderSchedule);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, firstName, lastName, gender, mobile, email, birthDate, location, username, password, status, myServiceProviderCatalog, myServiceProviderProfile);
+        return Objects.hash(id, firstName, lastName, gender, mobile, email, birthDate, location, username, password, status, myServiceProviderCatalog, myServiceProviderProfile, myServices, myServiceProviderSchedule);
     }
 }
