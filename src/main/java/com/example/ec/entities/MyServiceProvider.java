@@ -1,10 +1,11 @@
 package com.example.ec.entities;
 
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
+
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 @Entity
 public class MyServiceProvider  implements Serializable {
@@ -52,6 +53,11 @@ public class MyServiceProvider  implements Serializable {
             cascade = CascadeType.ALL)
     private MyServiceProviderSchedule myServiceProviderSchedule;
 
+    @OneToMany(mappedBy = "myServiceProvider",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true)
+    private Set<MyServiceProviderDocument> myServiceProviderDocuments = new HashSet<>();
+
     public MyServiceProvider() {
 
     }
@@ -70,6 +76,14 @@ public class MyServiceProvider  implements Serializable {
         this.status = status;
         this.myServiceProviderCatalog = myServiceProviderCatalog;
         this.myServiceProviderProfile = myServiceProviderProfile;
+    }
+
+    public Set<MyServiceProviderDocument> getMyServiceProviderDocuments() {
+        return myServiceProviderDocuments;
+    }
+
+    public void setMyServiceProviderDocuments(Set<MyServiceProviderDocument> myServiceProviderDocuments) {
+        this.myServiceProviderDocuments = myServiceProviderDocuments;
     }
 
     public MyServiceProviderSchedule getMyServiceProviderSchedule() {
@@ -210,6 +224,7 @@ public class MyServiceProvider  implements Serializable {
                 ", myServiceProviderProfile=" + myServiceProviderProfile +
                 ", myServices=" + myServices +
                 ", myServiceProviderSchedule=" + myServiceProviderSchedule +
+                ", myServiceProviderDocuments=" + myServiceProviderDocuments +
                 '}';
     }
 
@@ -232,11 +247,12 @@ public class MyServiceProvider  implements Serializable {
                 Objects.equals(myServiceProviderCatalog, that.myServiceProviderCatalog) &&
                 Objects.equals(myServiceProviderProfile, that.myServiceProviderProfile) &&
                 Objects.equals(myServices, that.myServices) &&
-                Objects.equals(myServiceProviderSchedule, that.myServiceProviderSchedule);
+                Objects.equals(myServiceProviderSchedule, that.myServiceProviderSchedule) &&
+                Objects.equals(myServiceProviderDocuments, that.myServiceProviderDocuments);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, firstName, lastName, gender, mobile, email, birthDate, location, username, password, status, myServiceProviderCatalog, myServiceProviderProfile, myServices, myServiceProviderSchedule);
+        return Objects.hash(id, firstName, lastName, gender, mobile, email, birthDate, location, username, password, status, myServiceProviderCatalog, myServiceProviderProfile, myServices, myServiceProviderSchedule, myServiceProviderDocuments);
     }
 }
