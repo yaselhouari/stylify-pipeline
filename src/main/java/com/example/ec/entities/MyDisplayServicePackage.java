@@ -1,8 +1,13 @@
 package com.example.ec.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 public class MyDisplayServicePackage implements Serializable {
@@ -22,6 +27,15 @@ public class MyDisplayServicePackage implements Serializable {
     @Column
     String icon;
 
+    @JsonIgnore
+    @OneToMany(
+            mappedBy = "myDisplayServicePackage",
+            orphanRemoval = true,
+            fetch = FetchType.EAGER
+
+    )
+    private List<MyDisplayService> myServices = new ArrayList<>();
+
     public MyDisplayServicePackage() {
     }
 
@@ -31,6 +45,14 @@ public class MyDisplayServicePackage implements Serializable {
         this.description = description;
         this.gender = gender;
         this.icon = icon;
+    }
+
+    public List<MyDisplayService> getMyServices() {
+        return myServices;
+    }
+
+    public void setMyServices(List<MyDisplayService> myServices) {
+        this.myServices = myServices;
     }
 
     public MyDisplayServicePackage(int id) {
@@ -79,12 +101,13 @@ public class MyDisplayServicePackage implements Serializable {
 
     @Override
     public String toString() {
-        return "MyServicePackage{" +
+        return "MyDisplayServicePackage{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", gender='" + gender + '\'' +
                 ", icon='" + icon + '\'' +
+                ", myServices=" + myServices +
                 '}';
     }
 
@@ -93,15 +116,16 @@ public class MyDisplayServicePackage implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         MyDisplayServicePackage that = (MyDisplayServicePackage) o;
-        return id.equals(that.id) &&
-                name.equals(that.name) &&
-                description.equals(that.description) &&
-                gender.equals(that.gender) &&
-                icon.equals(that.icon);
+        return Objects.equals(id, that.id) &&
+                Objects.equals(name, that.name) &&
+                Objects.equals(description, that.description) &&
+                Objects.equals(gender, that.gender) &&
+                Objects.equals(icon, that.icon) &&
+                Objects.equals(myServices, that.myServices);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, description, gender, icon);
+        return Objects.hash(id, name, description, gender, icon, myServices);
     }
 }

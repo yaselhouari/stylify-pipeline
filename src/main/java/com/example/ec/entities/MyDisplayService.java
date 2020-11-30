@@ -1,5 +1,7 @@
 package com.example.ec.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
@@ -17,7 +19,20 @@ public class MyDisplayService implements Serializable {
     @Column
     String description;
 
+    @JsonIgnore
+    @ManyToOne
+    @JoinColumn(name = "my_display_service_package_id")
+    MyDisplayServicePackage myDisplayServicePackage;
+
     public MyDisplayService() {
+    }
+
+    public MyDisplayServicePackage getMyDisplayServicePackage() {
+        return myDisplayServicePackage;
+    }
+
+    public void setMyDisplayServicePackage(MyDisplayServicePackage myDisplayServicePackage) {
+        this.myDisplayServicePackage = myDisplayServicePackage;
     }
 
     public Integer getId() {
@@ -50,6 +65,7 @@ public class MyDisplayService implements Serializable {
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
+                ", myDisplayServicePackage=" + myDisplayServicePackage +
                 '}';
     }
 
@@ -60,11 +76,12 @@ public class MyDisplayService implements Serializable {
         MyDisplayService that = (MyDisplayService) o;
         return Objects.equals(id, that.id) &&
                 Objects.equals(title, that.title) &&
-                Objects.equals(description, that.description);
+                Objects.equals(description, that.description) &&
+                Objects.equals(myDisplayServicePackage, that.myDisplayServicePackage);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, title, description);
+        return Objects.hash(id, title, description, myDisplayServicePackage);
     }
 }

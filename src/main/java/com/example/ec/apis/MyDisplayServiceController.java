@@ -16,8 +16,8 @@ public class MyDisplayServiceController {
         return myService.lookup();
     }
 
-    /*@GetMapping("/packageId/{packageId}")
-    public Iterable<MyService> getServicesByPackageId(@PathVariable Integer packageId) {
-        return myService.getServicesByPackageId(packageId);
-    }*/
+    @GetMapping("/packageId/{packageId}")
+    public Iterable<MyDisplayService> getServicesByPackageId(@PathVariable Integer packageId) {
+        return myService.getDisplayServicesByPackageId(packageId);
+    }
 }

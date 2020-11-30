@@ -1,15 +1,15 @@
 CREATE TABLE My_Display_Service (
   id BIGINT AUTO_INCREMENT PRIMARY KEY,
-  package_id CHAR(2),
+  my_display_service_package_id CHAR(2),
   title VARCHAR(100),
   description VARCHAR(2000),
   price VARCHAR(10),
   duration VARCHAR(32)
 );
 
-ALTER TABLE My_Display_Service ADD CONSTRAINT FK_SERVICE_PACKAGE_ID FOREIGN KEY (package_id) REFERENCES My_Display_Service_Package(id);
+ALTER TABLE My_Display_Service ADD CONSTRAINT FK_SERVICE_PACKAGE_ID FOREIGN KEY (my_display_service_package_id) REFERENCES My_Display_Service_Package(id);
 
-INSERT INTO My_Display_Service (id, package_id, title, description, price, duration) VALUES
+INSERT INTO My_Display_Service (id, my_display_service_package_id, title, description, price, duration) VALUES
 (1, 1, 'coloration cheveux', 'description', '100', '1:00'),
 (2, 1, 'coloration barbe', 'description', '100', '1:00'),
 (3, 1, 'coloration moustache', 'description', '100', '1:00'),
