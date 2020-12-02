@@ -20,4 +20,7 @@ public class UserService {
         repo.save(user);
     }
 
+    public User getByUserName(String username) {
+        return repo.getByUsername(username);
+    }
 }
