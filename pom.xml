@@ -183,5 +183,6 @@
 				</configuration>
 			</plugin>
         </plugins>
+		<finalName>stylify-3.0.0-SNAPSHOT</finalName>
     </build>
 </project>

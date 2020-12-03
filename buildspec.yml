@@ -1,20 +1,13 @@
 version: 0.2
 phases:
-  install:
-    runtime-versions:
-      java: corretto8
-  pre_build:
-    commands:
-      - echo In the pre_build phase...
   build:
     commands:
       - echo Build started on `date`
+      - mvn clean package
   post_build:
     commands:
       - echo Build completed on `date`
-      - mvn package
-      - mv target/stylify-3.0.0-SNAPSHOT.jar stylify-3.0.0-SNAPSHOT.jar
 artifacts:
   files:
-    - stylify-3.0.0-SNAPSHOT.jar
-    - .ebextensions/**/*
+    - target/stylify-3.0.0-SNAPSHOT.jar
+discard-paths: yes
